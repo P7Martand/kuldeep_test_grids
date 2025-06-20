@@ -343,6 +343,7 @@
   },
   "dependenciesContainer" : {
     "dependencies" : { },
+    "lastError" : "Server Error: Error occurred: Clone failed with an error: Error encountered: http://gitserver:3000/3hPfgmqG_team_67/foYwSqoh_project_27575.git: authentication not supported at line 1 and column 7 at path /getGitRdc",
     "prophecyProjectDependencies" : {
       "http://gitserver:3000/3hPfgmqG_team_67/foYwSqoh_project_27575.git" : "27575"
     }

@@ -6,11 +6,11 @@ models:
   - "prophecy_temp"
 sources:
 - name: "prophecy_tmp_source__amk"
-  database: "sony"
-  schema: "orch_test"
+  database: "database"
+  schema: "default"
   config:
     enabled: true
   tables:
-  - name: "prophecy_tmp__mc3c5y15__amk__Reformat_1"
+  - name: "prophecy_tmp__mc4h8saj__amk__Reformat_1"
     tags:
     - "prophecy_temp"

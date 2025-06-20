@@ -9,18 +9,18 @@
     },
     "graphConfig" : {
       "entityConfig" : {
-        "alias" : "\"prophecy_tmp__mc3c5y15__amk__Reformat_1\"",
+        "alias" : "\"prophecy_tmp__mc4h8saj__amk__Reformat_1\"",
         "materialized" : "table",
-        "database" : "\"sony\"",
-        "schema" : "\"orch_test\"",
+        "database" : "\"database\"",
+        "schema" : "\"default\"",
         "type" : "ModelConfig"
       }
     },
     "version" : 3
   },
   "processes" : {
-    "prophecy_tmp__mc3c5y15__amk__Reformat_1" : {
-      "id" : "prophecy_tmp__mc3c5y15__amk__Reformat_1",
+    "prophecy_tmp__mc4h8saj__amk__Reformat_1" : {
+      "id" : "prophecy_tmp__mc4h8saj__amk__Reformat_1",
       "component" : "TargetModel",
       "metadata" : {
         "label" : "Reformat_1",
@@ -107,10 +107,10 @@
     }
   },
   "connections" : [ {
-    "id" : "conn_h_tQ5pwLu7fMLLjQtd0NJ$$9TZFTwRIPhUSpiX_5tOSs_prophecy_tmp__mc3c5y15__amk__Reformat_1",
+    "id" : "conn_h_tQ5pwLu7fMLLjQtd0NJ$$9TZFTwRIPhUSpiX_5tOSs_prophecy_tmp__mc4h8saj__amk__Reformat_1",
     "source" : "h_tQ5pwLu7fMLLjQtd0NJ$$9TZFTwRIPhUSpiX_5tOSs",
     "sourcePort" : "u2Rv29xNod53jkNNcXfmw$$HB_4RmwDqC9prWmWvwGJh",
-    "target" : "prophecy_tmp__mc3c5y15__amk__Reformat_1",
+    "target" : "prophecy_tmp__mc4h8saj__amk__Reformat_1",
     "targetPort" : "input_port_0_1"
   }, {
     "id" : "eaSi1UJjHJn_BjNFMDMsZ",
