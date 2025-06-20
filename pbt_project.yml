@@ -41,40 +41,7 @@ sqlModels:
     createdAt: '2025-05-28 08:55:24'
   .prophecy/metadata/sqlmodels/m4:
     name: m4
-    schema:
-      entityType: ''
-      providerType: Databricks
-      fields:
-      - name: seq
-        dataType:
-          type: Integer
-      - name: from_city
-        dataType:
-          type: String
-      - name: to_city
-        dataType:
-          type: String
-      - name: from_wkt
-        dataType:
-          type: String
-      - name: to_wkt
-        dataType:
-          type: String
-      - name: Alteryx_Distance_KM
-        dataType:
-          type: Float
-      - name: Formula_Distance_KM
-        dataType:
-          type: Float
-      - name: Difference_Alteryx_KM_2
-        dataType:
-          type: Float
-      - name: h3_approx_distance
-        dataType:
-          type: Float
-      - name: Difference_Alteryx_KM
-        dataType:
-          type: Float
+    schema: null
     description: null
     author: sony@prophecy.io
     files:
@@ -609,46 +576,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: databricks
-        fields:
-        - name: Series_reference
-          dataType:
-            type: String
-        - name: Period
-          dataType:
-            type: Double
-        - name: Data_value
-          dataType:
-            type: Double
-        - name: STATUS
-          dataType:
-            type: String
-        - name: UNITS
-          dataType:
-            type: String
-        - name: MAGNTUDE
-          dataType:
-            type: Bigint
-        - name: Subject
-          dataType:
-            type: String
-        - name: Group
-          dataType:
-            type: String
-        - name: Series_title_1
-          dataType:
-            type: String
-        - name: Series_title_2
-          dataType:
-            type: String
-        - name: Series_title_3
-          dataType:
-            type: String
-        - name: Series_title_4
-          dataType:
-            type: String
-        - name: Series_title_5
-          dataType:
-            type: String
+        fields: []
       description: null
       author: sony@prophecy.io
       createdAt: '2025-06-03 06:23:41'
@@ -681,43 +609,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: databricks
-        fields:
-        - name: seq
-          dataType:
-            type: Bigint
-        - name: from_city
-          dataType:
-            type: String
-        - name: to_city
-          dataType:
-            type: String
-        - name: from_lat
-          dataType:
-            type: Double
-        - name: from_lon
-          dataType:
-            type: Double
-        - name: to_lat
-          dataType:
-            type: Double
-        - name: to_lon
-          dataType:
-            type: Double
-        - name: Alteryx_Distance_KM
-          dataType:
-            type: Double
-        - name: Formula_Distance_KM
-          dataType:
-            type: Double
-        - name: Difference_Alteryx_KM_2
-          dataType:
-            type: Double
-        - name: h3_approx_distance
-          dataType:
-            type: Double
-        - name: Difference_Alteryx_KM
-          dataType:
-            type: Double
+        fields: []
       description: null
       author: sony@prophecy.io
       createdAt: '2025-06-01 15:14:43'
@@ -755,16 +647,16 @@ sqlOrchestratorPipelines:
     description: null
     author: sony@prophecy.io
     files:
-    - models/latlog/schema.yml
-    - models/latlog_test2/schema.yml
-    - models/latlog_test2/model_latlog_test2_single_point_1_1.sql
     - models/latlog/model_latlog_charts.sql
-    - models/latlog/model_latlog_distance_comparison.sql
-    - models/latlog/model_latlog_create_point.sql
-    - models/latlog/model_latlog_single_point.sql
-    - models/latlog_test2/model_latlog_test2_single_point_1_2.sql
-    - models/latlog/model_latlog_points.sql
     - models/latlog_test2/model_latlog_test2_single_point_1.sql
+    - models/latlog/model_latlog_distance_comparison.sql
+    - models/latlog/model_latlog_points.sql
+    - models/latlog/model_latlog_create_point.sql
+    - models/latlog_test2/model_latlog_test2_single_point_1_1.sql
+    - models/latlog_test2/schema.yml
+    - models/latlog_test2/model_latlog_test2_single_point_1_2.sql
+    - models/latlog/schema.yml
+    - models/latlog/model_latlog_single_point.sql
     - models/latlog_test2/model_latlog_test2_single_point_1_3.sql
     - models/latlog_test2/model_latlog_test2_create_point_1_1.sql
     - .prophecy/ide/pipelines/latlog.json
@@ -776,11 +668,11 @@ sqlOrchestratorPipelines:
     description: null
     author: sony@prophecy.io
     files:
-    - models/latlong3/model_latlong3_single_point_1.sql
-    - models/latlong3/model_latlong3_single_point_1_1.sql
     - models/latlong3/model_latlong3_single_point_1_2.sql
     - models/latlong3/schema.yml
     - models/latlong3/model_latlong3_single_point_1_3.sql
+    - models/latlong3/model_latlong3_single_point_1.sql
+    - models/latlong3/model_latlong3_single_point_1_1.sql
     - .prophecy/ide/pipelines/latlong3.json
     - pipelines/latlong3.py
     createdAt: '2025-06-03 06:30:11'
@@ -830,10 +722,10 @@ sqlOrchestratorPipelines:
     description: null
     author: sony@prophecy.io
     files:
-    - models/latlog_test2/schema.yml
-    - models/latlog_test2/model_latlog_test2_single_point_1_1.sql
-    - models/latlog_test2/model_latlog_test2_single_point_1_2.sql
     - models/latlog_test2/model_latlog_test2_single_point_1.sql
+    - models/latlog_test2/model_latlog_test2_single_point_1_1.sql
+    - models/latlog_test2/schema.yml
+    - models/latlog_test2/model_latlog_test2_single_point_1_2.sql
     - models/latlog_test2/model_latlog_test2_single_point_1_3.sql
     - models/latlog_test2/model_latlog_test2_create_point_1_1.sql
     - .prophecy/ide/pipelines/latlog_test2.json
