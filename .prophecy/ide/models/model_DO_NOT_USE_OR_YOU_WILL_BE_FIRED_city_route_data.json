@@ -1,0 +1,673 @@
+{
+  "id" : "model_DO_NOT_USE_OR_YOU_WILL_BE_FIRED_city_route_data",
+  "metainfo" : {
+    "label" : "model_DO_NOT_USE_OR_YOU_WILL_BE_FIRED_city_route_data",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "alias" : "\"prophecy_tmp__mbrjvhe7__DO_NOT_USE_OR_YOU_WILL_BE_FIRED__city_route_data\"",
+        "materialized" : "table",
+        "database" : "\"sony\"",
+        "schema" : "\"orch_test\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "prophecy_tmp__mbrjvhe7__DO_NOT_USE_OR_YOU_WILL_BE_FIRED__city_route_data" : {
+      "id" : "prophecy_tmp__mbrjvhe7__DO_NOT_USE_OR_YOU_WILL_BE_FIRED__city_route_data",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "city_route_data",
+        "phase" : 0
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM city_route_data\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_0_1",
+          "slug" : "input_port_0_1"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_0_1",
+          "slug" : "output_port_0_1"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "route_data##UBTsyb5G" : {
+      "id" : "route_data##UBTsyb5G",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "route_data",
+        "x" : 820,
+        "y" : 220,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "route_data",
+          "sourceType" : "Seed"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "lzjmvTCL",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "high_gdp_cities_##GCGIpCVQ" : {
+      "id" : "high_gdp_cities_##GCGIpCVQ",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "high_gdp_cities_1",
+        "x" : 220,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "expression" : "GDP_billion_USD > 30"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "fQu0i6Ne",
+          "slug" : "city_information"
+        } ],
+        "outputs" : [ {
+          "id" : "SiLz9rIM",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "city_combination##N57DwBsc" : {
+      "id" : "city_combination##N57DwBsc",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "city_combinations_not_in_routes",
+        "x" : 1420,
+        "y" : 120,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "cc_city1"
+          },
+          "alias" : "city1",
+          "_row_id" : "822300522"
+        }, {
+          "expression" : {
+            "expression" : "cc_city2"
+          },
+          "alias" : "city2",
+          "_row_id" : "2118613356"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "R7s8CBu9",
+          "slug" : "missing_route_data"
+        } ],
+        "outputs" : [ {
+          "id" : "SgJXPfTj",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "city_information##Qj7gALhU" : {
+      "id" : "city_information##Qj7gALhU",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "city_information",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "city_data",
+          "sourceType" : "Seed"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "MnQblTV9",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "city_combination##oGNeRUCv" : {
+      "id" : "city_combination##oGNeRUCv",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "city_combinations",
+        "x" : 820,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "h1_city"
+          },
+          "alias" : "city1",
+          "_row_id" : "1222901459"
+        }, {
+          "expression" : {
+            "expression" : "h2_city"
+          },
+          "alias" : "city2",
+          "_row_id" : "504049004"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "BjupqGDb",
+          "slug" : "different_city_pairs"
+        } ],
+        "outputs" : [ {
+          "id" : "ctZFb3hk",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "city_pairs##s2xtrLom" : {
+      "id" : "city_pairs##s2xtrLom",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "city_pairs",
+        "x" : 420,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "h2",
+          "joinType" : "CROSS"
+        } ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "h2.city"
+          },
+          "alias" : "h2_city",
+          "_row_id" : "2077299407"
+        }, {
+          "expression" : {
+            "expression" : "h1.city"
+          },
+          "alias" : "h1_city",
+          "_row_id" : "1717434200"
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ ],
+        "headAlias" : "h1"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "FPM7lR8C",
+          "slug" : "h1"
+        }, {
+          "id" : "tB58z5uC",
+          "slug" : "h2"
+        } ],
+        "outputs" : [ {
+          "id" : "ncCG1Y9l",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "airport_informat##J4CCfxIL" : {
+      "id" : "airport_informat##J4CCfxIL",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "airport_information",
+        "x" : 1420,
+        "y" : 320,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "airport",
+          "sourceType" : "Seed"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "YiAtO5L1",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "enriched_city_co##JPzKgVEG" : {
+      "id" : "enriched_city_co##JPzKgVEG",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "enriched_city_combinations",
+        "x" : 1620,
+        "y" : 320,
+        "phase" : 0
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "a1",
+          "expression" : {
+            "expression" : "ccnir.city1 = a1.city"
+          },
+          "joinType" : ""
+        }, {
+          "alias" : "a2",
+          "expression" : {
+            "expression" : "ccnir.city2 = a2.city"
+          },
+          "joinType" : ""
+        } ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "ccnir.city1"
+          },
+          "_row_id" : "2146042933"
+        }, {
+          "expression" : {
+            "expression" : "ccnir.city2"
+          },
+          "_row_id" : "1516171820"
+        }, {
+          "expression" : {
+            "expression" : "a1.airport_name"
+          },
+          "alias" : "city1_airport",
+          "_row_id" : "1434953088"
+        }, {
+          "expression" : {
+            "expression" : "a2.airport_name"
+          },
+          "alias" : "city2_airport",
+          "_row_id" : "1617516093"
+        }, {
+          "expression" : {
+            "expression" : "CONCAT('POINT(', a1.longitude, ' ', a1.latitude, ')')"
+          },
+          "alias" : "city1_wkt_point",
+          "_row_id" : "1043623429"
+        }, {
+          "expression" : {
+            "expression" : "CONCAT('POINT(', a2.longitude, ' ', a2.latitude, ')')"
+          },
+          "alias" : "city2_wkt_point",
+          "_row_id" : "472197369"
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ ],
+        "headAlias" : "ccnir"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "FZvnvDmx",
+          "slug" : "ccnir"
+        }, {
+          "id" : "LOJdt2mC",
+          "slug" : "a1"
+        }, {
+          "id" : "j9UfnLFx",
+          "slug" : "a2"
+        } ],
+        "outputs" : [ {
+          "id" : "JA3znJXF",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "missing_route_da##SanofHJn" : {
+      "id" : "missing_route_da##SanofHJn",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "missing_route_data",
+        "x" : 1220,
+        "y" : 120,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "expression" : "rd_from_city IS NULL AND rd_to_city IS NULL"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "NUDI0bkl",
+          "slug" : "city_route_mappings"
+        } ],
+        "outputs" : [ {
+          "id" : "fDH9g8TE",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "different_city_p##bWX5Cy6M" : {
+      "id" : "different_city_p##bWX5Cy6M",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "different_city_pairs",
+        "x" : 620,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "expression" : "h1_city <> h2_city"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "iaEGW9g5",
+          "slug" : "city_pairs"
+        } ],
+        "outputs" : [ {
+          "id" : "Qgy8Jl4A",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "city_route_data##eD1FtfMk" : {
+      "id" : "city_route_data##eD1FtfMk",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "city_route_data",
+        "x" : 2020,
+        "y" : 320,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "city1"
+          },
+          "alias" : "ORIGIN_CITY",
+          "_row_id" : "1427524105"
+        }, {
+          "expression" : {
+            "expression" : "city1_wkt_point"
+          },
+          "alias" : "ORIGIN_CITY_WKT_POINT",
+          "_row_id" : "1942582291"
+        }, {
+          "expression" : {
+            "expression" : "UNIQUE_ROUTES"
+          },
+          "alias" : "TOTAL_UNIQUE_ROUTES",
+          "_row_id" : "593636877"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "BPMSjCEs",
+          "slug" : "unique_city_routes"
+        } ],
+        "outputs" : [ {
+          "id" : "KBafLVQk",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "city_route_mappi##M8tdLebF" : {
+      "id" : "city_route_mappi##M8tdLebF",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "city_route_mappings",
+        "x" : 1020,
+        "y" : 120,
+        "phase" : 0
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "rd",
+          "expression" : {
+            "expression" : "cc.city1 = rd.from_city AND cc.city2 = rd.to_city"
+          },
+          "joinType" : "LEFT"
+        } ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "cc.city2"
+          },
+          "alias" : "cc_city2",
+          "_row_id" : "304121055"
+        }, {
+          "expression" : {
+            "expression" : "rd.from_city"
+          },
+          "alias" : "rd_from_city",
+          "_row_id" : "413937208"
+        }, {
+          "expression" : {
+            "expression" : "rd.to_city"
+          },
+          "alias" : "rd_to_city",
+          "_row_id" : "1910221153"
+        }, {
+          "expression" : {
+            "expression" : "cc.city1"
+          },
+          "alias" : "cc_city1",
+          "_row_id" : "332715873"
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ ],
+        "headAlias" : "cc"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "o8oPPAMC",
+          "slug" : "cc"
+        }, {
+          "id" : "LizWKBBl",
+          "slug" : "rd"
+        } ],
+        "outputs" : [ {
+          "id" : "ezwpdWRl",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "unique_city_rout##CQ54u7Of" : {
+      "id" : "unique_city_rout##CQ54u7Of",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "unique_city_routes",
+        "x" : 1820,
+        "y" : 320,
+        "phase" : 0
+      },
+      "properties" : {
+        "aggregate" : [ {
+          "expression" : {
+            "expression" : "city1"
+          },
+          "_row_id" : "1205210992"
+        }, {
+          "expression" : {
+            "expression" : "city1_wkt_point"
+          },
+          "_row_id" : "591597403"
+        }, {
+          "expression" : {
+            "expression" : "COUNT(DISTINCT city2)"
+          },
+          "alias" : "UNIQUE_ROUTES",
+          "_row_id" : "145985384"
+        } ],
+        "allowSelection" : true,
+        "condition" : {
+          "expression" : ""
+        },
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ ],
+        "groupBy" : [ {
+          "expression" : {
+            "expression" : "city1"
+          },
+          "_row_id" : "1091481698"
+        }, {
+          "expression" : {
+            "expression" : "city1_wkt_point"
+          },
+          "_row_id" : "1700666053"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "wLwMtjUM",
+          "slug" : "enriched_city_combinations"
+        } ],
+        "outputs" : [ {
+          "id" : "R8C8AEct",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "conn_city_route_data##eD1FtfMk_prophecy_tmp__mbrjvhe7__DO_NOT_USE_OR_YOU_WILL_BE_FIRED__city_route_data",
+    "source" : "city_route_data##eD1FtfMk",
+    "sourcePort" : "KBafLVQk",
+    "target" : "prophecy_tmp__mbrjvhe7__DO_NOT_USE_OR_YOU_WILL_BE_FIRED__city_route_data",
+    "targetPort" : "input_port_0_1"
+  }, {
+    "id" : "CgwH5f3X",
+    "source" : "unique_city_rout##CQ54u7Of",
+    "sourcePort" : "R8C8AEct",
+    "target" : "city_route_data##eD1FtfMk",
+    "targetPort" : "BPMSjCEs"
+  }, {
+    "id" : "PqvHxPMW",
+    "source" : "enriched_city_co##JPzKgVEG",
+    "sourcePort" : "JA3znJXF",
+    "target" : "unique_city_rout##CQ54u7Of",
+    "targetPort" : "wLwMtjUM"
+  }, {
+    "id" : "ZY7bNwt3",
+    "source" : "city_combination##N57DwBsc",
+    "sourcePort" : "SgJXPfTj",
+    "target" : "enriched_city_co##JPzKgVEG",
+    "targetPort" : "FZvnvDmx"
+  }, {
+    "id" : "f78qOkVp",
+    "source" : "airport_informat##J4CCfxIL",
+    "sourcePort" : "YiAtO5L1",
+    "target" : "enriched_city_co##JPzKgVEG",
+    "targetPort" : "LOJdt2mC"
+  }, {
+    "id" : "mLOE5gTV",
+    "source" : "airport_informat##J4CCfxIL",
+    "sourcePort" : "YiAtO5L1",
+    "target" : "enriched_city_co##JPzKgVEG",
+    "targetPort" : "j9UfnLFx"
+  }, {
+    "id" : "gTasCjnu",
+    "source" : "missing_route_da##SanofHJn",
+    "sourcePort" : "fDH9g8TE",
+    "target" : "city_combination##N57DwBsc",
+    "targetPort" : "R7s8CBu9"
+  }, {
+    "id" : "RDXCD2rt",
+    "source" : "city_route_mappi##M8tdLebF",
+    "sourcePort" : "ezwpdWRl",
+    "target" : "missing_route_da##SanofHJn",
+    "targetPort" : "NUDI0bkl"
+  }, {
+    "id" : "XfJgwof3",
+    "source" : "city_combination##oGNeRUCv",
+    "sourcePort" : "ctZFb3hk",
+    "target" : "city_route_mappi##M8tdLebF",
+    "targetPort" : "o8oPPAMC"
+  }, {
+    "id" : "dhDp43wG",
+    "source" : "route_data##UBTsyb5G",
+    "sourcePort" : "lzjmvTCL",
+    "target" : "city_route_mappi##M8tdLebF",
+    "targetPort" : "LizWKBBl"
+  }, {
+    "id" : "MPN2iIF3",
+    "source" : "different_city_p##bWX5Cy6M",
+    "sourcePort" : "Qgy8Jl4A",
+    "target" : "city_combination##oGNeRUCv",
+    "targetPort" : "BjupqGDb"
+  }, {
+    "id" : "RUUN9zwl",
+    "source" : "city_pairs##s2xtrLom",
+    "sourcePort" : "ncCG1Y9l",
+    "target" : "different_city_p##bWX5Cy6M",
+    "targetPort" : "iaEGW9g5"
+  }, {
+    "id" : "bXJY90Nn",
+    "source" : "high_gdp_cities_##GCGIpCVQ",
+    "sourcePort" : "SiLz9rIM",
+    "target" : "city_pairs##s2xtrLom",
+    "targetPort" : "FPM7lR8C"
+  }, {
+    "id" : "xigxCpcG",
+    "source" : "high_gdp_cities_##GCGIpCVQ",
+    "sourcePort" : "SiLz9rIM",
+    "target" : "city_pairs##s2xtrLom",
+    "targetPort" : "tB58z5uC"
+  }, {
+    "id" : "H52ufoMo",
+    "source" : "city_information##Qj7gALhU",
+    "sourcePort" : "MnQblTV9",
+    "target" : "high_gdp_cities_##GCGIpCVQ",
+    "targetPort" : "fQu0i6Ne"
+  } ],
+  "component" : "Model"
+}

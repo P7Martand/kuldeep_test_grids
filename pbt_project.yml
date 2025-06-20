@@ -1,0 +1,959 @@
+name: kuldeep_keshwar
+description: ''
+version: '1.0'
+author: sony@prophecy.io
+language: sql
+buildSystem: ''
+buildSystemDetails: null
+pipelines: {}
+datasets: {}
+templates: {}
+jobs: {}
+gemContainer:
+  languageVersion: ''
+  gemLibsVersion: ''
+  gems: {}
+  dependencies: null
+functions:
+  author: null
+  createdAt: '2025-03-21 07:39:58'
+  udfs: {}
+  udafs: {}
+  expressions: {}
+  airflowFunctions: {}
+  businessRules: {}
+subgraphs: {}
+sqlModels:
+  .prophecy/metadata/sqlmodels/m1:
+    name: m1
+    schema: null
+    description: null
+    author: sony@prophecy.io
+    files:
+    - models/m1.sql
+    - .prophecy/ide/models/m1.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2025-05-28 08:55:24'
+  .prophecy/metadata/sqlmodels/m4:
+    name: m4
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: seq
+        dataType:
+          type: Integer
+      - name: from_city
+        dataType:
+          type: String
+      - name: to_city
+        dataType:
+          type: String
+      - name: from_wkt
+        dataType:
+          type: String
+      - name: to_wkt
+        dataType:
+          type: String
+      - name: Alteryx_Distance_KM
+        dataType:
+          type: Float
+      - name: Formula_Distance_KM
+        dataType:
+          type: Float
+      - name: Difference_Alteryx_KM_2
+        dataType:
+          type: Float
+      - name: h3_approx_distance
+        dataType:
+          type: Float
+      - name: Difference_Alteryx_KM
+        dataType:
+          type: Float
+    description: null
+    author: sony@prophecy.io
+    files:
+    - models/m4.sql
+    - .prophecy/ide/models/m4.json
+    - models/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2025-05-28 13:16:14'
+sqlSnapshots: {}
+sqlTests: {}
+sqlMacros:
+  .prophecy/metadata/sqlmacros/G1:
+    name: G1
+    macroType: query
+    description: null
+    author: sony@prophecy.io
+    files:
+    - macros/G1.sql
+    - .prophecy/ide/macros/G1.json
+    - macros/macros.yml
+    - gems/G1.py
+    createdAt: '2025-05-14 06:12:27'
+  .prophecy/metadata/sqlmacros/generate_schema_name:
+    name: generate_schema_name
+    macroType: expression
+    description: null
+    author: sony@prophecy.io
+    files:
+    - macros/generate_schema_name.sql
+    - .prophecy/ide/macros/generate_schema_name.json
+    createdAt: '2025-03-21 07:40:26'
+sqlSeeds:
+  .prophecy/metadata/sqlseeds/raw_test2:
+    name: raw_test2
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: seq
+        dataType:
+          type: Integer
+      - name: from_city
+        dataType:
+          type: String
+      - name: to_city
+        dataType:
+          type: String
+      - name: from_lat
+        dataType:
+          type: Float
+      - name: from_lon
+        dataType:
+          type: Float
+      - name: to_lat
+        dataType:
+          type: Float
+      - name: to_lon
+        dataType:
+          type: Float
+      - name: Alteryx_Distance_KM
+        dataType:
+          type: Float
+      - name: Formula_Distance_KM
+        dataType:
+          type: Float
+      - name: Difference_Alteryx_KM_2
+        dataType:
+          type: Float
+      - name: h3_approx_distance
+        dataType:
+          type: Float
+      - name: Difference_Alteryx_KM
+        dataType:
+          type: Float
+    description: null
+    author: sony@prophecy.io
+    files:
+    - seeds/raw_test2.csv
+    createdAt: '2025-05-28 10:11:15'
+  .prophecy/metadata/sqlseeds/map:
+    name: map
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: seq
+        dataType:
+          type: Integer
+      - name: from_city
+        dataType:
+          type: String
+      - name: to_city
+        dataType:
+          type: String
+      - name: from_wkt
+        dataType:
+          type: String
+      - name: to_wkt
+        dataType:
+          type: String
+      - name: Alteryx_Distance_KM
+        dataType:
+          type: Float
+      - name: Formula_Distance_KM
+        dataType:
+          type: Float
+      - name: Difference_Alteryx_KM_2
+        dataType:
+          type: Float
+      - name: h3_approx_distance
+        dataType:
+          type: Float
+      - name: Difference_Alteryx_KM
+        dataType:
+          type: Float
+    description: null
+    author: sony@prophecy.io
+    files:
+    - seeds/map.csv
+    - seeds/seeds.yml
+    createdAt: '2025-06-18 11:18:36'
+  .prophecy/metadata/sqlseeds/city_data:
+    name: city_data
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: city
+        dataType:
+          type: String
+      - name: population_2023
+        dataType:
+          type: Integer
+      - name: GDP_billion_USD
+        dataType:
+          type: Integer
+      - name: tourist_arrivals_million
+        dataType:
+          type: Float
+      - name: region
+        dataType:
+          type: String
+    description: null
+    author: sony@prophecy.io
+    files:
+    - seeds/city_data.csv
+    createdAt: '2025-06-04 13:32:19'
+  .prophecy/metadata/sqlseeds/create_point_gem_seed:
+    name: create_point_gem_seed
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: seq
+        dataType:
+          type: Integer
+      - name: from_city
+        dataType:
+          type: String
+      - name: to_city
+        dataType:
+          type: String
+      - name: from_lat
+        dataType:
+          type: Float
+      - name: from_lon
+        dataType:
+          type: Float
+      - name: to_lat
+        dataType:
+          type: Float
+      - name: to_lon
+        dataType:
+          type: Float
+      - name: Alteryx_Distance_KM
+        dataType:
+          type: Float
+      - name: Formula_Distance_KM
+        dataType:
+          type: Float
+      - name: Difference_Alteryx_KM_2
+        dataType:
+          type: Float
+      - name: h3_approx_distance
+        dataType:
+          type: Float
+      - name: Difference_Alteryx_KM
+        dataType:
+          type: Float
+    description: null
+    author: sony@prophecy.io
+    files:
+    - seeds/create_point_gem_seed.csv
+    createdAt: '2025-05-14 09:21:43'
+  .prophecy/metadata/sqlseeds/test_seed:
+    name: test_seed
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: seq
+        dataType:
+          type: Integer
+      - name: from_city
+        dataType:
+          type: String
+      - name: to_city
+        dataType:
+          type: String
+      - name: from_lat
+        dataType:
+          type: String
+      - name: from_lon
+        dataType:
+          type: String
+      - name: to_lat
+        dataType:
+          type: String
+      - name: to_lon
+        dataType:
+          type: String
+      - name: distance_km
+        dataType:
+          type: String
+      - name: sales_amount
+        dataType:
+          type: String
+      - name: customer_count
+        dataType:
+          type: String
+      - name: date_field
+        dataType:
+          type: String
+      - name: category
+        dataType:
+          type: String
+      - name: status
+        dataType:
+          type: String
+      - name: growth_rate
+        dataType:
+          type: String
+      - name: coordinates_valid
+        dataType:
+          type: String
+      - name: special_chars
+        dataType:
+          type: String
+      - name: mixed_data
+        dataType:
+          type: String
+    description: null
+    author: sony@prophecy.io
+    files:
+    - seeds/test_seed.csv
+    createdAt: '2025-05-28 11:42:20'
+  .prophecy/metadata/sqlseeds/airport:
+    name: airport
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: city
+        dataType:
+          type: String
+      - name: airport_code
+        dataType:
+          type: String
+      - name: airport_name
+        dataType:
+          type: String
+      - name: state
+        dataType:
+          type: String
+      - name: latitude
+        dataType:
+          type: Float
+      - name: longitude
+        dataType:
+          type: Float
+      - name: airport_type
+        dataType:
+          type: String
+      - name: is_hub
+        dataType:
+          type: String
+    description: null
+    author: sony@prophecy.io
+    files:
+    - seeds/airport.csv
+    createdAt: '2025-06-04 13:31:24'
+  .prophecy/metadata/sqlseeds/candlestick_data:
+    name: candlestick_data
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: Date
+        dataType:
+          type: Date
+      - name: Month
+        dataType:
+          type: String
+      - name: Open
+        dataType:
+          type: Float
+      - name: Close
+        dataType:
+          type: Float
+      - name: High
+        dataType:
+          type: Float
+      - name: Low
+        dataType:
+          type: Float
+    description: null
+    author: sony@prophecy.io
+    files:
+    - seeds/candlestick_data.csv
+    createdAt: '2025-06-17 10:11:48'
+  .prophecy/metadata/sqlseeds/test_new_seed_with_date:
+    name: test_new_seed_with_date
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: seq
+        dataType:
+          type: Integer
+      - name: from_city
+        dataType:
+          type: String
+      - name: to_city
+        dataType:
+          type: String
+      - name: from_lat
+        dataType:
+          type: Float
+      - name: from_lon
+        dataType:
+          type: Float
+      - name: to_lat
+        dataType:
+          type: Float
+      - name: to_lon
+        dataType:
+          type: Float
+      - name: distance_km
+        dataType:
+          type: Float
+      - name: sales_amount
+        dataType:
+          type: Float
+      - name: customer_count
+        dataType:
+          type: Integer
+      - name: date_field
+        dataType:
+          type: Date
+      - name: category
+        dataType:
+          type: String
+      - name: status
+        dataType:
+          type: String
+      - name: growth_rate
+        dataType:
+          type: Float
+      - name: coordinates_valid
+        dataType:
+          type: String
+      - name: special_chars
+        dataType:
+          type: String
+      - name: mixed_data
+        dataType:
+          type: String
+      - name: date
+        dataType:
+          type: Date
+      - name: timestampNTZ
+        dataType:
+          type: Date
+      - name: time
+        dataType:
+          type: String
+    description: null
+    author: sony@prophecy.io
+    files:
+    - seeds/test_new_seed_with_date.csv
+    createdAt: '2025-06-01 15:49:03'
+  .prophecy/metadata/sqlseeds/s1:
+    name: s1
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: a b
+        dataType:
+          type: String
+    description: null
+    author: sony@prophecy.io
+    files:
+    - seeds/s1.csv
+    createdAt: '2025-05-28 03:35:43'
+  .prophecy/metadata/sqlseeds/seedtest2:
+    name: seedtest2
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: seq
+        dataType:
+          type: String
+      - name: from_city
+        dataType:
+          type: String
+      - name: to_city
+        dataType:
+          type: String
+      - name: from_wkt
+        dataType:
+          type: String
+      - name: to_wkt
+        dataType:
+          type: String
+      - name: Alteryx_Distance_KM
+        dataType:
+          type: String
+      - name: Formula_Distance_KM
+        dataType:
+          type: String
+      - name: Difference_Alteryx_KM_2
+        dataType:
+          type: String
+      - name: h3_approx_distance
+        dataType:
+          type: String
+      - name: Difference_Alteryx_KM
+        dataType:
+          type: String
+    description: null
+    author: sony@prophecy.io
+    files:
+    - seeds/seedtest2.csv
+    createdAt: '2025-06-05 09:32:02'
+  .prophecy/metadata/sqlseeds/route_data:
+    name: route_data
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: route_id
+        dataType:
+          type: Integer
+      - name: from_city
+        dataType:
+          type: String
+      - name: to_city
+        dataType:
+          type: String
+      - name: distance_km
+        dataType:
+          type: Integer
+      - name: daily_frequency
+        dataType:
+          type: Integer
+      - name: avg_price_inr
+        dataType:
+          type: Integer
+    description: null
+    author: sony@prophecy.io
+    files:
+    - seeds/route_data.csv
+    createdAt: '2025-06-04 13:33:03'
+sqlSources:
+  .prophecy/metadata/sqlsources/prophecy_tmp_source__latlog:
+    name: prophecy_tmp_source__latlog
+    description: null
+    author: sony@prophecy.io
+    files:
+    - models/latlog/schema.yml
+    createdAt: '2025-05-29 22:38:24'
+    tables: []
+  .prophecy/metadata/sqlsources/sony_orch_tables:
+    name: sony.orch_tables
+    description: null
+    author: sony@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2025-03-21 07:56:46'
+    tables: []
+  .prophecy/metadata/sqlsources/Q_asd:
+    name: Q.asd
+    description: null
+    author: sony@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2025-05-28 03:59:42'
+    tables:
+    - name: asda
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields: []
+      description: ''
+      author: sony@prophecy.io
+      createdAt: '2025-05-28 03:59:42'
+      tableType: table
+  .prophecy/metadata/sqlsources/prophecy_tmp_source__amk:
+    name: prophecy_tmp_source__amk
+    description: null
+    author: sony@prophecy.io
+    files:
+    - models/amk/schema.yml
+    createdAt: '2025-06-19 11:00:22'
+    tables: []
+  .prophecy/metadata/sqlsources/qa_team_qa_database:
+    name: qa_team.qa_database
+    description: null
+    author: sony@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2025-06-03 06:23:41'
+    tables:
+    - name: ashtest
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: Series_reference
+          dataType:
+            type: String
+        - name: Period
+          dataType:
+            type: Double
+        - name: Data_value
+          dataType:
+            type: Double
+        - name: STATUS
+          dataType:
+            type: String
+        - name: UNITS
+          dataType:
+            type: String
+        - name: MAGNTUDE
+          dataType:
+            type: Bigint
+        - name: Subject
+          dataType:
+            type: String
+        - name: Group
+          dataType:
+            type: String
+        - name: Series_title_1
+          dataType:
+            type: String
+        - name: Series_title_2
+          dataType:
+            type: String
+        - name: Series_title_3
+          dataType:
+            type: String
+        - name: Series_title_4
+          dataType:
+            type: String
+        - name: Series_title_5
+          dataType:
+            type: String
+      description: null
+      author: sony@prophecy.io
+      createdAt: '2025-06-03 06:23:41'
+      tableType: table
+  .prophecy/metadata/sqlsources/prophecy_tmp_source__latlog_test2:
+    name: prophecy_tmp_source__latlog_test2
+    description: null
+    author: sony@prophecy.io
+    files:
+    - models/latlog_test2/schema.yml
+    createdAt: '2025-06-01 14:18:48'
+    tables: []
+  .prophecy/metadata/sqlsources:
+    name: ''
+    description: null
+    author: sony@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2025-03-21 08:10:53'
+    tables: []
+  .prophecy/metadata/sqlsources/sony_orch_test:
+    name: sony.orch_test
+    description: ''
+    author: sony@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2025-06-01 15:14:43'
+    tables:
+    - name: create_point_gem_seed
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: seq
+          dataType:
+            type: Bigint
+        - name: from_city
+          dataType:
+            type: String
+        - name: to_city
+          dataType:
+            type: String
+        - name: from_lat
+          dataType:
+            type: Double
+        - name: from_lon
+          dataType:
+            type: Double
+        - name: to_lat
+          dataType:
+            type: Double
+        - name: to_lon
+          dataType:
+            type: Double
+        - name: Alteryx_Distance_KM
+          dataType:
+            type: Double
+        - name: Formula_Distance_KM
+          dataType:
+            type: Double
+        - name: Difference_Alteryx_KM_2
+          dataType:
+            type: Double
+        - name: h3_approx_distance
+          dataType:
+            type: Double
+        - name: Difference_Alteryx_KM
+          dataType:
+            type: Double
+      description: null
+      author: sony@prophecy.io
+      createdAt: '2025-06-01 15:14:43'
+  .prophecy/metadata/sqlsources/prophecy_tmp_source__DO_NOT_USE_OR_YOU_WILL_BE_FIRED:
+    name: prophecy_tmp_source__DO_NOT_USE_OR_YOU_WILL_BE_FIRED
+    description: null
+    author: sony@prophecy.io
+    files:
+    - models/DO_NOT_USE_OR_YOU_WILL_BE_FIRED/schema.yml
+    createdAt: '2025-06-04 13:33:37'
+    tables: []
+  .prophecy/metadata/sqlsources/prophecy_tmp_source__latlong3:
+    name: prophecy_tmp_source__latlong3
+    description: null
+    author: sony@prophecy.io
+    files:
+    - models/latlong3/schema.yml
+    createdAt: '2025-06-03 06:30:15'
+    tables: []
+sqlUnreferencedSources: {}
+sqlPipeline:
+  name: sqlPipeline
+  description: null
+  author: sony@prophecy.io
+  createdAt: '2025-03-21 07:39:58'
+dependencies: []
+projectDependencies: {}
+flags:
+  shouldAddDefaultDependenciesIfAbsent: false
+pipelineConfigurations: {}
+sqlOrchestratorPipelines:
+  .prophecy/metadata/sqlorchestratorpipeline/latlog:
+    name: latlog
+    schema: null
+    description: null
+    author: sony@prophecy.io
+    files:
+    - models/latlog/schema.yml
+    - models/latlog_test2/schema.yml
+    - models/latlog_test2/model_latlog_test2_single_point_1_1.sql
+    - models/latlog/model_latlog_charts.sql
+    - models/latlog/model_latlog_distance_comparison.sql
+    - models/latlog/model_latlog_create_point.sql
+    - models/latlog/model_latlog_single_point.sql
+    - models/latlog_test2/model_latlog_test2_single_point_1_2.sql
+    - models/latlog/model_latlog_points.sql
+    - models/latlog_test2/model_latlog_test2_single_point_1.sql
+    - models/latlog_test2/model_latlog_test2_single_point_1_3.sql
+    - models/latlog_test2/model_latlog_test2_create_point_1_1.sql
+    - .prophecy/ide/pipelines/latlog.json
+    - pipelines/latlog.py
+    createdAt: '2025-05-14 08:19:02'
+  .prophecy/metadata/sqlorchestratorpipeline/latlong3:
+    name: latlong3
+    schema: null
+    description: null
+    author: sony@prophecy.io
+    files:
+    - models/latlong3/model_latlong3_single_point_1.sql
+    - models/latlong3/model_latlong3_single_point_1_1.sql
+    - models/latlong3/model_latlong3_single_point_1_2.sql
+    - models/latlong3/schema.yml
+    - models/latlong3/model_latlong3_single_point_1_3.sql
+    - .prophecy/ide/pipelines/latlong3.json
+    - pipelines/latlong3.py
+    createdAt: '2025-06-03 06:30:11'
+  .prophecy/metadata/sqlorchestratorpipeline/p1:
+    name: p1
+    schema: null
+    description: null
+    author: sony@prophecy.io
+    files:
+    - .prophecy/ide/pipelines/p1.json
+    - pipelines/p1.py
+    createdAt: '2025-05-08 00:40:49'
+  .prophecy/metadata/sqlorchestratorpipeline/bfg:
+    name: bfg
+    schema: null
+    description: null
+    author: sony@prophecy.io
+    files:
+    - .prophecy/ide/pipelines/bfg.json
+    - pipelines/bfg.py
+    createdAt: '2025-06-04 07:17:24'
+  .prophecy/metadata/sqlorchestratorpipeline/amk:
+    name: amk
+    schema: null
+    description: null
+    author: sony@prophecy.io
+    files:
+    - models/amk/schema.yml
+    - models/amk/model_amk_Reformat_1.sql
+    - .prophecy/ide/pipelines/amk.json
+    - pipelines/amk.py
+    createdAt: '2025-06-19 08:26:31'
+  .prophecy/metadata/sqlorchestratorpipeline/DO_NOT_USE_OR_YOU_WILL_BE_FIRED:
+    name: DO_NOT_USE_OR_YOU_WILL_BE_FIRED
+    schema: null
+    description: null
+    author: sony@prophecy.io
+    files:
+    - models/DO_NOT_USE_OR_YOU_WILL_BE_FIRED/model_DO_NOT_USE_OR_YOU_WILL_BE_FIRED_city_route_data.sql
+    - models/DO_NOT_USE_OR_YOU_WILL_BE_FIRED/schema.yml
+    - .prophecy/ide/pipelines/DO_NOT_USE_OR_YOU_WILL_BE_FIRED.json
+    - pipelines/DO_NOT_USE_OR_YOU_WILL_BE_FIRED.py
+    createdAt: '2025-06-04 01:58:13'
+  .prophecy/metadata/sqlorchestratorpipeline/latlog_test2:
+    name: latlog_test2
+    schema: null
+    description: null
+    author: sony@prophecy.io
+    files:
+    - models/latlog_test2/schema.yml
+    - models/latlog_test2/model_latlog_test2_single_point_1_1.sql
+    - models/latlog_test2/model_latlog_test2_single_point_1_2.sql
+    - models/latlog_test2/model_latlog_test2_single_point_1.sql
+    - models/latlog_test2/model_latlog_test2_single_point_1_3.sql
+    - models/latlog_test2/model_latlog_test2_create_point_1_1.sql
+    - .prophecy/ide/pipelines/latlog_test2.json
+    - pipelines/latlog_test2.py
+    createdAt: '2025-05-28 10:38:57'
+  .prophecy/metadata/sqlorchestratorpipeline/ashtest1:
+    name: ashtest1
+    schema: null
+    description: null
+    author: sony@prophecy.io
+    files:
+    - .prophecy/ide/pipelines/ashtest1.json
+    - pipelines/ashtest1.py
+    createdAt: '2025-06-11 07:06:42'
+sqlBusinessApps:
+  .prophecy/metadata/sqlbusinessapp/app2:
+    name: app2
+    schema: null
+    description: null
+    author: sony@prophecy.io
+    files:
+    - apps/app2.json
+    createdAt: '2025-06-02 23:52:39'
+    sqlOrchestrationPipelineName: latlog
+  .prophecy/metadata/sqlbusinessapp/prakharapp1:
+    name: prakharapp1
+    schema: null
+    description: null
+    author: sony@prophecy.io
+    files:
+    - apps/prakharapp1.json
+    createdAt: '2025-06-03 06:30:50'
+    sqlOrchestrationPipelineName: latlong3
+  .prophecy/metadata/sqlbusinessapp/prakharapp2:
+    name: prakharapp2
+    schema: null
+    description: null
+    author: sony@prophecy.io
+    files:
+    - apps/prakharapp2.json
+    createdAt: '2025-06-03 06:34:05'
+    sqlOrchestrationPipelineName: latlong3
+  .prophecy/metadata/sqlbusinessapp/amk:
+    name: amk
+    schema: null
+    description: null
+    author: sony@prophecy.io
+    files:
+    - apps/amk.json
+    createdAt: '2025-06-19 10:39:33'
+    sqlOrchestrationPipelineName: amk
+  .prophecy/metadata/sqlbusinessapp/apps2:
+    name: apps2
+    schema: null
+    description: null
+    author: sony@prophecy.io
+    files:
+    - apps/apps2.json
+    createdAt: '2025-06-02 23:52:39'
+    sqlOrchestrationPipelineName: latlog_test2
+  .prophecy/metadata/sqlbusinessapp/newAppPrakhar2:
+    name: newAppPrakhar2
+    schema: null
+    description: null
+    author: sony@prophecy.io
+    files:
+    - apps/newAppPrakhar2.json
+    createdAt: '2025-06-05 08:18:23'
+    sqlOrchestrationPipelineName: latlog_test2
+  .prophecy/metadata/sqlbusinessapp/ads:
+    name: ads
+    schema: null
+    description: null
+    author: sony@prophecy.io
+    files:
+    - apps/ads.json
+    createdAt: '2025-06-04 07:18:10'
+    sqlOrchestrationPipelineName: bfg
+  .prophecy/metadata/sqlbusinessapp/app:
+    name: app
+    schema: null
+    description: null
+    author: sony@prophecy.io
+    files:
+    - apps/app.json
+    createdAt: '2025-05-29 08:05:12'
+    sqlOrchestrationPipelineName: p3
+  .prophecy/metadata/sqlbusinessapp/app5:
+    name: app5
+    schema: null
+    description: null
+    author: sony@prophecy.io
+    files:
+    - apps/app5.json
+    createdAt: '2025-06-02 23:58:09'
+    sqlOrchestrationPipelineName: latlog
+  .prophecy/metadata/sqlbusinessapp/App1:
+    name: App1
+    schema: null
+    description: null
+    author: sony@prophecy.io
+    files:
+    - apps/App1.json
+    createdAt: '2025-06-02 23:52:39'
+    sqlOrchestrationPipelineName: latlog
+  .prophecy/metadata/sqlbusinessapp/testappash:
+    name: testappash
+    schema: null
+    description: null
+    author: sony@prophecy.io
+    files:
+    - apps/testappash.json
+    createdAt: '2025-06-11 07:08:37'
+    sqlOrchestrationPipelineName: ashtest1
+  .prophecy/metadata/sqlbusinessapp/app4:
+    name: app4
+    schema: null
+    description: null
+    author: sony@prophecy.io
+    files:
+    - apps/app4.json
+    createdAt: '2025-06-02 23:52:39'
+    sqlOrchestrationPipelineName: latlog

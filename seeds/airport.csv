@@ -1,0 +1,4 @@
+city,airport_code,airport_name,state,latitude,longitude,airport_type,is_hub
+Delhi,DEL,Indira Gandhi International Airport,Delhi,28.7,77.1,International,Yes
+Mumbai,BOM,Chhatrapati Shivaji Maharaj International Airport,Maharashtra,19.08,72.88,International,Yes
+Bangalore,BLR,Kempegowda International Airport Bengaluru,Karnataka,12.97,77.59,International,Yes

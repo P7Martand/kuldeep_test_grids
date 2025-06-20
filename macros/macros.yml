@@ -1,0 +1,9 @@
+---
+version: 2
+macros:
+- name: "G1"
+  arguments:
+  - name: "parameter1"
+    type: "value"
+    description: "{\"ProphecyType\": \"value\"}"
+  macroType: "query"

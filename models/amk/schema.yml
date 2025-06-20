@@ -1,0 +1,16 @@
+---
+version: 2
+models:
+- name: "model_amk_Reformat_1"
+  tags:
+  - "prophecy_temp"
+sources:
+- name: "prophecy_tmp_source__amk"
+  database: "sony"
+  schema: "orch_test"
+  config:
+    enabled: true
+  tables:
+  - name: "prophecy_tmp__mc3c5y15__amk__Reformat_1"
+    tags:
+    - "prophecy_temp"

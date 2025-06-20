@@ -1,0 +1,298 @@
+{
+  "id" : "model_latlong3_single_point_1_2",
+  "metainfo" : {
+    "label" : "model_latlong3_single_point_1_2",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "alias" : "\"prophecy_tmp__mbrjvs6c__latlong3__single_point_1_2\"",
+        "materialized" : "table",
+        "database" : "\"sony\"",
+        "schema" : "\"orch_test\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "prophecy_tmp__mbrjvs6c__latlong3__single_point_1_2" : {
+      "id" : "prophecy_tmp__mbrjvs6c__latlong3__single_point_1_2",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "single_point_1_2",
+        "phase" : 0
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM single_point_1_2\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_1_1",
+          "slug" : "input_port_1_1"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_1_1",
+          "slug" : "output_port_1_1"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "prophecy_tmp__mbrjvs6c__latlong3__dataLatLong_csv_1" : {
+      "id" : "prophecy_tmp__mbrjvs6c__latlong3__dataLatLong_csv_1",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "dataLatLong_csv_1",
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "prophecy_tmp__mbrjvs6c__latlong3__dataLatLong_csv_1",
+          "sourceType" : "Source",
+          "sourceName" : "prophecy_tmp_source__latlong3",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "output_port_0_1",
+          "slug" : "output_port_0_1"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "vfbnZNGZ0nSdpTsm8W3Bu$$yqyh-6iiTld92CN2KjtSv" : {
+      "id" : "vfbnZNGZ0nSdpTsm8W3Bu$$yqyh-6iiTld92CN2KjtSv",
+      "component" : "Limit",
+      "metadata" : {
+        "label" : "single_point_1_2",
+        "x" : 600,
+        "y" : 320,
+        "phase" : 0
+      },
+      "properties" : {
+        "limit" : {
+          "expression" : "1"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "b2s7zHNf1_Zempyua5kqw$$X8vO19u79_yOkxrf7b2_3",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "qJrjgVF6R2xiqYwxKrcnv$$jh5Z6ZlFy-O5oiMxSAXl1",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "mSg-VuJpVLslRa_WMoP_h$$jEk3pBjetnnyarunCJe07" : {
+      "id" : "mSg-VuJpVLslRa_WMoP_h$$jEk3pBjetnnyarunCJe07",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "create_point_1_1",
+        "x" : 200,
+        "y" : 320,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "yL811n0gSLzvckJvf7CVo$$PJveou88ltPkV06larwdO##seq", "yL811n0gSLzvckJvf7CVo$$PJveou88ltPkV06larwdO##from_city", "yL811n0gSLzvckJvf7CVo$$PJveou88ltPkV06larwdO##to_city", "yL811n0gSLzvckJvf7CVo$$PJveou88ltPkV06larwdO##from_lon", "yL811n0gSLzvckJvf7CVo$$PJveou88ltPkV06larwdO##from_lat", "yL811n0gSLzvckJvf7CVo$$PJveou88ltPkV06larwdO##to_lon", "yL811n0gSLzvckJvf7CVo$$PJveou88ltPkV06larwdO##to_lat", "yL811n0gSLzvckJvf7CVo$$PJveou88ltPkV06larwdO##Alteryx_Distance_KM", "yL811n0gSLzvckJvf7CVo$$PJveou88ltPkV06larwdO##Formula_Distance_KM", "yL811n0gSLzvckJvf7CVo$$PJveou88ltPkV06larwdO##Difference_Alteryx_KM_2", "yL811n0gSLzvckJvf7CVo$$PJveou88ltPkV06larwdO##h3_approx_distance", "yL811n0gSLzvckJvf7CVo$$PJveou88ltPkV06larwdO##Difference_Alteryx_KM" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "seq"
+          },
+          "alias" : "seq",
+          "_row_id" : "2023309115"
+        }, {
+          "expression" : {
+            "expression" : "from_city"
+          },
+          "alias" : "from_city",
+          "_row_id" : "2145984674"
+        }, {
+          "expression" : {
+            "expression" : "to_city"
+          },
+          "alias" : "to_city",
+          "_row_id" : "1110302321"
+        }, {
+          "expression" : {
+            "expression" : "CONCAT('POINT(', from_lon, ' ', from_lat, ')')"
+          },
+          "alias" : "from_wkt",
+          "_row_id" : "71232349"
+        }, {
+          "expression" : {
+            "expression" : "CONCAT('POINT(', to_lon, ' ', to_lat, ')')"
+          },
+          "alias" : "to_wkt",
+          "_row_id" : "1060444723"
+        }, {
+          "expression" : {
+            "expression" : "Alteryx_Distance_KM"
+          },
+          "alias" : "Alteryx_Distance_KM",
+          "_row_id" : "1159842737"
+        }, {
+          "expression" : {
+            "expression" : "Formula_Distance_KM"
+          },
+          "alias" : "Formula_Distance_KM",
+          "_row_id" : "1390834828"
+        }, {
+          "expression" : {
+            "expression" : "Difference_Alteryx_KM_2"
+          },
+          "alias" : "Difference_Alteryx_KM_2",
+          "_row_id" : "2126289909"
+        }, {
+          "expression" : {
+            "expression" : "h3_approx_distance"
+          },
+          "alias" : "h3_approx_distance",
+          "_row_id" : "1770210937"
+        }, {
+          "expression" : {
+            "expression" : "Difference_Alteryx_KM"
+          },
+          "alias" : "Difference_Alteryx_KM",
+          "_row_id" : "1717492824"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "yL811n0gSLzvckJvf7CVo$$PJveou88ltPkV06larwdO",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "03h86aR1W9R01-SW5Y0KW$$M2gfhgEzTvf0phlY1vHob",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "-CUdPvjuhlp1wZJwnCDsy$$eJgTS0Vb9UBCNotIUqsLd" : {
+      "id" : "-CUdPvjuhlp1wZJwnCDsy$$eJgTS0Vb9UBCNotIUqsLd",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "points_1_2",
+        "x" : 400,
+        "y" : 320,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "XU9PuXjwuRRuhWJ0IoVLc$$_y_Q2uWjkfMsL4S9SSK1w##seq", "XU9PuXjwuRRuhWJ0IoVLc$$_y_Q2uWjkfMsL4S9SSK1w##from_city", "XU9PuXjwuRRuhWJ0IoVLc$$_y_Q2uWjkfMsL4S9SSK1w##to_city", "XU9PuXjwuRRuhWJ0IoVLc$$_y_Q2uWjkfMsL4S9SSK1w##from_wkt", "XU9PuXjwuRRuhWJ0IoVLc$$_y_Q2uWjkfMsL4S9SSK1w##Alteryx_Distance_KM", "XU9PuXjwuRRuhWJ0IoVLc$$_y_Q2uWjkfMsL4S9SSK1w##Formula_Distance_KM", "XU9PuXjwuRRuhWJ0IoVLc$$_y_Q2uWjkfMsL4S9SSK1w##Difference_Alteryx_KM_2", "XU9PuXjwuRRuhWJ0IoVLc$$_y_Q2uWjkfMsL4S9SSK1w##h3_approx_distance", "XU9PuXjwuRRuhWJ0IoVLc$$_y_Q2uWjkfMsL4S9SSK1w##Difference_Alteryx_KM" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "seq"
+          },
+          "alias" : "seq",
+          "_row_id" : "34065643"
+        }, {
+          "expression" : {
+            "expression" : "from_city"
+          },
+          "alias" : "from_city",
+          "_row_id" : "33563606"
+        }, {
+          "expression" : {
+            "expression" : "to_city"
+          },
+          "alias" : "to_city",
+          "_row_id" : "273269488"
+        }, {
+          "expression" : {
+            "expression" : "from_wkt"
+          },
+          "alias" : "from_wkt",
+          "_row_id" : "2068057143"
+        }, {
+          "expression" : {
+            "expression" : "Alteryx_Distance_KM"
+          },
+          "alias" : "Alteryx_Distance_KM",
+          "_row_id" : "493531372"
+        }, {
+          "expression" : {
+            "expression" : "Formula_Distance_KM"
+          },
+          "alias" : "Formula_Distance_KM",
+          "_row_id" : "1618567376"
+        }, {
+          "expression" : {
+            "expression" : "Difference_Alteryx_KM_2"
+          },
+          "alias" : "Difference_Alteryx_KM_2",
+          "_row_id" : "551771342"
+        }, {
+          "expression" : {
+            "expression" : "h3_approx_distance"
+          },
+          "alias" : "h3_approx_distance",
+          "_row_id" : "1356397681"
+        }, {
+          "expression" : {
+            "expression" : "Difference_Alteryx_KM"
+          },
+          "alias" : "Difference_Alteryx_KM",
+          "_row_id" : "2038540104"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "XU9PuXjwuRRuhWJ0IoVLc$$_y_Q2uWjkfMsL4S9SSK1w",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "tPoC0a_yl7X1bOSIsLZa8$$pVeomLr1PF814T4GXgI6r",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "conn_vfbnZNGZ0nSdpTsm8W3Bu$$yqyh-6iiTld92CN2KjtSv_prophecy_tmp__mbrjvs6c__latlong3__single_point_1_2",
+    "source" : "vfbnZNGZ0nSdpTsm8W3Bu$$yqyh-6iiTld92CN2KjtSv",
+    "sourcePort" : "qJrjgVF6R2xiqYwxKrcnv$$jh5Z6ZlFy-O5oiMxSAXl1",
+    "target" : "prophecy_tmp__mbrjvs6c__latlong3__single_point_1_2",
+    "targetPort" : "input_port_1_1"
+  }, {
+    "id" : "0nNgp7sXXgJqR3NE2CQRK",
+    "source" : "-CUdPvjuhlp1wZJwnCDsy$$eJgTS0Vb9UBCNotIUqsLd",
+    "sourcePort" : "tPoC0a_yl7X1bOSIsLZa8$$pVeomLr1PF814T4GXgI6r",
+    "target" : "vfbnZNGZ0nSdpTsm8W3Bu$$yqyh-6iiTld92CN2KjtSv",
+    "targetPort" : "b2s7zHNf1_Zempyua5kqw$$X8vO19u79_yOkxrf7b2_3"
+  }, {
+    "id" : "v1PWWM4vbeOEjt5nsnQRL",
+    "source" : "mSg-VuJpVLslRa_WMoP_h$$jEk3pBjetnnyarunCJe07",
+    "sourcePort" : "03h86aR1W9R01-SW5Y0KW$$M2gfhgEzTvf0phlY1vHob",
+    "target" : "-CUdPvjuhlp1wZJwnCDsy$$eJgTS0Vb9UBCNotIUqsLd",
+    "targetPort" : "XU9PuXjwuRRuhWJ0IoVLc$$_y_Q2uWjkfMsL4S9SSK1w"
+  }, {
+    "id" : "conn_prophecy_tmp__mbrjvs6c__latlong3__dataLatLong_csv_1_mSg-VuJpVLslRa_WMoP_h$$jEk3pBjetnnyarunCJe07_yL811n0gSLzvckJvf7CVo$$PJveou88ltPkV06larwdO",
+    "source" : "prophecy_tmp__mbrjvs6c__latlong3__dataLatLong_csv_1",
+    "sourcePort" : "output_port_0_1",
+    "target" : "mSg-VuJpVLslRa_WMoP_h$$jEk3pBjetnnyarunCJe07",
+    "targetPort" : "yL811n0gSLzvckJvf7CVo$$PJveou88ltPkV06larwdO"
+  } ],
+  "component" : "Model"
+}

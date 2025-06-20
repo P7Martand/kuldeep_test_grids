@@ -1,0 +1,40 @@
+---
+version: 2
+models:
+- name: "model_latlog_charts"
+  tags:
+  - "prophecy_temp"
+- name: "model_latlog_create_point"
+  tags:
+  - "prophecy_temp"
+- name: "model_latlog_distance_comparison"
+  tags:
+  - "prophecy_temp"
+- name: "model_latlog_points"
+  tags:
+  - "prophecy_temp"
+- name: "model_latlog_single_point"
+  tags:
+  - "prophecy_temp"
+sources:
+- name: "prophecy_tmp_source__latlog"
+  database: "sony"
+  schema: "orch_test"
+  config:
+    enabled: true
+  tables:
+  - name: "prophecy_tmp__mc001kf5__latlog__charts"
+    tags:
+    - "prophecy_temp"
+  - name: "prophecy_tmp__mc001kf5__latlog__create_point"
+    tags:
+    - "prophecy_temp"
+  - name: "prophecy_tmp__mc001kf5__latlog__distance_comparison"
+    tags:
+    - "prophecy_temp"
+  - name: "prophecy_tmp__mc001kf5__latlog__points"
+    tags:
+    - "prophecy_temp"
+  - name: "prophecy_tmp__mc001kf5__latlog__single_point"
+    tags:
+    - "prophecy_temp"

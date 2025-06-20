@@ -1,0 +1,36 @@
+---
+version: 2
+models:
+- name: "m4"
+  columns:
+  - name: "h3_approx_distance"
+    dataType:
+      type: "Float"
+  - name: "Difference_Alteryx_KM"
+    dataType:
+      type: "Float"
+  - name: "from_wkt"
+    dataType:
+      type: "String"
+  - name: "Alteryx_Distance_KM"
+    dataType:
+      type: "Float"
+  - name: "Difference_Alteryx_KM_2"
+    dataType:
+      type: "Float"
+  - name: "seq"
+    dataType:
+      type: "Integer"
+  - name: "Formula_Distance_KM"
+    dataType:
+      type: "Float"
+  - name: "to_city"
+    dataType:
+      type: "String"
+  - name: "to_wkt"
+    dataType:
+      type: "String"
+  - name: "from_city"
+    dataType:
+      type: "String"
+  tests: []

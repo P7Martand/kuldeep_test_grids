@@ -1,0 +1,16 @@
+---
+version: 2
+models:
+- name: "model_DO_NOT_USE_OR_YOU_WILL_BE_FIRED_city_route_data"
+  tags:
+  - "prophecy_temp"
+sources:
+- name: "prophecy_tmp_source__DO_NOT_USE_OR_YOU_WILL_BE_FIRED"
+  database: "sony"
+  schema: "orch_test"
+  config:
+    enabled: true
+  tables:
+  - name: "prophecy_tmp__mbrjvhe7__DO_NOT_USE_OR_YOU_WILL_BE_FIRED__city_route_data"
+    tags:
+    - "prophecy_temp"

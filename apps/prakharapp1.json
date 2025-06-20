@@ -1,0 +1,69 @@
+{
+  "id" : "prakharapp1",
+  "metainfo" : {
+    "description" : "",
+    "pipelineId" : "latlong3"
+  },
+  "definition" : {
+    "template" : [ {
+      "key" : "LfpVW0k4dnD_5vkflytIm",
+      "id" : "DataPreview1",
+      "type" : "DataPreview",
+      "properties" : {
+        "tableId" : "iNqRADdTHAvEIN7QSLNrP$$CN6LES4tu7DwELLYWShLw",
+        "columns" : [ {
+          "column" : "seq",
+          "label" : "seq",
+          "selected" : true
+        }, {
+          "column" : "from_city",
+          "label" : "from_city",
+          "selected" : true
+        }, {
+          "column" : "to_city",
+          "label" : "to_city",
+          "selected" : true
+        }, {
+          "column" : "from_lat",
+          "label" : "from_lat",
+          "selected" : true
+        }, {
+          "column" : "from_lon",
+          "label" : "from_lon",
+          "selected" : true
+        }, {
+          "column" : "to_lat",
+          "label" : "to_lat",
+          "selected" : true
+        }, {
+          "column" : "to_lon",
+          "label" : "to_lon",
+          "selected" : true
+        }, {
+          "column" : "Alteryx_Distance_KM",
+          "label" : "Alteryx_Distance_KM",
+          "selected" : true
+        }, {
+          "column" : "Formula_Distance_KM",
+          "label" : "Formula_Distance_KM",
+          "selected" : true
+        }, {
+          "column" : "Difference_Alteryx_KM_2",
+          "label" : "Difference_Alteryx_KM_2",
+          "selected" : true
+        }, {
+          "column" : "h3_approx_distance",
+          "label" : "h3_approx_distance",
+          "selected" : true
+        }, {
+          "column" : "Difference_Alteryx_KM",
+          "label" : "Difference_Alteryx_KM",
+          "selected" : true
+        } ],
+        "title" : "create_point_gem_seed_3"
+      },
+      "errors" : { }
+    } ]
+  },
+  "instances" : { }
+}

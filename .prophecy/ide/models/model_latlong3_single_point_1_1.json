@@ -1,0 +1,271 @@
+{
+  "id" : "model_latlong3_single_point_1_1",
+  "metainfo" : {
+    "label" : "model_latlong3_single_point_1_1",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "alias" : "\"prophecy_tmp__mbrjvs6c__latlong3__single_point_1_1\"",
+        "materialized" : "table",
+        "database" : "\"sony\"",
+        "schema" : "\"orch_test\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "eslpRWxH3x2raQRvtIsgY$$o75Lz1ZsXggvEhxR-ajat" : {
+      "id" : "eslpRWxH3x2raQRvtIsgY$$o75Lz1ZsXggvEhxR-ajat",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "points_1_1",
+        "x" : 400,
+        "y" : -40,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "bHUfLCtGdn7drbT_RHg5O$$NdQDSN8J_4YRAdpk5R-oD##seq", "bHUfLCtGdn7drbT_RHg5O$$NdQDSN8J_4YRAdpk5R-oD##from_city", "bHUfLCtGdn7drbT_RHg5O$$NdQDSN8J_4YRAdpk5R-oD##to_city", "bHUfLCtGdn7drbT_RHg5O$$NdQDSN8J_4YRAdpk5R-oD##from_wkt", "bHUfLCtGdn7drbT_RHg5O$$NdQDSN8J_4YRAdpk5R-oD##to_wkt", "bHUfLCtGdn7drbT_RHg5O$$NdQDSN8J_4YRAdpk5R-oD##distance_km", "bHUfLCtGdn7drbT_RHg5O$$NdQDSN8J_4YRAdpk5R-oD##growth_rate" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "seq"
+          },
+          "alias" : "seq",
+          "_row_id" : "34065643"
+        }, {
+          "expression" : {
+            "expression" : "from_city"
+          },
+          "alias" : "from_city",
+          "_row_id" : "33563606"
+        }, {
+          "expression" : {
+            "expression" : "to_city"
+          },
+          "alias" : "to_city",
+          "_row_id" : "273269488"
+        }, {
+          "expression" : {
+            "expression" : "from_wkt"
+          },
+          "alias" : "from_wkt",
+          "_row_id" : "2068057143"
+        }, {
+          "expression" : {
+            "expression" : "to_wkt"
+          },
+          "alias" : "to_wkt",
+          "_row_id" : "1509788166"
+        }, {
+          "expression" : {
+            "expression" : "distance_km"
+          },
+          "alias" : "distance_km",
+          "_row_id" : "1663729045"
+        }, {
+          "expression" : {
+            "expression" : "growth_rate"
+          },
+          "alias" : "growth_rate",
+          "_row_id" : "1243551073"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "bHUfLCtGdn7drbT_RHg5O$$NdQDSN8J_4YRAdpk5R-oD",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "-1JV0D1MvKrTB4czrgAtj$$Ph85bAX-1f-tHvUxp6baV",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "wcxl03kY54EhA9bwzyLlH$$8t-MNqjB8YF30SG7Mdbe2" : {
+      "id" : "wcxl03kY54EhA9bwzyLlH$$8t-MNqjB8YF30SG7Mdbe2",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "test_seed",
+        "x" : 0,
+        "y" : -40,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "test_seed",
+          "sourceType" : "Seed"
+        },
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "_Pr5F42SRTLz8MYtMmVju$$BmBxQqvszoS7xJ3XbIf1U",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "prophecy_tmp__mbrjvs6c__latlong3__single_point_1_1" : {
+      "id" : "prophecy_tmp__mbrjvs6c__latlong3__single_point_1_1",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "single_point_1_1",
+        "phase" : 0
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM single_point_1_1\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_4_1",
+          "slug" : "input_port_4_1"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_4_1",
+          "slug" : "output_port_4_1"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "mHcS9avzZC-bQP3vyvAJ1$$FSqa3Jsss45s7DDlDmN7-" : {
+      "id" : "mHcS9avzZC-bQP3vyvAJ1$$FSqa3Jsss45s7DDlDmN7-",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "create_point_1_2",
+        "x" : 200,
+        "y" : -40,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "I4s4mfw7yLjpyjig-d4ix$$NyyuPk8wLB3Zc4F1DHF1P##seq", "I4s4mfw7yLjpyjig-d4ix$$NyyuPk8wLB3Zc4F1DHF1P##from_city", "I4s4mfw7yLjpyjig-d4ix$$NyyuPk8wLB3Zc4F1DHF1P##to_city", "I4s4mfw7yLjpyjig-d4ix$$NyyuPk8wLB3Zc4F1DHF1P##from_lon", "I4s4mfw7yLjpyjig-d4ix$$NyyuPk8wLB3Zc4F1DHF1P##from_lat", "I4s4mfw7yLjpyjig-d4ix$$NyyuPk8wLB3Zc4F1DHF1P##to_lon", "I4s4mfw7yLjpyjig-d4ix$$NyyuPk8wLB3Zc4F1DHF1P##to_lat", "I4s4mfw7yLjpyjig-d4ix$$NyyuPk8wLB3Zc4F1DHF1P##distance_km", "I4s4mfw7yLjpyjig-d4ix$$NyyuPk8wLB3Zc4F1DHF1P##growth_rate" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "seq"
+          },
+          "alias" : "seq",
+          "_row_id" : "2023309115"
+        }, {
+          "expression" : {
+            "expression" : "from_city"
+          },
+          "alias" : "from_city",
+          "_row_id" : "2145984674"
+        }, {
+          "expression" : {
+            "expression" : "to_city"
+          },
+          "alias" : "to_city",
+          "_row_id" : "1110302321"
+        }, {
+          "expression" : {
+            "expression" : "CONCAT('POINT(', from_lon, ' ', from_lat, ')')"
+          },
+          "alias" : "from_wkt",
+          "_row_id" : "71232349"
+        }, {
+          "expression" : {
+            "expression" : "CONCAT('POINT(', to_lon, ' ', to_lat, ')')"
+          },
+          "alias" : "to_wkt",
+          "_row_id" : "1060444723"
+        }, {
+          "expression" : {
+            "expression" : "distance_km"
+          },
+          "alias" : "distance_km",
+          "_row_id" : "1344598369"
+        }, {
+          "expression" : {
+            "expression" : "growth_rate"
+          },
+          "alias" : "growth_rate",
+          "_row_id" : "1235246555"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "I4s4mfw7yLjpyjig-d4ix$$NyyuPk8wLB3Zc4F1DHF1P",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "mmN9Tg3376jB87Qk5CpGD$$bS_TZp5C7RPEdQLKrXeNP",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "W9PBK27dzG5k82Y3ecx3L$$pL2bscYiDqbUOgZAEvKnO" : {
+      "id" : "W9PBK27dzG5k82Y3ecx3L$$pL2bscYiDqbUOgZAEvKnO",
+      "component" : "Limit",
+      "metadata" : {
+        "label" : "single_point_1_1",
+        "x" : 600,
+        "y" : -40,
+        "phase" : 0
+      },
+      "properties" : {
+        "limit" : {
+          "expression" : "1"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "obSOtOGqIoe8XveFEOd_P$$3CH9V1PilZ1RCO3p62RJo",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "pCafeRr-UpbMWpDKH_xb1$$suTQX1cmMwBq3UUQOHaxM",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "conn_W9PBK27dzG5k82Y3ecx3L$$pL2bscYiDqbUOgZAEvKnO_prophecy_tmp__mbrjvs6c__latlong3__single_point_1_1",
+    "source" : "W9PBK27dzG5k82Y3ecx3L$$pL2bscYiDqbUOgZAEvKnO",
+    "sourcePort" : "pCafeRr-UpbMWpDKH_xb1$$suTQX1cmMwBq3UUQOHaxM",
+    "target" : "prophecy_tmp__mbrjvs6c__latlong3__single_point_1_1",
+    "targetPort" : "input_port_4_1"
+  }, {
+    "id" : "Zot3rd7OXrw6aoHLiVQoP",
+    "source" : "eslpRWxH3x2raQRvtIsgY$$o75Lz1ZsXggvEhxR-ajat",
+    "sourcePort" : "-1JV0D1MvKrTB4czrgAtj$$Ph85bAX-1f-tHvUxp6baV",
+    "target" : "W9PBK27dzG5k82Y3ecx3L$$pL2bscYiDqbUOgZAEvKnO",
+    "targetPort" : "obSOtOGqIoe8XveFEOd_P$$3CH9V1PilZ1RCO3p62RJo"
+  }, {
+    "id" : "f0whg6q-PT87kdeCnj7V_",
+    "source" : "mHcS9avzZC-bQP3vyvAJ1$$FSqa3Jsss45s7DDlDmN7-",
+    "sourcePort" : "mmN9Tg3376jB87Qk5CpGD$$bS_TZp5C7RPEdQLKrXeNP",
+    "target" : "eslpRWxH3x2raQRvtIsgY$$o75Lz1ZsXggvEhxR-ajat",
+    "targetPort" : "bHUfLCtGdn7drbT_RHg5O$$NdQDSN8J_4YRAdpk5R-oD"
+  }, {
+    "id" : "OJ07NhkFdZh5nfSXDst39",
+    "source" : "wcxl03kY54EhA9bwzyLlH$$8t-MNqjB8YF30SG7Mdbe2",
+    "sourcePort" : "_Pr5F42SRTLz8MYtMmVju$$BmBxQqvszoS7xJ3XbIf1U",
+    "target" : "mHcS9avzZC-bQP3vyvAJ1$$FSqa3Jsss45s7DDlDmN7-",
+    "targetPort" : "I4s4mfw7yLjpyjig-d4ix$$NyyuPk8wLB3Zc4F1DHF1P"
+  } ],
+  "component" : "Model"
+}

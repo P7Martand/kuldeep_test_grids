@@ -1,0 +1,1549 @@
+{
+  "id" : "latlog_test2",
+  "metainfo" : {
+    "label" : "latlog_test2",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "schedule" : {
+      "cron" : "* 0 2 * * * *",
+      "timeZone" : "GMT",
+      "emailOnSuccess" : false,
+      "emailOnFailure" : false,
+      "emailOnStart" : false,
+      "emails" : [ "email@gmail.com" ],
+      "enabled" : false
+    },
+    "isTranspiledPipeline" : false
+  },
+  "processes" : {
+    "hIYSowDckMOWP1wRD653-" : {
+      "id" : "hIYSowDckMOWP1wRD653-",
+      "component" : "OrchestrationSource",
+      "kind" : "S3Source",
+      "metadata" : {
+        "label" : "dataLatLongPoint_csv_1",
+        "x" : 220,
+        "y" : 820,
+        "phase" : 0
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "s3",
+          "properties" : {
+            "id" : "s3"
+          },
+          "type" : "connector"
+        },
+        "format" : {
+          "kind" : "csv",
+          "properties" : {
+            "allowLazyQuotes" : false,
+            "allowEmptyColumnNames" : true,
+            "description" : "Distance comparison data between cities, aiding in geographical analysis and route optimization.",
+            "separator" : ",",
+            "nullValue" : "",
+            "schema" : {
+              "providerType" : "Arrow",
+              "fields" : [ {
+                "name" : "seq",
+                "dataType" : {
+                  "type" : "int64"
+                },
+                "description" : "A unique sequence number for each record in the dataset"
+              }, {
+                "name" : "from_city",
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "description" : "The city from which the distance measurement starts"
+              }, {
+                "name" : "to_city",
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "description" : "The destination city for the route"
+              }, {
+                "name" : "from_wkt",
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "description" : "Well-Known Text representation of the starting location"
+              }, {
+                "name" : "to_wkt",
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "description" : "Well-known text representation of the destination city"
+              }, {
+                "name" : "Alteryx_Distance_KM",
+                "dataType" : {
+                  "type" : "float64"
+                },
+                "description" : "Distance between two cities calculated using Alteryx in kilometers"
+              }, {
+                "name" : "Formula_Distance_KM",
+                "dataType" : {
+                  "type" : "float64"
+                },
+                "description" : "Calculated distance between two cities based on a specific formula"
+              }, {
+                "name" : "Difference_Alteryx_KM_2",
+                "dataType" : {
+                  "type" : "float64"
+                },
+                "description" : "The difference in distance calculated by Alteryx compared to another method."
+              }, {
+                "name" : "h3_approx_distance",
+                "dataType" : {
+                  "type" : "float64"
+                },
+                "description" : "Approximate distance calculated using H3 indexing method."
+              }, {
+                "name" : "Difference_Alteryx_KM",
+                "dataType" : {
+                  "type" : "float64"
+                },
+                "description" : "The difference in distance calculated by Alteryx compared to another method."
+              } ]
+            },
+            "additionalProperties" : {
+              "copilot" : {
+                "datasetDescriptionStatus" : "fromCopilot"
+              }
+            },
+            "header" : true
+          }
+        },
+        "properties" : {
+          "filePath" : "/datasets/orchestration_datasets/csv/arun/dataLatLongPoint.csv"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "f10baca5-25ef-4a65-8cd7-a693d78950b3",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Alteryx_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Formula_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM_2",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "h3_approx_distance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ]
+      }
+    },
+    "Hd8p3ZHl_yQZz0HeOy6GH$$GNXfqUcQt6PLYOKdIaOJm" : {
+      "id" : "Hd8p3ZHl_yQZz0HeOy6GH$$GNXfqUcQt6PLYOKdIaOJm",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "model_latlog_test2_single_point_1_2",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "model_latlog_test2_single_point_1_2"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "prophecy_tmp__mbz0tvui__latlog_test2__single_point_1_2", "Hd8p3ZHl_yQZz0HeOy6GH$$GNXfqUcQt6PLYOKdIaOJm", "_GNadeSeKe5-myKg3xvxI$$U2oMMBDzPbmqCcUuGec4P", "prophecy_tmp__mbz0tvui__latlog_test2__create_point_1_1" ],
+        "type" : "table",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "model_latlog_test2_single_point_1_2_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "model_latlog_test2_single_point_1_2_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "zHBqr0lwtDTJ4kze2RlwP" : {
+      "id" : "zHBqr0lwtDTJ4kze2RlwP",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "create_point_gem_seed_2",
+        "x" : 640,
+        "y" : 820,
+        "phase" : 0
+      },
+      "properties" : {
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        },
+        "table" : {
+          "name" : "create_point_gem_seed",
+          "sourceType" : "Table",
+          "sourceName" : "sony.orch_test",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "1Mb3qHkgshYniGibdhcyi",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_lat",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "from_lon",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "to_lat",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "to_lon",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Alteryx_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Formula_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM_2",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "h3_approx_distance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "bXcQSDauyWrF1DgtOBoDE",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_lat",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "from_lon",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "to_lat",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "to_lon",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Alteryx_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Formula_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM_2",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "h3_approx_distance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "UxtfvXdgMcjxEsN5zHI36$$Ja_NcHqIBuAJf_VGwvcWL" : {
+      "id" : "UxtfvXdgMcjxEsN5zHI36$$Ja_NcHqIBuAJf_VGwvcWL",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "model_latlog_test2_single_point_1",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "model_latlog_test2_single_point_1"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "prophecy_tmp__mbz0tvui__latlog_test2__single_point_1", "UxtfvXdgMcjxEsN5zHI36$$Ja_NcHqIBuAJf_VGwvcWL", "BISbrT_ZrXmM9i1ykfDDI$$puYGVF8X33pvL1lxkIYa7", "ctWtQcx3kD6P9TH_nKbts$$OMIpzbPLZWX6TKcETVPsW", "4rZQbIkpiASw_Yt_rrW4k" ],
+        "type" : "table",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "model_latlog_test2_single_point_1_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "model_latlog_test2_single_point_1_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "xY2BBQenPHqanhREczm4q$$KXn2Xnw2rsp1E0Gxu82m4" : {
+      "id" : "xY2BBQenPHqanhREczm4q$$KXn2Xnw2rsp1E0Gxu82m4",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "seedtest2",
+        "x" : -220,
+        "y" : 360,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "seedtest2",
+          "sourceType" : "Seed"
+        },
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "gPYcNrxJgik9qpfEhlbgq$$eb-ef7bF_giNvWmhKO_7-",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Alteryx_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Formula_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM_2",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "h3_approx_distance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "q6_TMcUCMVGjH0m0vhfQP$$3d5lsPDDtzoWp-PPSurx8",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Alteryx_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Formula_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM_2",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "h3_approx_distance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "jeGub_iyJ0wclcbH8h1Ip$$bBye_3eKIZV7lepf58SjT" : {
+      "id" : "jeGub_iyJ0wclcbH8h1Ip$$bBye_3eKIZV7lepf58SjT",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "model_latlog_test2_single_point_1_1",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "model_latlog_test2_single_point_1_1"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "prophecy_tmp__mbz0tvui__latlog_test2__single_point_1_1", "jeGub_iyJ0wclcbH8h1Ip$$bBye_3eKIZV7lepf58SjT", "Mdire8r5UdKJ0ZvbpKW1P$$BmBfr1weUWy-5_nhy79Sq", "MpnEm_O0qvNSrWX8JW4UW$$qsMBkbKmDRcXz1McVmXBi", "wV9fYg3_TRJawuZC_eJHj$$UaCfW7YEgaI-r6H6qLFkk" ],
+        "type" : "table",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "model_latlog_test2_single_point_1_1_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "model_latlog_test2_single_point_1_1_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "XzI5fnYuQyajZweAtoXth" : {
+      "id" : "XzI5fnYuQyajZweAtoXth",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "create_point_gem_seed_1",
+        "x" : 440,
+        "y" : 820,
+        "phase" : 0
+      },
+      "properties" : {
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        },
+        "table" : {
+          "name" : "create_point_gem_seed",
+          "sourceType" : "Table",
+          "sourceName" : "sony.orch_test",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "KQMmSRQPsIUq8yEADBZ_D",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "cY5Q7RNtsm4fdNPV4x8eU",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_lat",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "from_lon",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "to_lat",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "to_lon",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Alteryx_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Formula_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM_2",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "h3_approx_distance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "NV9DPoqzvKJZbKu591rvy" : {
+      "id" : "NV9DPoqzvKJZbKu591rvy",
+      "component" : "OrchestrationSource",
+      "kind" : "S3Source",
+      "metadata" : {
+        "label" : "dataLatLong_csv_1",
+        "x" : 20,
+        "y" : 320,
+        "phase" : 0
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "s3",
+          "properties" : {
+            "id" : "s3"
+          },
+          "type" : "connector"
+        },
+        "format" : {
+          "kind" : "csv",
+          "properties" : {
+            "allowLazyQuotes" : false,
+            "allowEmptyColumnNames" : true,
+            "separator" : ",",
+            "nullValue" : "",
+            "schema" : {
+              "fields" : [ {
+                "name" : "seq",
+                "dataType" : {
+                  "type" : "int64"
+                }
+              }, {
+                "name" : "from_city",
+                "dataType" : {
+                  "type" : "utf8"
+                }
+              }, {
+                "name" : "to_city",
+                "dataType" : {
+                  "type" : "utf8"
+                }
+              }, {
+                "name" : "from_lat",
+                "dataType" : {
+                  "type" : "float64"
+                }
+              }, {
+                "name" : "from_lon",
+                "dataType" : {
+                  "type" : "float64"
+                }
+              }, {
+                "name" : "to_lat",
+                "dataType" : {
+                  "type" : "float64"
+                }
+              }, {
+                "name" : "to_lon",
+                "dataType" : {
+                  "type" : "float64"
+                }
+              }, {
+                "name" : "Alteryx_Distance_KM",
+                "dataType" : {
+                  "type" : "float64"
+                }
+              }, {
+                "name" : "Formula_Distance_KM",
+                "dataType" : {
+                  "type" : "float64"
+                }
+              }, {
+                "name" : "Difference_Alteryx_KM_2",
+                "dataType" : {
+                  "type" : "float64"
+                }
+              }, {
+                "name" : "h3_approx_distance",
+                "dataType" : {
+                  "type" : "float64"
+                }
+              }, {
+                "name" : "Difference_Alteryx_KM",
+                "dataType" : {
+                  "type" : "float64"
+                }
+              } ],
+              "providerType" : "arrow"
+            },
+            "header" : true
+          }
+        },
+        "properties" : {
+          "filePath" : "/datasets/orchestration_datasets/csv/arun/dataLatLong.csv"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "827f9a44-ea0c-420d-ad77-0469e023942e",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_lat",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "from_lon",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "to_lat",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "to_lon",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Alteryx_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Formula_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM_2",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "h3_approx_distance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ]
+      }
+    },
+    "wV9fYg3_TRJawuZC_eJHj$$UaCfW7YEgaI-r6H6qLFkk" : {
+      "id" : "wV9fYg3_TRJawuZC_eJHj$$UaCfW7YEgaI-r6H6qLFkk",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "test_seed",
+        "x" : 20,
+        "y" : 1020,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "test_seed",
+          "sourceType" : "Seed"
+        },
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "WOtuNBS_9vM5dIUFWzHKP$$ElXuxiwPZz58A4sXFExoW",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "si6ASb_sc65fTtcrIqnU9$$xTYo4V-ZdYqMlTkyHDTBt",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_lat",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_lon",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_lat",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_lon",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "distance_km",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sales_amount",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "customer_count",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "date_field",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "category",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "growth_rate",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "coordinates_valid",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "special_chars",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "mixed_data",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "prophecy_tmp__mbz0tvui__latlog_test2__dataLatLong_csv_1" : {
+      "id" : "prophecy_tmp__mbz0tvui__latlog_test2__dataLatLong_csv_1",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "dataLatLong_csv_1",
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "prophecy_tmp__mbz0tvui__latlog_test2__dataLatLong_csv_1",
+          "sourceType" : "Source",
+          "sourceName" : "prophecy_tmp_source__latlog_test2",
+          "alias" : ""
+        }
+      },
+      "visualMetaInfo" : {
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_0_1",
+          "slug" : "input_port_0_1"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_0_1",
+          "slug" : "output_port_0_1"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "_wB_IsPBocWdumlHUIey9$$6GpZpcNVSPx8q6OgvgUEP" : {
+      "id" : "_wB_IsPBocWdumlHUIey9$$6GpZpcNVSPx8q6OgvgUEP",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "ashtest",
+        "x" : 20,
+        "y" : 820,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "ashtest",
+          "sourceType" : "Table",
+          "sourceName" : "qa_team.qa_database",
+          "alias" : "",
+          "additionalProperties" : null
+        },
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "701gjh32Aep0GN2k5mX9I$$PBZuq7qRxxrUAP-wadMf0",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "jlMTcsIvuoJ4F1YktmiLS$$Or-EXiAxGOVRVRLgPthH_",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "Series_reference",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Period",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Data_value",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "UNITS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "MAGNTUDE",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "Subject",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Group",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Series_title_1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Series_title_2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Series_title_3",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Series_title_4",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Series_title_5",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "NYtlkYyr8XSO7GkTx38Cz$$FJ3bVaGr_f9_pPDfJ10ZB" : {
+      "id" : "NYtlkYyr8XSO7GkTx38Cz$$FJ3bVaGr_f9_pPDfJ10ZB",
+      "component" : "OrchestrationTarget",
+      "kind" : "S3Target",
+      "metadata" : {
+        "label" : "city_distance_analysis_csv",
+        "x" : 420,
+        "y" : 420,
+        "phase" : 0
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "s3",
+          "properties" : {
+            "id" : "s3"
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "filePath" : {
+            "type" : "concat_operation",
+            "properties" : {
+              "elements" : [ {
+                "type" : "literal",
+                "properties" : {
+                  "value" : "/datasets/orchestration_datasets/csv/arun/dataLatLongPoint.csv"
+                }
+              } ]
+            }
+          }
+        },
+        "format" : {
+          "properties" : {
+            "allowLazyQuotes" : false,
+            "allowEmptyColumnNames" : true,
+            "separator" : ",",
+            "nullValue" : "null",
+            "additionalProperties" : {
+              "copilot" : {
+                "datasetDescriptionStatus" : "fromUser"
+              }
+            },
+            "header" : true
+          },
+          "kind" : "csv",
+          "category" : "file"
+        },
+        "isNew" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ZDdC_jDD46F6Ew-UeD58H$$EsZcuVE9lBRgjBQOrXIer",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Alteryx_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Formula_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM_2",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "h3_approx_distance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "in"
+        } ],
+        "outputs" : [ ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "JHYFsTyET_gZlQ2yB9THP$$orMhMfFbDSAT78rKWwNal" : {
+      "id" : "JHYFsTyET_gZlQ2yB9THP$$orMhMfFbDSAT78rKWwNal",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "model_latlog_test2_single_point_1_3",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "model_latlog_test2_single_point_1_3"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "prophecy_tmp__mbz0tvui__latlog_test2__single_point_1_3", "JHYFsTyET_gZlQ2yB9THP$$orMhMfFbDSAT78rKWwNal", "08epPZXK4GXtHVjyv96Sx$$4Z_6WcgX8k9tb-waZCXbH", "DyYA2ZEXcARzV1F0xtpm3$$oPiuHSdtnzRf1nAnUQPOV", "-ipy-FVeb6RDVl2bQKZRe" ],
+        "type" : "table",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "model_latlog_test2_single_point_1_3_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "model_latlog_test2_single_point_1_3_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "-ipy-FVeb6RDVl2bQKZRe" : {
+      "id" : "-ipy-FVeb6RDVl2bQKZRe",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "test_new_seed_with_date",
+        "x" : 20,
+        "y" : 620,
+        "phase" : 0
+      },
+      "properties" : {
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        },
+        "table" : {
+          "name" : "test_new_seed_with_date",
+          "sourceType" : "Seed",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "YEOVFXH85VqSnCFGHddzB",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "BI_hUrzMpUtLdJ8ZdHVwa",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_lat",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "from_lon",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "to_lat",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "to_lon",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "distance_km",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "sales_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "customer_count",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "date_field",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "category",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "growth_rate",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "coordinates_valid",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "special_chars",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "mixed_data",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "timestampNTZ",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "time",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "8W0dg9skB7T80qsPDNN81$$PodMqnJ0K54rORsu3QHwr" : {
+      "id" : "8W0dg9skB7T80qsPDNN81$$PodMqnJ0K54rORsu3QHwr",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "model_latlog_test2_create_point_1_1",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "model_latlog_test2_create_point_1_1"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "prophecy_tmp__mbz0tvui__latlog_test2__create_point_1_1", "8W0dg9skB7T80qsPDNN81$$PodMqnJ0K54rORsu3QHwr", "prophecy_tmp__mbz0tvui__latlog_test2__dataLatLong_csv_1" ],
+        "type" : "table",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "model_latlog_test2_create_point_1_1_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "model_latlog_test2_create_point_1_1_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "4rZQbIkpiASw_Yt_rrW4k" : {
+      "id" : "4rZQbIkpiASw_Yt_rrW4k",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "create_point_gem_seed_3",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        },
+        "table" : {
+          "name" : "create_point_gem_seed",
+          "sourceType" : "Table",
+          "sourceName" : "sony.orch_test",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "7LvQmTVx0f45NJDCNIYTP",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "I2bNUhJcR8T4fDx9bA9k2",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_lat",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "from_lon",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "to_lat",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "to_lon",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Alteryx_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Formula_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM_2",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "h3_approx_distance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "yKEWmbDu_iMUa9L8yqr_c$$hakJYu4aIbE8XTiJMHSw3",
+    "source" : "XzI5fnYuQyajZweAtoXth",
+    "sourcePort" : "cY5Q7RNtsm4fdNPV4x8eU",
+    "target" : "zHBqr0lwtDTJ4kze2RlwP",
+    "targetPort" : "1Mb3qHkgshYniGibdhcyi"
+  }, {
+    "id" : "ZQxvRk2wuf06TRDWWNlDW",
+    "source" : "hIYSowDckMOWP1wRD653-",
+    "sourcePort" : "f10baca5-25ef-4a65-8cd7-a693d78950b3",
+    "target" : "xY2BBQenPHqanhREczm4q$$KXn2Xnw2rsp1E0Gxu82m4",
+    "targetPort" : "gPYcNrxJgik9qpfEhlbgq$$eb-ef7bF_giNvWmhKO_7-"
+  }, {
+    "id" : "c6EiqU2h0KYr_MvbNklam",
+    "source" : "NV9DPoqzvKJZbKu591rvy",
+    "sourcePort" : "827f9a44-ea0c-420d-ad77-0469e023942e",
+    "target" : "prophecy_tmp__mbz0tvui__latlog_test2__dataLatLong_csv_1",
+    "targetPort" : "input_port_0_1"
+  }, {
+    "id" : "M_Y7PiL8WlvLoa-9pOePL",
+    "source" : "4rZQbIkpiASw_Yt_rrW4k",
+    "sourcePort" : "I2bNUhJcR8T4fDx9bA9k2",
+    "target" : "UxtfvXdgMcjxEsN5zHI36$$Ja_NcHqIBuAJf_VGwvcWL",
+    "targetPort" : "model_latlog_test2_single_point_1_in_0"
+  }, {
+    "id" : "BiaoXz-jowIEvlAAflm2j",
+    "source" : "wV9fYg3_TRJawuZC_eJHj$$UaCfW7YEgaI-r6H6qLFkk",
+    "sourcePort" : "si6ASb_sc65fTtcrIqnU9$$xTYo4V-ZdYqMlTkyHDTBt",
+    "target" : "jeGub_iyJ0wclcbH8h1Ip$$bBye_3eKIZV7lepf58SjT",
+    "targetPort" : "model_latlog_test2_single_point_1_1_in_0"
+  }, {
+    "id" : "ikBHg8qAgzL2UVx98Zhtl",
+    "source" : "-ipy-FVeb6RDVl2bQKZRe",
+    "sourcePort" : "BI_hUrzMpUtLdJ8ZdHVwa",
+    "target" : "JHYFsTyET_gZlQ2yB9THP$$orMhMfFbDSAT78rKWwNal",
+    "targetPort" : "model_latlog_test2_single_point_1_3_in_0"
+  }, {
+    "id" : "conn_prophecy_tmp__mbz0tvui__latlog_test2__dataLatLong_csv_1_8W0dg9skB7T80qsPDNN81$$PodMqnJ0K54rORsu3QHwr_wYrihg_I7eoDtcidKTc_d$$njkev_N_TauNBaSe3N2Vp",
+    "source" : "prophecy_tmp__mbz0tvui__latlog_test2__dataLatLong_csv_1",
+    "sourcePort" : "output_port_0_1",
+    "target" : "8W0dg9skB7T80qsPDNN81$$PodMqnJ0K54rORsu3QHwr",
+    "targetPort" : "model_latlog_test2_create_point_1_1_in_0"
+  }, {
+    "id" : "conn_8W0dg9skB7T80qsPDNN81$$PodMqnJ0K54rORsu3QHwr_NYtlkYyr8XSO7GkTx38Cz$$FJ3bVaGr_f9_pPDfJ10ZB",
+    "source" : "8W0dg9skB7T80qsPDNN81$$PodMqnJ0K54rORsu3QHwr",
+    "sourcePort" : "model_latlog_test2_create_point_1_1_out_0",
+    "target" : "NYtlkYyr8XSO7GkTx38Cz$$FJ3bVaGr_f9_pPDfJ10ZB",
+    "targetPort" : "ZDdC_jDD46F6Ew-UeD58H$$EsZcuVE9lBRgjBQOrXIer"
+  }, {
+    "id" : "conn_8W0dg9skB7T80qsPDNN81$$PodMqnJ0K54rORsu3QHwr_Hd8p3ZHl_yQZz0HeOy6GH$$GNXfqUcQt6PLYOKdIaOJm",
+    "source" : "8W0dg9skB7T80qsPDNN81$$PodMqnJ0K54rORsu3QHwr",
+    "sourcePort" : "model_latlog_test2_create_point_1_1_out_0",
+    "target" : "Hd8p3ZHl_yQZz0HeOy6GH$$GNXfqUcQt6PLYOKdIaOJm",
+    "targetPort" : "model_latlog_test2_single_point_1_2_in_0"
+  } ],
+  "component" : "Pipeline"
+}

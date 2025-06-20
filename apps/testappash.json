@@ -1,0 +1,1134 @@
+{
+  "id" : "testappash",
+  "metainfo" : {
+    "description" : "",
+    "pipelineId" : "ashtest1"
+  },
+  "definition" : {
+    "template" : [ {
+      "key" : "GvoRJBuYn9Qw6bEqw0aDa",
+      "id" : "Chart11",
+      "type" : "line",
+      "properties" : {
+        "tableId" : "yNi4_YcX1KkTKvU88H32t",
+        "title" : "Charts Title",
+        "type" : "line",
+        "config" : {
+          "xAxisColumn" : "STATUS",
+          "yAxisColumn" : [ {
+            "name" : "Period",
+            "agg" : "Sum",
+            "error" : false
+          } ],
+          "showLegend" : true,
+          "showTooltip" : true,
+          "barAndLineConfig" : {
+            "showGrid" : true
+          },
+          "areaConfig" : {
+            "showGrid" : true,
+            "stacked" : false,
+            "showGradient" : true
+          },
+          "pieConfig" : {
+            "angle" : "full",
+            "chartStyle" : "pie",
+            "innerRadius" : 0,
+            "outerRadius" : 100,
+            "centerX" : 50,
+            "centerY" : 50
+          },
+          "candlestickConfig" : {
+            "openColumn" : "",
+            "closeColumn" : ""
+          },
+          "mapConfig" : {
+            "mapType" : "marker",
+            "fitBounds" : false,
+            "markerConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "black",
+                  "fillColor" : "black",
+                  "fillOpacity" : 0.1
+                },
+                "showTooltip" : true,
+                "showLabel" : true
+              },
+              "columns" : {
+                "column" : "",
+                "labelColumn" : "",
+                "tooltipColumns" : [ ]
+              }
+            },
+            "displacementConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "blue",
+                  "weight" : 1.5
+                },
+                "showArrow" : true
+              },
+              "columns" : {
+                "sourceColumn" : "",
+                "sourceLabelColumn" : "",
+                "destinationColumn" : "",
+                "destinationLabelColumn" : "",
+                "tooltipColumns" : [ ]
+              }
+            }
+          },
+          "scatterConfig" : {
+            "series" : [ ],
+            "type" : "Scatter"
+          },
+          "yAxisConfig" : { }
+        }
+      },
+      "errors" : { }
+    }, {
+      "key" : "zzDTi_FOrQKf7jq__peOP",
+      "id" : "DataPreview1",
+      "type" : "DataPreview",
+      "properties" : {
+        "tableId" : "yNi4_YcX1KkTKvU88H32t",
+        "columns" : [ {
+          "key" : "Series_reference",
+          "column" : "Series_reference",
+          "label" : "Series_reference",
+          "selected" : true
+        }, {
+          "key" : "Period",
+          "column" : "Period",
+          "label" : "Period",
+          "selected" : true
+        }, {
+          "key" : "Data_value",
+          "column" : "Data_value",
+          "label" : "Data_value",
+          "selected" : true,
+          "error" : false
+        }, {
+          "key" : "STATUS",
+          "column" : "STATUS",
+          "label" : "STATUS",
+          "selected" : true
+        }, {
+          "key" : "UNITS",
+          "column" : "UNITS",
+          "label" : "UNITS",
+          "selected" : true
+        }, {
+          "key" : "MAGNTUDE",
+          "column" : "MAGNTUDE",
+          "label" : "MAGNTUDE",
+          "selected" : true
+        }, {
+          "key" : "Subject",
+          "column" : "Subject",
+          "label" : "Subject",
+          "selected" : true
+        }, {
+          "key" : "Group",
+          "column" : "Group",
+          "label" : "Group",
+          "selected" : true
+        }, {
+          "key" : "Series_title_1",
+          "column" : "Series_title_1",
+          "label" : "Series_title_1",
+          "selected" : true
+        }, {
+          "key" : "Series_title_2",
+          "column" : "Series_title_2",
+          "label" : "Series_title_2",
+          "selected" : true
+        }, {
+          "key" : "Series_title_3",
+          "column" : "Series_title_3",
+          "label" : "Series_title_3",
+          "selected" : true
+        }, {
+          "key" : "Series_title_4",
+          "column" : "Series_title_4",
+          "label" : "Series_title_4",
+          "selected" : true
+        }, {
+          "key" : "Series_title_5",
+          "column" : "Series_title_5",
+          "label" : "Series_title_5",
+          "selected" : true
+        } ],
+        "title" : "Table Title"
+      },
+      "errors" : { }
+    }, {
+      "key" : "tb5sIz0HfbhyJ_8nBpuFt",
+      "id" : "DataPreview2",
+      "type" : "DataPreview",
+      "properties" : {
+        "tableId" : "IKuZzYMaczkk5ItC0a3T6",
+        "columns" : [ {
+          "key" : "city",
+          "column" : "city",
+          "label" : "city",
+          "selected" : true
+        }, {
+          "key" : "airport_code",
+          "column" : "airport_code",
+          "label" : "airport_code",
+          "selected" : true
+        }, {
+          "key" : "airport_name",
+          "column" : "airport_name",
+          "label" : "airport_name",
+          "selected" : true
+        }, {
+          "key" : "state",
+          "column" : "state",
+          "label" : "state",
+          "selected" : true
+        }, {
+          "key" : "latitude",
+          "column" : "latitude",
+          "label" : "latitude",
+          "selected" : true
+        }, {
+          "key" : "longitude",
+          "column" : "longitude",
+          "label" : "longitude",
+          "selected" : true
+        }, {
+          "key" : "airport_type",
+          "column" : "airport_type",
+          "label" : "airport_type",
+          "selected" : true
+        }, {
+          "key" : "is_hub",
+          "column" : "is_hub",
+          "label" : "is_hub",
+          "selected" : true
+        } ],
+        "title" : "Table Title"
+      },
+      "errors" : { }
+    }, {
+      "key" : "aVAd9KmEoWtHROLCpXYHZ",
+      "id" : "Chart1",
+      "type" : "line",
+      "properties" : {
+        "tableId" : "Mx7f_IPe6ZwUK6y7gzkcC",
+        "title" : "Charts Title",
+        "type" : "line",
+        "config" : {
+          "xAxisColumn" : "city",
+          "yAxisColumn" : [ {
+            "name" : "population_2023",
+            "agg" : "Avg",
+            "error" : false
+          }, {
+            "name" : "population_2023",
+            "agg" : "Sum",
+            "error" : false
+          }, {
+            "name" : "GDP_billion_USD",
+            "agg" : "Sum",
+            "error" : false
+          } ],
+          "showLegend" : true,
+          "showTooltip" : true,
+          "barAndLineConfig" : {
+            "showGrid" : true
+          },
+          "areaConfig" : {
+            "showGrid" : true,
+            "stacked" : false,
+            "showGradient" : true
+          },
+          "pieConfig" : {
+            "angle" : "full",
+            "chartStyle" : "pie",
+            "innerRadius" : 0,
+            "outerRadius" : 100,
+            "centerX" : 50,
+            "centerY" : 50
+          },
+          "candlestickConfig" : {
+            "openColumn" : "",
+            "closeColumn" : ""
+          },
+          "mapConfig" : {
+            "mapType" : "marker",
+            "fitBounds" : false,
+            "markerConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "black",
+                  "fillColor" : "black",
+                  "fillOpacity" : 0.1
+                },
+                "showTooltip" : true,
+                "showLabel" : true
+              },
+              "columns" : {
+                "column" : "",
+                "labelColumn" : "",
+                "tooltipColumns" : [ ]
+              }
+            },
+            "displacementConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "blue",
+                  "weight" : 1.5
+                },
+                "showArrow" : true
+              },
+              "columns" : {
+                "sourceColumn" : "",
+                "sourceLabelColumn" : "",
+                "destinationColumn" : "",
+                "destinationLabelColumn" : "",
+                "tooltipColumns" : [ ]
+              }
+            }
+          },
+          "scatterConfig" : {
+            "series" : [ ],
+            "type" : "Scatter"
+          },
+          "yAxisConfig" : { }
+        }
+      },
+      "errors" : { }
+    }, {
+      "key" : "oVhIldgNwmzkBmKugWD-e",
+      "id" : "Chart2",
+      "type" : "pie",
+      "properties" : {
+        "tableId" : "Mx7f_IPe6ZwUK6y7gzkcC",
+        "title" : "Charts Title",
+        "type" : "pie",
+        "config" : {
+          "xAxisColumn" : "region",
+          "yAxisColumn" : [ {
+            "name" : "population_2023",
+            "agg" : "Avg",
+            "error" : false
+          } ],
+          "showLegend" : true,
+          "showTooltip" : true,
+          "barAndLineConfig" : {
+            "showGrid" : true
+          },
+          "areaConfig" : {
+            "showGrid" : true,
+            "stacked" : false,
+            "showGradient" : true
+          },
+          "pieConfig" : {
+            "angle" : "full",
+            "chartStyle" : "pie",
+            "innerRadius" : 0,
+            "outerRadius" : 100,
+            "centerX" : 50,
+            "centerY" : 50
+          },
+          "candlestickConfig" : {
+            "openColumn" : "",
+            "closeColumn" : ""
+          },
+          "mapConfig" : {
+            "mapType" : "marker",
+            "fitBounds" : false,
+            "markerConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "black",
+                  "fillColor" : "black",
+                  "fillOpacity" : 0.1
+                },
+                "showTooltip" : true,
+                "showLabel" : true
+              },
+              "columns" : {
+                "column" : "",
+                "labelColumn" : "",
+                "tooltipColumns" : [ ]
+              }
+            },
+            "displacementConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "blue",
+                  "weight" : 1.5
+                },
+                "showArrow" : true
+              },
+              "columns" : {
+                "sourceColumn" : "",
+                "sourceLabelColumn" : "",
+                "destinationColumn" : "",
+                "destinationLabelColumn" : "",
+                "tooltipColumns" : [ ]
+              }
+            }
+          },
+          "scatterConfig" : {
+            "series" : [ ],
+            "type" : "Scatter"
+          },
+          "yAxisConfig" : { }
+        }
+      },
+      "errors" : { }
+    }, {
+      "key" : "4WqITuu82d51d3RN_3_4V",
+      "id" : "Chart3",
+      "type" : "area",
+      "properties" : {
+        "tableId" : "yNi4_YcX1KkTKvU88H32t",
+        "title" : "Charts Title",
+        "type" : "area",
+        "config" : {
+          "xAxisColumn" : "Group",
+          "yAxisColumn" : [ {
+            "name" : "Data_value",
+            "agg" : "Sum",
+            "error" : false
+          } ],
+          "showLegend" : true,
+          "showTooltip" : true,
+          "barAndLineConfig" : {
+            "showGrid" : true
+          },
+          "areaConfig" : {
+            "showGrid" : false,
+            "stacked" : false,
+            "showGradient" : true
+          },
+          "pieConfig" : {
+            "angle" : "full",
+            "chartStyle" : "pie",
+            "innerRadius" : 0,
+            "outerRadius" : 100,
+            "centerX" : 50,
+            "centerY" : 50
+          },
+          "candlestickConfig" : {
+            "openColumn" : "",
+            "closeColumn" : ""
+          },
+          "mapConfig" : {
+            "mapType" : "marker",
+            "fitBounds" : false,
+            "markerConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "black",
+                  "fillColor" : "black",
+                  "fillOpacity" : 0.1
+                },
+                "showTooltip" : true,
+                "showLabel" : true
+              },
+              "columns" : {
+                "column" : "",
+                "labelColumn" : "",
+                "tooltipColumns" : [ ]
+              }
+            },
+            "displacementConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "blue",
+                  "weight" : 1.5
+                },
+                "showArrow" : true
+              },
+              "columns" : {
+                "sourceColumn" : "",
+                "sourceLabelColumn" : "",
+                "destinationColumn" : "",
+                "destinationLabelColumn" : "",
+                "tooltipColumns" : [ ]
+              }
+            }
+          },
+          "scatterConfig" : {
+            "series" : [ ],
+            "type" : "Scatter"
+          },
+          "yAxisConfig" : { }
+        }
+      },
+      "errors" : { }
+    }, {
+      "key" : "MioDcKxowLyLNX7OQaKUb",
+      "id" : "Chart4",
+      "type" : "line",
+      "properties" : {
+        "tableId" : "W1NPjPm8moY0WboOlEWdE",
+        "title" : "Charts Title",
+        "type" : "line",
+        "config" : {
+          "xAxisColumn" : "to_city",
+          "yAxisColumn" : [ {
+            "name" : "seq",
+            "agg" : "Sum",
+            "error" : false
+          } ],
+          "showLegend" : true,
+          "showTooltip" : true,
+          "barAndLineConfig" : {
+            "showGrid" : true
+          },
+          "areaConfig" : {
+            "showGrid" : true,
+            "stacked" : false,
+            "showGradient" : true
+          },
+          "pieConfig" : {
+            "angle" : "full",
+            "chartStyle" : "pie",
+            "innerRadius" : 0,
+            "outerRadius" : 100,
+            "centerX" : 50,
+            "centerY" : 50
+          },
+          "candlestickConfig" : {
+            "openColumn" : "",
+            "closeColumn" : ""
+          },
+          "mapConfig" : {
+            "mapType" : "marker",
+            "fitBounds" : false,
+            "markerConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "black",
+                  "fillColor" : "black",
+                  "fillOpacity" : 0.1
+                },
+                "showTooltip" : true,
+                "showLabel" : true
+              },
+              "columns" : {
+                "column" : "",
+                "labelColumn" : "",
+                "tooltipColumns" : [ ]
+              }
+            },
+            "displacementConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "blue",
+                  "weight" : 1.5
+                },
+                "showArrow" : true
+              },
+              "columns" : {
+                "sourceColumn" : "",
+                "sourceLabelColumn" : "",
+                "destinationColumn" : "",
+                "destinationLabelColumn" : "",
+                "tooltipColumns" : [ ]
+              }
+            }
+          },
+          "scatterConfig" : {
+            "series" : [ ],
+            "type" : "Scatter"
+          },
+          "yAxisConfig" : { }
+        }
+      },
+      "errors" : { }
+    }, {
+      "key" : "ZizAWSTWnvG9bxk1iObHp",
+      "id" : "Chart5",
+      "type" : "line",
+      "properties" : {
+        "tableId" : "Y5BSBu1RhEj9uEgMYizxy",
+        "title" : "Charts Title",
+        "type" : "line",
+        "config" : {
+          "xAxisColumn" : "from_city",
+          "yAxisColumn" : [ {
+            "name" : "Difference_Alteryx_KM_2",
+            "agg" : "Sum",
+            "error" : false
+          }, {
+            "name" : "h3_approx_distance",
+            "agg" : "Sum",
+            "error" : false
+          } ],
+          "showLegend" : true,
+          "showTooltip" : true,
+          "barAndLineConfig" : {
+            "showGrid" : true
+          },
+          "areaConfig" : {
+            "showGrid" : true,
+            "stacked" : false,
+            "showGradient" : true
+          },
+          "pieConfig" : {
+            "angle" : "full",
+            "chartStyle" : "pie",
+            "innerRadius" : 0,
+            "outerRadius" : 100,
+            "centerX" : 50,
+            "centerY" : 50
+          },
+          "candlestickConfig" : {
+            "openColumn" : "",
+            "closeColumn" : ""
+          },
+          "mapConfig" : {
+            "mapType" : "marker",
+            "fitBounds" : false,
+            "markerConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "black",
+                  "fillColor" : "black",
+                  "fillOpacity" : 0.1
+                },
+                "showTooltip" : true,
+                "showLabel" : true
+              },
+              "columns" : {
+                "column" : "",
+                "labelColumn" : "",
+                "tooltipColumns" : [ ]
+              }
+            },
+            "displacementConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "blue",
+                  "weight" : 1.5
+                },
+                "showArrow" : true
+              },
+              "columns" : {
+                "sourceColumn" : "",
+                "sourceLabelColumn" : "",
+                "destinationColumn" : "",
+                "destinationLabelColumn" : "",
+                "tooltipColumns" : [ ]
+              }
+            }
+          },
+          "scatterConfig" : {
+            "series" : [ ],
+            "type" : "Scatter"
+          },
+          "yAxisConfig" : { }
+        }
+      },
+      "errors" : { }
+    }, {
+      "key" : "0Ff_yg5h8NYurfan2zUIB",
+      "id" : "DataPreview3",
+      "type" : "DataPreview",
+      "properties" : {
+        "tableId" : "IKuZzYMaczkk5ItC0a3T6",
+        "columns" : [ {
+          "key" : "city",
+          "column" : "city",
+          "label" : "city",
+          "selected" : true
+        }, {
+          "key" : "airport_code",
+          "column" : "airport_code",
+          "label" : "airport_code",
+          "selected" : true
+        }, {
+          "key" : "airport_name",
+          "column" : "airport_name",
+          "label" : "airport_name",
+          "selected" : true
+        }, {
+          "key" : "state",
+          "column" : "state",
+          "label" : "state",
+          "selected" : false,
+          "error" : false
+        }, {
+          "key" : "latitude",
+          "column" : "latitude",
+          "label" : "latitude",
+          "selected" : false,
+          "error" : false
+        }, {
+          "key" : "longitude",
+          "column" : "longitude",
+          "label" : "longitude",
+          "selected" : false,
+          "error" : false
+        }, {
+          "key" : "airport_type",
+          "column" : "airport_type",
+          "label" : "airport_type",
+          "selected" : true
+        }, {
+          "key" : "is_hub",
+          "column" : "is_hub",
+          "label" : "is_hub",
+          "selected" : false,
+          "error" : false
+        } ],
+        "title" : "Table Title"
+      },
+      "errors" : { }
+    }, {
+      "key" : "nHkF1JvZx4suCMZQBJl3A",
+      "id" : "Chart6",
+      "type" : "bar",
+      "properties" : {
+        "tableId" : "1JF8aFfLG1B126y5jrHb6",
+        "title" : "Charts Title",
+        "type" : "bar",
+        "config" : {
+          "xAxisColumn" : "from_city",
+          "yAxisColumn" : [ {
+            "name" : "growth_rate",
+            "agg" : "Sum",
+            "error" : false
+          } ],
+          "showLegend" : true,
+          "showTooltip" : true,
+          "barAndLineConfig" : {
+            "showGrid" : true
+          },
+          "areaConfig" : {
+            "showGrid" : true,
+            "stacked" : false,
+            "showGradient" : true
+          },
+          "pieConfig" : {
+            "angle" : "full",
+            "chartStyle" : "pie",
+            "innerRadius" : 0,
+            "outerRadius" : 100,
+            "centerX" : 50,
+            "centerY" : 50
+          },
+          "candlestickConfig" : {
+            "openColumn" : "",
+            "closeColumn" : ""
+          },
+          "mapConfig" : {
+            "mapType" : "marker",
+            "fitBounds" : false,
+            "markerConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "black",
+                  "fillColor" : "black",
+                  "fillOpacity" : 0.1
+                },
+                "showTooltip" : true,
+                "showLabel" : true
+              },
+              "columns" : {
+                "column" : "",
+                "labelColumn" : "",
+                "tooltipColumns" : [ ]
+              }
+            },
+            "displacementConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "blue",
+                  "weight" : 1.5
+                },
+                "showArrow" : true
+              },
+              "columns" : {
+                "sourceColumn" : "",
+                "sourceLabelColumn" : "",
+                "destinationColumn" : "",
+                "destinationLabelColumn" : "",
+                "tooltipColumns" : [ ]
+              }
+            }
+          },
+          "scatterConfig" : {
+            "series" : [ ],
+            "type" : "Scatter"
+          },
+          "yAxisConfig" : { }
+        }
+      },
+      "errors" : { }
+    }, {
+      "key" : "vqkhJq8eKOe5_w1q3SAky",
+      "id" : "Chart7",
+      "type" : "line",
+      "properties" : {
+        "tableId" : "yNi4_YcX1KkTKvU88H32t",
+        "title" : "Charts Title",
+        "type" : "line",
+        "config" : {
+          "xAxisColumn" : "Group",
+          "yAxisColumn" : [ {
+            "name" : "MAGNTUDE",
+            "agg" : "Avg",
+            "error" : false
+          } ],
+          "showLegend" : true,
+          "showTooltip" : true,
+          "barAndLineConfig" : {
+            "showGrid" : true
+          },
+          "areaConfig" : {
+            "showGrid" : true,
+            "stacked" : false,
+            "showGradient" : true
+          },
+          "pieConfig" : {
+            "angle" : "full",
+            "chartStyle" : "pie",
+            "innerRadius" : 0,
+            "outerRadius" : 100,
+            "centerX" : 50,
+            "centerY" : 50
+          },
+          "candlestickConfig" : {
+            "openColumn" : "",
+            "closeColumn" : ""
+          },
+          "mapConfig" : {
+            "mapType" : "marker",
+            "fitBounds" : false,
+            "markerConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "black",
+                  "fillColor" : "black",
+                  "fillOpacity" : 0.1
+                },
+                "showTooltip" : true,
+                "showLabel" : true
+              },
+              "columns" : {
+                "column" : "",
+                "labelColumn" : "",
+                "tooltipColumns" : [ ]
+              }
+            },
+            "displacementConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "blue",
+                  "weight" : 1.5
+                },
+                "showArrow" : true
+              },
+              "columns" : {
+                "sourceColumn" : "",
+                "sourceLabelColumn" : "",
+                "destinationColumn" : "",
+                "destinationLabelColumn" : "",
+                "tooltipColumns" : [ ]
+              }
+            }
+          },
+          "scatterConfig" : {
+            "series" : [ ],
+            "type" : "Scatter"
+          },
+          "yAxisConfig" : { }
+        }
+      },
+      "errors" : { }
+    }, {
+      "key" : "lShaw1PilWEcRjUg-ubuJ",
+      "id" : "Chart8",
+      "type" : "pie",
+      "properties" : {
+        "tableId" : "yNi4_YcX1KkTKvU88H32t",
+        "title" : "Charts Title",
+        "type" : "pie",
+        "config" : {
+          "xAxisColumn" : "STATUS",
+          "yAxisColumn" : [ {
+            "name" : "Data_value",
+            "agg" : "Sum",
+            "error" : false
+          } ],
+          "showLegend" : true,
+          "showTooltip" : true,
+          "barAndLineConfig" : {
+            "showGrid" : true
+          },
+          "areaConfig" : {
+            "showGrid" : true,
+            "stacked" : false,
+            "showGradient" : true
+          },
+          "pieConfig" : {
+            "angle" : "full",
+            "chartStyle" : "pie",
+            "innerRadius" : 0,
+            "outerRadius" : 100,
+            "centerX" : 50,
+            "centerY" : 50
+          },
+          "candlestickConfig" : {
+            "openColumn" : "",
+            "closeColumn" : ""
+          },
+          "mapConfig" : {
+            "mapType" : "marker",
+            "fitBounds" : false,
+            "markerConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "black",
+                  "fillColor" : "black",
+                  "fillOpacity" : 0.1
+                },
+                "showTooltip" : true,
+                "showLabel" : true
+              },
+              "columns" : {
+                "column" : "",
+                "labelColumn" : "",
+                "tooltipColumns" : [ ]
+              }
+            },
+            "displacementConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "blue",
+                  "weight" : 1.5
+                },
+                "showArrow" : true
+              },
+              "columns" : {
+                "sourceColumn" : "",
+                "sourceLabelColumn" : "",
+                "destinationColumn" : "",
+                "destinationLabelColumn" : "",
+                "tooltipColumns" : [ ]
+              }
+            }
+          },
+          "scatterConfig" : {
+            "series" : [ ],
+            "type" : "Scatter"
+          }
+        }
+      },
+      "errors" : { }
+    }, {
+      "key" : "-VYlLShnkIzdQMKsx7LHJ",
+      "id" : "Chart9",
+      "type" : "candlestick",
+      "properties" : {
+        "tableId" : "OVEDYi_eKkQClkNExt62Q",
+        "title" : "Charts Title",
+        "type" : "candlestick",
+        "config" : {
+          "xAxisColumn" : "Date",
+          "yAxisColumn" : [ ],
+          "showLegend" : true,
+          "showTooltip" : true,
+          "barAndLineConfig" : {
+            "showGrid" : true
+          },
+          "areaConfig" : {
+            "showGrid" : true,
+            "stacked" : false,
+            "showGradient" : true
+          },
+          "pieConfig" : {
+            "angle" : "full",
+            "chartStyle" : "pie",
+            "innerRadius" : 0,
+            "outerRadius" : 100,
+            "centerX" : 50,
+            "centerY" : 50
+          },
+          "candlestickConfig" : {
+            "openColumn" : "Open",
+            "closeColumn" : "Close",
+            "lowColumn" : "Low",
+            "highColumn" : "High"
+          },
+          "mapConfig" : {
+            "mapType" : "marker",
+            "fitBounds" : false,
+            "markerConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "black",
+                  "fillColor" : "black",
+                  "fillOpacity" : 0.1
+                },
+                "showTooltip" : true,
+                "showLabel" : true
+              },
+              "columns" : {
+                "column" : "",
+                "labelColumn" : "",
+                "tooltipColumns" : [ ]
+              }
+            },
+            "displacementConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "blue",
+                  "weight" : 1.5
+                },
+                "showArrow" : true
+              },
+              "columns" : {
+                "sourceColumn" : "",
+                "sourceLabelColumn" : "",
+                "destinationColumn" : "",
+                "destinationLabelColumn" : "",
+                "tooltipColumns" : [ ]
+              }
+            }
+          },
+          "scatterConfig" : {
+            "series" : [ ],
+            "type" : "Scatter"
+          }
+        }
+      },
+      "errors" : { }
+    }, {
+      "key" : "0QhBIluLEgs9CwIFNBuF2",
+      "id" : "DataPreview4",
+      "type" : "DataPreview",
+      "properties" : {
+        "tableId" : "OVEDYi_eKkQClkNExt62Q",
+        "columns" : [ {
+          "key" : "Date",
+          "column" : "Date",
+          "label" : "Date",
+          "selected" : true
+        }, {
+          "key" : "Month",
+          "column" : "Month",
+          "label" : "Month",
+          "selected" : true
+        }, {
+          "key" : "Open",
+          "column" : "Open",
+          "label" : "Open",
+          "selected" : true,
+          "error" : false
+        }, {
+          "key" : "Close",
+          "column" : "Close",
+          "label" : "Close",
+          "selected" : true
+        }, {
+          "key" : "High",
+          "column" : "High",
+          "label" : "High",
+          "selected" : true
+        }, {
+          "key" : "Low",
+          "column" : "Low",
+          "label" : "Low",
+          "selected" : true
+        } ],
+        "title" : "Table Title"
+      },
+      "errors" : { }
+    }, {
+      "key" : "431znKJQg593EeYVxmYwP",
+      "id" : "Chart10",
+      "type" : "map",
+      "properties" : {
+        "tableId" : "enfYepL2VI4bz1_25KQ7d",
+        "title" : "Charts Title",
+        "type" : "map",
+        "config" : {
+          "xAxisColumn" : "",
+          "yAxisColumn" : [ {
+            "name" : "",
+            "agg" : "Sum"
+          } ],
+          "showLegend" : true,
+          "showTooltip" : true,
+          "barAndLineConfig" : {
+            "showGrid" : true
+          },
+          "areaConfig" : {
+            "showGrid" : true,
+            "stacked" : false,
+            "showGradient" : true
+          },
+          "pieConfig" : {
+            "angle" : "full",
+            "chartStyle" : "pie",
+            "innerRadius" : 0,
+            "outerRadius" : 100,
+            "centerX" : 50,
+            "centerY" : 50
+          },
+          "candlestickConfig" : {
+            "openColumn" : "",
+            "closeColumn" : ""
+          },
+          "mapConfig" : {
+            "mapType" : "marker",
+            "fitBounds" : false,
+            "markerConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "black",
+                  "fillColor" : "black",
+                  "fillOpacity" : 0.1
+                },
+                "showTooltip" : true,
+                "showLabel" : true
+              },
+              "columns" : {
+                "column" : "",
+                "labelColumn" : "",
+                "tooltipColumns" : [ ]
+              }
+            },
+            "displacementConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "blue",
+                  "weight" : 1.5
+                },
+                "showArrow" : true
+              },
+              "columns" : {
+                "sourceColumn" : "",
+                "sourceLabelColumn" : "",
+                "destinationColumn" : "",
+                "destinationLabelColumn" : "",
+                "tooltipColumns" : [ ]
+              }
+            }
+          },
+          "scatterConfig" : {
+            "series" : [ ],
+            "type" : "Scatter"
+          }
+        }
+      },
+      "errors" : { }
+    } ]
+  },
+  "instances" : {
+    "undefined" : {
+      "config" : { },
+      "sources" : { }
+    }
+  }
+}

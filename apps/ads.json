@@ -1,0 +1,90 @@
+{
+  "id" : "ads",
+  "metainfo" : {
+    "description" : "",
+    "pipelineId" : "bfg"
+  },
+  "definition" : {
+    "template" : [ {
+      "key" : "32IpR_3R5b8Uw2JwSPc9C",
+      "id" : "Chart1",
+      "type" : "map",
+      "properties" : {
+        "tableId" : "MNWteUjISU_43eI63Spkg",
+        "title" : "Charts Title",
+        "type" : "map",
+        "config" : {
+          "xAxisColumn" : "",
+          "yAxisColumn" : [ {
+            "name" : "",
+            "agg" : "Sum"
+          } ],
+          "showLegend" : true,
+          "showTooltip" : true,
+          "barAndLineConfig" : {
+            "showGrid" : true
+          },
+          "areaConfig" : {
+            "showGrid" : true,
+            "stacked" : false,
+            "showGradient" : true
+          },
+          "pieConfig" : {
+            "angle" : "full",
+            "chartStyle" : "pie",
+            "innerRadius" : 0,
+            "outerRadius" : 100,
+            "centerX" : 50,
+            "centerY" : 50
+          },
+          "candlestickConfig" : {
+            "openColumn" : "",
+            "closeColumn" : ""
+          },
+          "mapConfig" : {
+            "mapType" : "marker",
+            "fitBounds" : false,
+            "markerConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "black",
+                  "fillColor" : "black",
+                  "fillOpacity" : 0.1
+                },
+                "showTooltip" : true,
+                "showLabel" : true
+              },
+              "columns" : {
+                "column" : "",
+                "labelColumn" : "city",
+                "tooltipColumns" : [ "airport_code" ]
+              }
+            },
+            "displacementConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "blue",
+                  "weight" : 1.5
+                },
+                "showArrow" : true
+              },
+              "columns" : {
+                "sourceColumn" : "",
+                "sourceLabelColumn" : "",
+                "destinationColumn" : "",
+                "destinationLabelColumn" : "",
+                "tooltipColumns" : [ ]
+              }
+            }
+          },
+          "scatterConfig" : {
+            "series" : [ ],
+            "type" : "Scatter"
+          }
+        }
+      },
+      "errors" : { }
+    } ]
+  },
+  "instances" : { }
+}

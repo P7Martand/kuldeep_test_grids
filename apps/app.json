@@ -1,0 +1,245 @@
+{
+  "id" : "app",
+  "metainfo" : {
+    "description" : "",
+    "pipelineId" : "p3"
+  },
+  "definition" : {
+    "template" : [ {
+      "key" : "P11wQK1AwuRhLOTUoatZk",
+      "id" : "TextInput1",
+      "type" : "TextInput",
+      "properties" : {
+        "configField" : "",
+        "label" : ""
+      },
+      "errors" : {
+        "properties" : true
+      }
+    }, {
+      "key" : "vAEzApiLLN54sMehTZQ9G",
+      "id" : "NumberInput1",
+      "type" : "NumberInput",
+      "properties" : {
+        "configField" : "",
+        "label" : "",
+        "format" : "Standard"
+      },
+      "errors" : {
+        "properties" : true
+      }
+    }, {
+      "key" : "M6on5MJJ8JGUUFySHOJ1P",
+      "id" : "Textarea1",
+      "type" : "Textarea",
+      "properties" : {
+        "configField" : "",
+        "label" : ""
+      },
+      "errors" : {
+        "properties" : true
+      }
+    }, {
+      "key" : "d5PnyewF4JIkNAFT9WWGZ",
+      "id" : "Dropdown1",
+      "type" : "Dropdown",
+      "properties" : {
+        "configField" : "",
+        "label" : "",
+        "options" : [ ]
+      },
+      "errors" : {
+        "properties" : true
+      }
+    }, {
+      "key" : "ciw9DuXjETquEw9gtAQJQ",
+      "id" : "Checkbox1",
+      "type" : "Checkbox",
+      "properties" : {
+        "defaultValue" : false,
+        "configField" : "",
+        "label" : ""
+      },
+      "errors" : {
+        "properties" : true
+      }
+    }, {
+      "key" : "gJ0FsLxCCBfpJMdEP0X1p",
+      "id" : "CheckboxGroup1",
+      "type" : "CheckboxGroup",
+      "properties" : {
+        "configField" : "",
+        "options" : [ ]
+      },
+      "errors" : {
+        "properties" : true
+      }
+    }, {
+      "key" : "jQuVpHHHAFsk25z83sV6a",
+      "id" : "RadioGroup1",
+      "type" : "RadioGroup",
+      "properties" : {
+        "configField" : "",
+        "options" : [ ]
+      },
+      "errors" : {
+        "properties" : true
+      }
+    }, {
+      "key" : "hNe6SXFNMNZrupRZhgDCs",
+      "id" : "Toggle1",
+      "type" : "Toggle",
+      "properties" : {
+        "defaultValue" : false,
+        "configField" : "",
+        "label" : ""
+      },
+      "errors" : {
+        "properties" : true
+      }
+    }, {
+      "key" : "CtYgJKdT5Zyk0tSnzjmrB",
+      "id" : "Date1",
+      "type" : "Date",
+      "properties" : {
+        "configField" : "",
+        "label" : "",
+        "format" : "MMMM d, yyyy",
+        "firstDay" : "Sunday"
+      },
+      "errors" : {
+        "properties" : true
+      }
+    }, {
+      "key" : "mP2Vxa5go0XmV9z2nSgsX",
+      "id" : "DataPreview1",
+      "type" : "DataPreview",
+      "properties" : {
+        "tableId" : "",
+        "columns" : [ ],
+        "title" : "Table Title"
+      },
+      "errors" : {
+        "properties" : true
+      }
+    }, {
+      "key" : "61-MpD_3i8IPos5OdHItC",
+      "id" : "FileUpload1",
+      "type" : "FileUpload",
+      "properties" : {
+        "sourceId" : "",
+        "sourceName" : "",
+        "fileTypes" : [ ]
+      },
+      "errors" : {
+        "properties" : true
+      }
+    }, {
+      "key" : "xq3tBA4ed9xVzms_OUIJZ",
+      "id" : "Charts1",
+      "type" : "Charts",
+      "properties" : {
+        "tableId" : "",
+        "title" : "Charts Title",
+        "type" : "area",
+        "config" : {
+          "xAxisColumn" : "",
+          "yAxisColumn" : [ ],
+          "showLegend" : true,
+          "showTooltip" : true,
+          "barAndLineConfig" : {
+            "showGrid" : true
+          },
+          "areaConfig" : {
+            "showGrid" : true,
+            "stacked" : false,
+            "showGradient" : true
+          },
+          "pieConfig" : {
+            "angle" : "full",
+            "chartStyle" : "pie",
+            "innerRadius" : 0,
+            "outerRadius" : 100,
+            "centerX" : 50,
+            "centerY" : 50
+          },
+          "candlestickConfig" : {
+            "openColumn" : "",
+            "closeColumn" : ""
+          },
+          "mapConfig" : {
+            "fitBounds" : false,
+            "markerConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "black",
+                  "fillColor" : "black",
+                  "fillOpacity" : 0.1
+                },
+                "showTooltip" : true,
+                "showLabel" : true
+              },
+              "columns" : {
+                "column" : "",
+                "labelColumn" : "",
+                "tooltipColumns" : [ ]
+              }
+            },
+            "displacementConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "blue",
+                  "weight" : 1.5
+                },
+                "showArrow" : true
+              },
+              "columns" : {
+                "sourceColumn" : "",
+                "sourceLabelColumn" : "",
+                "destinationColumn" : "",
+                "destinationLabelColumn" : "",
+                "tooltipColumns" : [ ]
+              }
+            }
+          },
+          "scatterConfig" : {
+            "series" : [ {
+              "xAxisColumn" : "",
+              "yAxisColumn" : "",
+              "size" : 10,
+              "error" : true
+            } ],
+            "type" : "Scatter"
+          },
+          "yAxisConfig" : { },
+          "xAxisConfig" : { }
+        }
+      },
+      "errors" : {
+        "properties" : true
+      }
+    }, {
+      "key" : "LKZgKU_L019IhHpxZnuIf",
+      "id" : "Text1",
+      "type" : "Text",
+      "properties" : {
+        "content" : ""
+      },
+      "errors" : { }
+    }, {
+      "key" : "aMjXQmM7Wzzd4AZWSdy2Q",
+      "id" : "Image1",
+      "type" : "Image",
+      "properties" : {
+        "sourceType" : "URL",
+        "source" : "",
+        "height" : "auto",
+        "width" : "cover"
+      },
+      "errors" : {
+        "properties" : true
+      }
+    } ]
+  },
+  "instances" : { }
+}

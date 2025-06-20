@@ -1,0 +1,299 @@
+{
+  "id" : "latlog",
+  "metainfo" : {
+    "label" : "latlog",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "schedule" : {
+      "cron" : "* 0 2 * * * *",
+      "timeZone" : "GMT",
+      "emailOnSuccess" : false,
+      "emailOnFailure" : false,
+      "emailOnStart" : false,
+      "emails" : [ "email@gmail.com" ],
+      "enabled" : false
+    }
+  },
+  "processes" : {
+    "zmJof3wFp3t72jGKhGQBO$$nFHghWk_9nLNertOSl15E" : {
+      "id" : "zmJof3wFp3t72jGKhGQBO$$nFHghWk_9nLNertOSl15E",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "model_latlog_single_point",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "model_latlog_single_point"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "prophecy_tmp__mc001kf5__latlog__single_point", "zmJof3wFp3t72jGKhGQBO$$nFHghWk_9nLNertOSl15E", "prophecy_tmp__mc001kf5__latlog__points" ],
+        "type" : "table",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "model_latlog_single_point_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "model_latlog_single_point_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "M_Tf_JDC2HBj9GZwrN4hs$$pGFRlgfpEtdavu3YHAtGr" : {
+      "id" : "M_Tf_JDC2HBj9GZwrN4hs$$pGFRlgfpEtdavu3YHAtGr",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "raw_points",
+        "x" : -820,
+        "y" : 300,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "create_point_gem_seed",
+          "sourceType" : "Seed"
+        },
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "niugDoe4DoK8y1cX_9RQ5$$rXqHke8BWd3NOuT-MXQPp",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "m3RtCxJ08nvyY15MaH3tk$$-GahlugHubvz5HSXjIUjO",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_lat",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "from_lon",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "to_lat",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "to_lon",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "Alteryx_Distance_KM",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "Formula_Distance_KM",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM_2",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "h3_approx_distance",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM",
+              "dataType" : {
+                "type" : "Float"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "HYgb0vedUIhCcx5n9v87V$$xIHb_2hobV3Z95asX86D0" : {
+      "id" : "HYgb0vedUIhCcx5n9v87V$$xIHb_2hobV3Z95asX86D0",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "model_latlog_charts",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "model_latlog_charts"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "prophecy_tmp__mc001kf5__latlog__charts", "HYgb0vedUIhCcx5n9v87V$$xIHb_2hobV3Z95asX86D0", "prophecy_tmp__mc001kf5__latlog__create_point" ],
+        "type" : "table",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "model_latlog_charts_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "model_latlog_charts_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "o28z2yTVR3yCh_wO_NAs9$$H2pnrL0WdqhzrUHUi5Tpg" : {
+      "id" : "o28z2yTVR3yCh_wO_NAs9$$H2pnrL0WdqhzrUHUi5Tpg",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "model_latlog_create_point",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "model_latlog_create_point"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "prophecy_tmp__mc001kf5__latlog__create_point", "o28z2yTVR3yCh_wO_NAs9$$H2pnrL0WdqhzrUHUi5Tpg", "M_Tf_JDC2HBj9GZwrN4hs$$pGFRlgfpEtdavu3YHAtGr" ],
+        "type" : "table",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "model_latlog_create_point_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "model_latlog_create_point_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "yga2MOJ8Mxu7SkRFciiZ0$$IQyI86J5xHtl7MNVeqJea" : {
+      "id" : "yga2MOJ8Mxu7SkRFciiZ0$$IQyI86J5xHtl7MNVeqJea",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "model_latlog_points",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "model_latlog_points"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "prophecy_tmp__mc001kf5__latlog__points", "yga2MOJ8Mxu7SkRFciiZ0$$IQyI86J5xHtl7MNVeqJea", "prophecy_tmp__mc001kf5__latlog__create_point" ],
+        "type" : "table",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "model_latlog_points_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "model_latlog_points_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "TzZeJcqDhGEYgZhU9HgMV$$PqVeIvExko09WZ24xPtkK" : {
+      "id" : "TzZeJcqDhGEYgZhU9HgMV$$PqVeIvExko09WZ24xPtkK",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "model_latlog_distance_comparison",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "model_latlog_distance_comparison"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "prophecy_tmp__mc001kf5__latlog__distance_comparison", "TzZeJcqDhGEYgZhU9HgMV$$PqVeIvExko09WZ24xPtkK", "prophecy_tmp__mc001kf5__latlog__points", "WRsO-blkr0hvCb4ndMnFH$$7jTOXYPwA1FxG2t7K7xd5", "prophecy_tmp__mc001kf5__latlog__create_point" ],
+        "type" : "table",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "model_latlog_distance_comparison_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "model_latlog_distance_comparison_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "model_latlog_distance_comparison_in_2",
+          "slug" : "in_2"
+        } ],
+        "outputs" : [ {
+          "id" : "model_latlog_distance_comparison_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "FJXkTNvhvYpzsRtYYhHbu$$RN-uWCljDt3CJ7iC5CVNT",
+    "source" : "M_Tf_JDC2HBj9GZwrN4hs$$pGFRlgfpEtdavu3YHAtGr",
+    "sourcePort" : "m3RtCxJ08nvyY15MaH3tk$$-GahlugHubvz5HSXjIUjO",
+    "target" : "o28z2yTVR3yCh_wO_NAs9$$H2pnrL0WdqhzrUHUi5Tpg",
+    "targetPort" : "model_latlog_create_point_in_0"
+  }, {
+    "id" : "conn_o28z2yTVR3yCh_wO_NAs9$$H2pnrL0WdqhzrUHUi5Tpg_HYgb0vedUIhCcx5n9v87V$$xIHb_2hobV3Z95asX86D0",
+    "source" : "o28z2yTVR3yCh_wO_NAs9$$H2pnrL0WdqhzrUHUi5Tpg",
+    "sourcePort" : "model_latlog_create_point_out_0",
+    "target" : "HYgb0vedUIhCcx5n9v87V$$xIHb_2hobV3Z95asX86D0",
+    "targetPort" : "model_latlog_charts_in_0"
+  }, {
+    "id" : "conn_o28z2yTVR3yCh_wO_NAs9$$H2pnrL0WdqhzrUHUi5Tpg_TzZeJcqDhGEYgZhU9HgMV$$PqVeIvExko09WZ24xPtkK",
+    "source" : "o28z2yTVR3yCh_wO_NAs9$$H2pnrL0WdqhzrUHUi5Tpg",
+    "sourcePort" : "model_latlog_create_point_out_0",
+    "target" : "TzZeJcqDhGEYgZhU9HgMV$$PqVeIvExko09WZ24xPtkK",
+    "targetPort" : "model_latlog_distance_comparison_in_0"
+  }, {
+    "id" : "conn_o28z2yTVR3yCh_wO_NAs9$$H2pnrL0WdqhzrUHUi5Tpg_yga2MOJ8Mxu7SkRFciiZ0$$IQyI86J5xHtl7MNVeqJea",
+    "source" : "o28z2yTVR3yCh_wO_NAs9$$H2pnrL0WdqhzrUHUi5Tpg",
+    "sourcePort" : "model_latlog_create_point_out_0",
+    "target" : "yga2MOJ8Mxu7SkRFciiZ0$$IQyI86J5xHtl7MNVeqJea",
+    "targetPort" : "model_latlog_points_in_0"
+  }, {
+    "id" : "conn_yga2MOJ8Mxu7SkRFciiZ0$$IQyI86J5xHtl7MNVeqJea_zmJof3wFp3t72jGKhGQBO$$nFHghWk_9nLNertOSl15E",
+    "source" : "yga2MOJ8Mxu7SkRFciiZ0$$IQyI86J5xHtl7MNVeqJea",
+    "sourcePort" : "model_latlog_points_out_0",
+    "target" : "zmJof3wFp3t72jGKhGQBO$$nFHghWk_9nLNertOSl15E",
+    "targetPort" : "model_latlog_single_point_in_0"
+  }, {
+    "id" : "conn_yga2MOJ8Mxu7SkRFciiZ0$$IQyI86J5xHtl7MNVeqJea_TzZeJcqDhGEYgZhU9HgMV$$PqVeIvExko09WZ24xPtkK",
+    "source" : "yga2MOJ8Mxu7SkRFciiZ0$$IQyI86J5xHtl7MNVeqJea",
+    "sourcePort" : "model_latlog_points_out_0",
+    "target" : "TzZeJcqDhGEYgZhU9HgMV$$PqVeIvExko09WZ24xPtkK",
+    "targetPort" : "model_latlog_distance_comparison_in_0"
+  } ],
+  "component" : "Pipeline"
+}

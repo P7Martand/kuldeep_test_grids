@@ -1,0 +1,43 @@
+---
+version: 2
+models:
+- name: "model_latlog_test2_create_point_1_1"
+  tags:
+  - "prophecy_temp"
+- name: "model_latlog_test2_single_point_1"
+  tags:
+  - "prophecy_temp"
+- name: "model_latlog_test2_single_point_1_1"
+  tags:
+  - "prophecy_temp"
+- name: "model_latlog_test2_single_point_1_2"
+  tags:
+  - "prophecy_temp"
+- name: "model_latlog_test2_single_point_1_3"
+  tags:
+  - "prophecy_temp"
+sources:
+- name: "prophecy_tmp_source__latlog_test2"
+  database: "sony"
+  schema: "orch_test"
+  config:
+    enabled: true
+  tables:
+  - name: "prophecy_tmp__mbz0tvui__latlog_test2__create_point_1_1"
+    tags:
+    - "prophecy_temp"
+  - name: "prophecy_tmp__mbz0tvui__latlog_test2__dataLatLong_csv_1"
+    tags:
+    - "prophecy_temp"
+  - name: "prophecy_tmp__mbz0tvui__latlog_test2__single_point_1"
+    tags:
+    - "prophecy_temp"
+  - name: "prophecy_tmp__mbz0tvui__latlog_test2__single_point_1_1"
+    tags:
+    - "prophecy_temp"
+  - name: "prophecy_tmp__mbz0tvui__latlog_test2__single_point_1_2"
+    tags:
+    - "prophecy_temp"
+  - name: "prophecy_tmp__mbz0tvui__latlog_test2__single_point_1_3"
+    tags:
+    - "prophecy_temp"

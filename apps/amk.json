@@ -1,0 +1,90 @@
+{
+  "id" : "amk",
+  "metainfo" : {
+    "description" : "",
+    "pipelineId" : "amk"
+  },
+  "definition" : {
+    "template" : [ {
+      "key" : "3nYZb9VV3X2Zpnr0Z7GGy",
+      "id" : "Chart1",
+      "type" : "map",
+      "properties" : {
+        "tableId" : "z9r2FAcwjjZqJgG6veHMh",
+        "title" : "Charts Title",
+        "type" : "map",
+        "config" : {
+          "xAxisColumn" : "",
+          "yAxisColumn" : [ {
+            "name" : "",
+            "agg" : "Sum"
+          } ],
+          "showLegend" : true,
+          "showTooltip" : true,
+          "barAndLineConfig" : {
+            "showGrid" : true
+          },
+          "areaConfig" : {
+            "showGrid" : true,
+            "stacked" : false,
+            "showGradient" : true
+          },
+          "pieConfig" : {
+            "angle" : "full",
+            "chartStyle" : "pie",
+            "innerRadius" : 0,
+            "outerRadius" : 100,
+            "centerX" : 50,
+            "centerY" : 50
+          },
+          "candlestickConfig" : {
+            "openColumn" : "",
+            "closeColumn" : ""
+          },
+          "mapConfig" : {
+            "mapType" : "displacement",
+            "fitBounds" : false,
+            "markerConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "black",
+                  "fillColor" : "black",
+                  "fillOpacity" : 0.1
+                },
+                "showTooltip" : true,
+                "showLabel" : true
+              },
+              "columns" : {
+                "column" : "from_wkt",
+                "labelColumn" : "to_city",
+                "tooltipColumns" : [ "from_city" ]
+              }
+            },
+            "displacementConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "blue",
+                  "weight" : 1.5
+                },
+                "showArrow" : true
+              },
+              "columns" : {
+                "sourceColumn" : "from_wkt",
+                "sourceLabelColumn" : "from_city",
+                "destinationColumn" : "to_wkt",
+                "destinationLabelColumn" : "to_city",
+                "tooltipColumns" : [ ]
+              }
+            }
+          },
+          "scatterConfig" : {
+            "series" : [ ],
+            "type" : "Scatter"
+          }
+        }
+      },
+      "errors" : { }
+    } ]
+  },
+  "instances" : { }
+}

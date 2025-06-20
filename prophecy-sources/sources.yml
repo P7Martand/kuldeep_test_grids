@@ -1,0 +1,112 @@
+---
+version: 2
+sources:
+- name: "sony.orch_tables"
+  database: "sony"
+  schema: "orch_tables"
+  config:
+    enabled: true
+  tables: []
+- name: ""
+  database: "main"
+  schema: "default"
+  tables: []
+- name: "Q.asd"
+  database: "Q"
+  schema: "asd"
+  tables:
+  - name: "asda"
+    description: ""
+    columns: []
+    type: "table"
+- name: "sony.orch_test"
+  description: ""
+  database: "sony"
+  schema: "orch_test"
+  tables:
+  - name: "create_point_gem_seed"
+    quoting:
+      identifier: true
+    columns:
+    - name: "seq"
+      dataType:
+        type: "Bigint"
+    - name: "from_city"
+      dataType:
+        type: "String"
+    - name: "to_city"
+      dataType:
+        type: "String"
+    - name: "from_lat"
+      dataType:
+        type: "Double"
+    - name: "from_lon"
+      dataType:
+        type: "Double"
+    - name: "to_lat"
+      dataType:
+        type: "Double"
+    - name: "to_lon"
+      dataType:
+        type: "Double"
+    - name: "Alteryx_Distance_KM"
+      dataType:
+        type: "Double"
+    - name: "Formula_Distance_KM"
+      dataType:
+        type: "Double"
+    - name: "Difference_Alteryx_KM_2"
+      dataType:
+        type: "Double"
+    - name: "h3_approx_distance"
+      dataType:
+        type: "Double"
+    - name: "Difference_Alteryx_KM"
+      dataType:
+        type: "Double"
+- name: "qa_team.qa_database"
+  database: "qa_team"
+  schema: "qa_database"
+  tables:
+  - name: "ashtest"
+    columns:
+    - name: "Series_reference"
+      dataType:
+        type: "String"
+    - name: "Period"
+      dataType:
+        type: "Double"
+    - name: "Data_value"
+      dataType:
+        type: "Double"
+    - name: "STATUS"
+      dataType:
+        type: "String"
+    - name: "UNITS"
+      dataType:
+        type: "String"
+    - name: "MAGNTUDE"
+      dataType:
+        type: "Bigint"
+    - name: "Subject"
+      dataType:
+        type: "String"
+    - name: "Group"
+      dataType:
+        type: "String"
+    - name: "Series_title_1"
+      dataType:
+        type: "String"
+    - name: "Series_title_2"
+      dataType:
+        type: "String"
+    - name: "Series_title_3"
+      dataType:
+        type: "String"
+    - name: "Series_title_4"
+      dataType:
+        type: "String"
+    - name: "Series_title_5"
+      dataType:
+        type: "String"
+    type: "table"

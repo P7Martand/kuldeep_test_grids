@@ -1,0 +1,430 @@
+{
+  "id" : "App1",
+  "metainfo" : {
+    "description" : "",
+    "pipelineId" : "latlog"
+  },
+  "definition" : {
+    "template" : [ {
+      "key" : "a78b3OYEZ-TJBSEOTMBZF",
+      "id" : "Chart1",
+      "type" : "line",
+      "properties" : {
+        "tableId" : "M_Tf_JDC2HBj9GZwrN4hs$$pGFRlgfpEtdavu3YHAtGr",
+        "title" : "Charts Title",
+        "type" : "line",
+        "config" : {
+          "xAxisColumn" : "from_city",
+          "yAxisColumn" : [ {
+            "name" : "Alteryx_Distance_KM",
+            "agg" : "Sum",
+            "error" : false
+          } ],
+          "showLegend" : true,
+          "showTooltip" : true,
+          "barAndLineConfig" : {
+            "showGrid" : true
+          },
+          "areaConfig" : {
+            "showGrid" : true,
+            "stacked" : false,
+            "showGradient" : true
+          },
+          "pieConfig" : {
+            "angle" : "full",
+            "chartStyle" : "pie",
+            "innerRadius" : 0,
+            "outerRadius" : 100,
+            "centerX" : 50,
+            "centerY" : 50
+          },
+          "candlestickConfig" : {
+            "openColumn" : "",
+            "closeColumn" : ""
+          },
+          "mapConfig" : {
+            "mapType" : "marker",
+            "fitBounds" : false,
+            "markerConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "black",
+                  "fillColor" : "black",
+                  "fillOpacity" : 0.1
+                },
+                "showTooltip" : true,
+                "showLabel" : true
+              },
+              "columns" : {
+                "column" : "",
+                "labelColumn" : "",
+                "tooltipColumns" : [ ]
+              }
+            },
+            "displacementConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "blue",
+                  "weight" : 1.5
+                },
+                "showArrow" : true
+              },
+              "columns" : {
+                "sourceColumn" : "",
+                "sourceLabelColumn" : "",
+                "destinationColumn" : "",
+                "destinationLabelColumn" : "",
+                "tooltipColumns" : [ ]
+              }
+            }
+          },
+          "scatterConfig" : {
+            "series" : [ ],
+            "type" : "Scatter"
+          },
+          "yAxisConfig" : { }
+        }
+      },
+      "errors" : { }
+    }, {
+      "key" : "y0SzzOzN7IML4_gkTT5tb",
+      "id" : "Chart2",
+      "type" : "area",
+      "properties" : {
+        "tableId" : "M_Tf_JDC2HBj9GZwrN4hs$$pGFRlgfpEtdavu3YHAtGr",
+        "title" : "Charts Title",
+        "type" : "area",
+        "config" : {
+          "xAxisColumn" : "from_city",
+          "yAxisColumn" : [ {
+            "name" : "Alteryx_Distance_KM",
+            "agg" : "Sum",
+            "error" : false
+          } ],
+          "showLegend" : true,
+          "showTooltip" : true,
+          "barAndLineConfig" : {
+            "showGrid" : true
+          },
+          "areaConfig" : {
+            "showGrid" : true,
+            "stacked" : false,
+            "showGradient" : true
+          },
+          "pieConfig" : {
+            "angle" : "full",
+            "chartStyle" : "pie",
+            "innerRadius" : 0,
+            "outerRadius" : 100,
+            "centerX" : 50,
+            "centerY" : 50
+          },
+          "candlestickConfig" : {
+            "openColumn" : "",
+            "closeColumn" : ""
+          },
+          "mapConfig" : {
+            "mapType" : "marker",
+            "fitBounds" : false,
+            "markerConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "black",
+                  "fillColor" : "black",
+                  "fillOpacity" : 0.1
+                },
+                "showTooltip" : true,
+                "showLabel" : true
+              },
+              "columns" : {
+                "column" : "",
+                "labelColumn" : "",
+                "tooltipColumns" : [ ]
+              }
+            },
+            "displacementConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "blue",
+                  "weight" : 1.5
+                },
+                "showArrow" : true
+              },
+              "columns" : {
+                "sourceColumn" : "",
+                "sourceLabelColumn" : "",
+                "destinationColumn" : "",
+                "destinationLabelColumn" : "",
+                "tooltipColumns" : [ ]
+              }
+            }
+          },
+          "scatterConfig" : {
+            "series" : [ ],
+            "type" : "Scatter"
+          },
+          "yAxisConfig" : { }
+        }
+      },
+      "errors" : { }
+    }, {
+      "key" : "LJxP-T-_dtzhbN9UpJcG1",
+      "id" : "line1",
+      "type" : "line",
+      "properties" : {
+        "tableId" : "M_Tf_JDC2HBj9GZwrN4hs$$pGFRlgfpEtdavu3YHAtGr",
+        "title" : "raw_points",
+        "type" : "line",
+        "config" : {
+          "xAxisColumn" : "from_city",
+          "yAxisColumn" : [ {
+            "name" : "from_lat",
+            "agg" : "Sum"
+          } ],
+          "showLegend" : true,
+          "showTooltip" : true,
+          "barAndLineConfig" : {
+            "showGrid" : true
+          },
+          "areaConfig" : {
+            "showGrid" : true,
+            "stacked" : false,
+            "showGradient" : true
+          },
+          "pieConfig" : {
+            "angle" : "full",
+            "chartStyle" : "pie",
+            "innerRadius" : 0,
+            "outerRadius" : 100,
+            "centerX" : 50,
+            "centerY" : 50
+          },
+          "candlestickConfig" : {
+            "openColumn" : "",
+            "closeColumn" : ""
+          },
+          "mapConfig" : {
+            "mapType" : "marker",
+            "fitBounds" : false,
+            "markerConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "black",
+                  "fillColor" : "black",
+                  "fillOpacity" : 0.1
+                },
+                "showTooltip" : true,
+                "showLabel" : true
+              },
+              "columns" : {
+                "column" : "",
+                "labelColumn" : "",
+                "tooltipColumns" : [ "seq", "from_city", "to_city", "from_lat", "from_lon", "to_lat", "to_lon", "Alteryx_Distance_KM", "Formula_Distance_KM", "Difference_Alteryx_KM_2", "h3_approx_distance", "Difference_Alteryx_KM" ]
+              }
+            },
+            "displacementConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "blue",
+                  "weight" : 1.5
+                },
+                "showArrow" : true
+              },
+              "columns" : {
+                "sourceColumn" : "",
+                "sourceLabelColumn" : "",
+                "destinationColumn" : "",
+                "destinationLabelColumn" : "",
+                "tooltipColumns" : [ "seq", "from_city", "to_city", "from_lat", "from_lon", "to_lat", "to_lon", "Alteryx_Distance_KM", "Formula_Distance_KM", "Difference_Alteryx_KM_2", "h3_approx_distance", "Difference_Alteryx_KM" ]
+              }
+            }
+          },
+          "scatterConfig" : {
+            "series" : [ ],
+            "type" : "Scatter"
+          }
+        }
+      },
+      "errors" : { }
+    }, {
+      "key" : "hVeYdB3Luiv-rfcSPRuJb",
+      "id" : "line2",
+      "type" : "line",
+      "properties" : {
+        "tableId" : "M_Tf_JDC2HBj9GZwrN4hs$$pGFRlgfpEtdavu3YHAtGr",
+        "title" : "raw_points",
+        "type" : "line",
+        "config" : {
+          "xAxisColumn" : "from_city",
+          "yAxisColumn" : [ {
+            "name" : "from_lat",
+            "agg" : "Sum"
+          } ],
+          "showLegend" : true,
+          "showTooltip" : true,
+          "barAndLineConfig" : {
+            "showGrid" : true
+          },
+          "areaConfig" : {
+            "showGrid" : true,
+            "stacked" : false,
+            "showGradient" : true
+          },
+          "pieConfig" : {
+            "angle" : "full",
+            "chartStyle" : "pie",
+            "innerRadius" : 0,
+            "outerRadius" : 100,
+            "centerX" : 50,
+            "centerY" : 50
+          },
+          "candlestickConfig" : {
+            "openColumn" : "",
+            "closeColumn" : ""
+          },
+          "mapConfig" : {
+            "mapType" : "marker",
+            "fitBounds" : false,
+            "markerConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "black",
+                  "fillColor" : "black",
+                  "fillOpacity" : 0.1
+                },
+                "showTooltip" : true,
+                "showLabel" : true
+              },
+              "columns" : {
+                "column" : "",
+                "labelColumn" : "",
+                "tooltipColumns" : [ "seq", "from_city", "to_city", "from_lat", "from_lon", "to_lat", "to_lon", "Alteryx_Distance_KM", "Formula_Distance_KM", "Difference_Alteryx_KM_2", "h3_approx_distance", "Difference_Alteryx_KM" ]
+              }
+            },
+            "displacementConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "blue",
+                  "weight" : 1.5
+                },
+                "showArrow" : true
+              },
+              "columns" : {
+                "sourceColumn" : "",
+                "sourceLabelColumn" : "",
+                "destinationColumn" : "",
+                "destinationLabelColumn" : "",
+                "tooltipColumns" : [ "seq", "from_city", "to_city", "from_lat", "from_lon", "to_lat", "to_lon", "Alteryx_Distance_KM", "Formula_Distance_KM", "Difference_Alteryx_KM_2", "h3_approx_distance", "Difference_Alteryx_KM" ]
+              }
+            }
+          },
+          "scatterConfig" : {
+            "series" : [ ],
+            "type" : "Scatter"
+          },
+          "yAxisConfig" : { }
+        }
+      },
+      "errors" : { }
+    }, {
+      "key" : "sxW0rwVBdp5EzBgcJhNSn",
+      "id" : "line3",
+      "type" : "line",
+      "properties" : {
+        "tableId" : "M_Tf_JDC2HBj9GZwrN4hs$$pGFRlgfpEtdavu3YHAtGr",
+        "title" : "raw_points",
+        "type" : "line",
+        "config" : {
+          "xAxisColumn" : "from_city",
+          "yAxisColumn" : [ {
+            "name" : "from_lat",
+            "agg" : "Sum"
+          } ],
+          "showLegend" : true,
+          "showTooltip" : true,
+          "barAndLineConfig" : {
+            "showGrid" : true
+          },
+          "areaConfig" : {
+            "showGrid" : true,
+            "stacked" : false,
+            "showGradient" : true
+          },
+          "pieConfig" : {
+            "angle" : "full",
+            "chartStyle" : "pie",
+            "innerRadius" : 0,
+            "outerRadius" : 100,
+            "centerX" : 50,
+            "centerY" : 50
+          },
+          "candlestickConfig" : {
+            "openColumn" : "",
+            "closeColumn" : ""
+          },
+          "mapConfig" : {
+            "mapType" : "marker",
+            "fitBounds" : false,
+            "markerConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "black",
+                  "fillColor" : "black",
+                  "fillOpacity" : 0.1
+                },
+                "showTooltip" : true,
+                "showLabel" : true
+              },
+              "columns" : {
+                "column" : "",
+                "labelColumn" : "",
+                "tooltipColumns" : [ "seq", "from_city", "to_city", "from_lat", "from_lon", "to_lat", "to_lon", "Alteryx_Distance_KM", "Formula_Distance_KM", "Difference_Alteryx_KM_2", "h3_approx_distance", "Difference_Alteryx_KM" ]
+              }
+            },
+            "displacementConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "blue",
+                  "weight" : 1.5
+                },
+                "showArrow" : true
+              },
+              "columns" : {
+                "sourceColumn" : "",
+                "sourceLabelColumn" : "",
+                "destinationColumn" : "",
+                "destinationLabelColumn" : "",
+                "tooltipColumns" : [ "seq", "from_city", "to_city", "from_lat", "from_lon", "to_lat", "to_lon", "Alteryx_Distance_KM", "Formula_Distance_KM", "Difference_Alteryx_KM_2", "h3_approx_distance", "Difference_Alteryx_KM" ]
+              }
+            }
+          },
+          "scatterConfig" : {
+            "series" : [ ],
+            "type" : "Scatter"
+          },
+          "yAxisConfig" : { }
+        }
+      },
+      "errors" : { }
+    } ]
+  },
+  "instances" : {
+    "config" : {
+      "config" : { },
+      "sources" : { },
+      "schedule" : {
+        "cron" : "* 0 2 * * * *",
+        "timeZone" : "GMT",
+        "emailOnSuccess" : false,
+        "emailOnFailure" : false,
+        "emailOnStart" : false,
+        "emails" : [ "email@gmail.com" ],
+        "enabled" : false
+      }
+    },
+    "undefined" : {
+      "config" : { },
+      "sources" : { }
+    }
+  }
+}

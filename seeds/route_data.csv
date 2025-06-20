@@ -1,0 +1,5 @@
+route_id,from_city,to_city,distance_km,daily_frequency,avg_price_inr
+1,Delhi,Mumbai,1148,32,6300
+2,Mumbai,Delhi,1148,33,6200
+3,Delhi,Bangalore,1739,28,7600
+4,Bangalore,Delhi,1739,27,7500

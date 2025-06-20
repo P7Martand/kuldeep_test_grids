@@ -1,0 +1,270 @@
+{
+  "id" : "DO_NOT_USE_OR_YOU_WILL_BE_FIRED",
+  "metainfo" : {
+    "label" : "DO_NOT_USE_OR_YOU_WILL_BE_FIRED",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "isTranspiledPipeline" : false
+  },
+  "processes" : {
+    "route_data##UBTsyb5G" : {
+      "id" : "route_data##UBTsyb5G",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "route_data",
+        "x" : 820,
+        "y" : 220,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "route_data",
+          "sourceType" : "Seed"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "lzjmvTCL",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "route_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "distance_km",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "daily_frequency",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "avg_price_inr",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      },
+      "index" : 0
+    },
+    "city_information##Qj7gALhU" : {
+      "id" : "city_information##Qj7gALhU",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "city_information",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "city_data",
+          "sourceType" : "Seed"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "MnQblTV9",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "population_2023",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "GDP_billion_USD",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "tourist_arrivals_million",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "region",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      },
+      "index" : 1
+    },
+    "airport_informat##J4CCfxIL" : {
+      "id" : "airport_informat##J4CCfxIL",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "airport_information",
+        "x" : 1420,
+        "y" : 320,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "airport",
+          "sourceType" : "Seed"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "YiAtO5L1",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "airport_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "airport_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "state",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "latitude",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "longitude",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "airport_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "is_hub",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      },
+      "index" : 9
+    },
+    "city_route_data##eD1FtfMk" : {
+      "id" : "city_route_data##eD1FtfMk",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "model_DO_NOT_USE_OR_YOU_WILL_BE_FIRED_city_route_data",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "model_DO_NOT_USE_OR_YOU_WILL_BE_FIRED_city_route_data"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "prophecy_tmp__mbrjvhe7__DO_NOT_USE_OR_YOU_WILL_BE_FIRED__city_route_data", "city_route_data##eD1FtfMk", "unique_city_rout##CQ54u7Of", "enriched_city_co##JPzKgVEG", "airport_informat##J4CCfxIL", "city_combination##N57DwBsc", "missing_route_da##SanofHJn", "city_route_mappi##M8tdLebF", "route_data##UBTsyb5G", "city_combination##oGNeRUCv", "different_city_p##bWX5Cy6M", "city_pairs##s2xtrLom", "high_gdp_cities_##GCGIpCVQ", "city_information##Qj7gALhU" ],
+        "type" : "table",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "model_DO_NOT_USE_OR_YOU_WILL_BE_FIRED_city_route_data_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "model_DO_NOT_USE_OR_YOU_WILL_BE_FIRED_city_route_data_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "model_DO_NOT_USE_OR_YOU_WILL_BE_FIRED_city_route_data_in_2",
+          "slug" : "in_2"
+        }, {
+          "id" : "model_DO_NOT_USE_OR_YOU_WILL_BE_FIRED_city_route_data_in_3",
+          "slug" : "in_3"
+        }, {
+          "id" : "model_DO_NOT_USE_OR_YOU_WILL_BE_FIRED_city_route_data_in_4",
+          "slug" : "in_4"
+        }, {
+          "id" : "model_DO_NOT_USE_OR_YOU_WILL_BE_FIRED_city_route_data_in_5",
+          "slug" : "in_5"
+        } ],
+        "outputs" : [ {
+          "id" : "model_DO_NOT_USE_OR_YOU_WILL_BE_FIRED_city_route_data_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "H52ufoMo",
+    "source" : "city_information##Qj7gALhU",
+    "sourcePort" : "MnQblTV9",
+    "target" : "city_route_data##eD1FtfMk",
+    "targetPort" : "model_DO_NOT_USE_OR_YOU_WILL_BE_FIRED_city_route_data_in_0"
+  }, {
+    "id" : "dhDp43wG",
+    "source" : "route_data##UBTsyb5G",
+    "sourcePort" : "lzjmvTCL",
+    "target" : "city_route_data##eD1FtfMk",
+    "targetPort" : "model_DO_NOT_USE_OR_YOU_WILL_BE_FIRED_city_route_data_in_2"
+  }, {
+    "id" : "f78qOkVp",
+    "source" : "airport_informat##J4CCfxIL",
+    "sourcePort" : "YiAtO5L1",
+    "target" : "city_route_data##eD1FtfMk",
+    "targetPort" : "model_DO_NOT_USE_OR_YOU_WILL_BE_FIRED_city_route_data_in_4"
+  }, {
+    "id" : "mLOE5gTV",
+    "source" : "airport_informat##J4CCfxIL",
+    "sourcePort" : "YiAtO5L1",
+    "target" : "city_route_data##eD1FtfMk",
+    "targetPort" : "model_DO_NOT_USE_OR_YOU_WILL_BE_FIRED_city_route_data_in_5"
+  } ],
+  "component" : "Pipeline"
+}

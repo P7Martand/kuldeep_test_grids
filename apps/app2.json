@@ -1,0 +1,196 @@
+{
+  "id" : "app2",
+  "metainfo" : {
+    "description" : "",
+    "pipelineId" : "latlog"
+  },
+  "definition" : {
+    "template" : [ {
+      "key" : "4lWz6rPCxTKaxWhyCo5Tw",
+      "id" : "line1",
+      "type" : "line",
+      "properties" : {
+        "tableId" : "M_Tf_JDC2HBj9GZwrN4hs$$pGFRlgfpEtdavu3YHAtGr",
+        "title" : "raw_points",
+        "type" : "line",
+        "config" : {
+          "xAxisColumn" : "from_city",
+          "yAxisColumn" : [ {
+            "name" : "from_lat",
+            "agg" : "Sum"
+          } ],
+          "showLegend" : true,
+          "showTooltip" : true,
+          "barAndLineConfig" : {
+            "showGrid" : true
+          },
+          "areaConfig" : {
+            "showGrid" : true,
+            "stacked" : false,
+            "showGradient" : true
+          },
+          "pieConfig" : {
+            "angle" : "full",
+            "chartStyle" : "pie",
+            "innerRadius" : 0,
+            "outerRadius" : 100,
+            "centerX" : 50,
+            "centerY" : 50
+          },
+          "candlestickConfig" : {
+            "openColumn" : "",
+            "closeColumn" : ""
+          },
+          "mapConfig" : {
+            "mapType" : "marker",
+            "fitBounds" : false,
+            "markerConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "black",
+                  "fillColor" : "black",
+                  "fillOpacity" : 0.1
+                },
+                "showTooltip" : true,
+                "showLabel" : true
+              },
+              "columns" : {
+                "column" : "",
+                "labelColumn" : "",
+                "tooltipColumns" : [ "seq", "from_city", "to_city", "from_lat", "from_lon", "to_lat", "to_lon", "Alteryx_Distance_KM", "Formula_Distance_KM", "Difference_Alteryx_KM_2", "h3_approx_distance", "Difference_Alteryx_KM" ]
+              }
+            },
+            "displacementConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "blue",
+                  "weight" : 1.5
+                },
+                "showArrow" : true
+              },
+              "columns" : {
+                "sourceColumn" : "",
+                "sourceLabelColumn" : "",
+                "destinationColumn" : "",
+                "destinationLabelColumn" : "",
+                "tooltipColumns" : [ "seq", "from_city", "to_city", "from_lat", "from_lon", "to_lat", "to_lon", "Alteryx_Distance_KM", "Formula_Distance_KM", "Difference_Alteryx_KM_2", "h3_approx_distance", "Difference_Alteryx_KM" ]
+              }
+            }
+          },
+          "scatterConfig" : {
+            "series" : [ ],
+            "type" : "Scatter"
+          },
+          "yAxisConfig" : { }
+        }
+      },
+      "errors" : { }
+    }, {
+      "key" : "jc9H7kTzBFKyu7XTiEbKh",
+      "id" : "line2",
+      "type" : "line",
+      "properties" : {
+        "tableId" : "M_Tf_JDC2HBj9GZwrN4hs$$pGFRlgfpEtdavu3YHAtGr",
+        "title" : "raw_points",
+        "type" : "line",
+        "config" : {
+          "xAxisColumn" : "from_city",
+          "yAxisColumn" : [ {
+            "name" : "from_lat",
+            "agg" : "Sum"
+          } ],
+          "showLegend" : true,
+          "showTooltip" : true,
+          "barAndLineConfig" : {
+            "showGrid" : true
+          },
+          "areaConfig" : {
+            "showGrid" : true,
+            "stacked" : false,
+            "showGradient" : true
+          },
+          "pieConfig" : {
+            "angle" : "full",
+            "chartStyle" : "pie",
+            "innerRadius" : 0,
+            "outerRadius" : 100,
+            "centerX" : 50,
+            "centerY" : 50
+          },
+          "candlestickConfig" : {
+            "openColumn" : "",
+            "closeColumn" : ""
+          },
+          "mapConfig" : {
+            "mapType" : "marker",
+            "fitBounds" : false,
+            "markerConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "black",
+                  "fillColor" : "black",
+                  "fillOpacity" : 0.1
+                },
+                "showTooltip" : true,
+                "showLabel" : true
+              },
+              "columns" : {
+                "column" : "",
+                "labelColumn" : "",
+                "tooltipColumns" : [ "seq", "from_city", "to_city", "from_lat", "from_lon", "to_lat", "to_lon", "Alteryx_Distance_KM", "Formula_Distance_KM", "Difference_Alteryx_KM_2", "h3_approx_distance", "Difference_Alteryx_KM" ]
+              }
+            },
+            "displacementConfig" : {
+              "options" : {
+                "pathOptions" : {
+                  "color" : "blue",
+                  "weight" : 1.5
+                },
+                "showArrow" : true
+              },
+              "columns" : {
+                "sourceColumn" : "",
+                "sourceLabelColumn" : "",
+                "destinationColumn" : "",
+                "destinationLabelColumn" : "",
+                "tooltipColumns" : [ "seq", "from_city", "to_city", "from_lat", "from_lon", "to_lat", "to_lon", "Alteryx_Distance_KM", "Formula_Distance_KM", "Difference_Alteryx_KM_2", "h3_approx_distance", "Difference_Alteryx_KM" ]
+              }
+            }
+          },
+          "scatterConfig" : {
+            "series" : [ ],
+            "type" : "Scatter"
+          },
+          "yAxisConfig" : { }
+        }
+      },
+      "errors" : { }
+    }, {
+      "key" : "eJEBgZP7bvk2hcEG6K6Wh",
+      "id" : "TextInput1",
+      "type" : "TextInput",
+      "properties" : {
+        "configField" : "",
+        "label" : ""
+      },
+      "errors" : {
+        "properties" : true
+      }
+    } ]
+  },
+  "instances" : {
+    "c21" : {
+      "config" : { },
+      "sources" : { },
+      "schedule" : {
+        "cron" : "* 0 2 * * * *",
+        "timeZone" : "GMT",
+        "emailOnSuccess" : false,
+        "emailOnFailure" : false,
+        "emailOnStart" : false,
+        "emails" : [ "email@gmail.com" ],
+        "enabled" : false
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id" : "app5",
+  "metainfo" : {
+    "description" : "",
+    "pipelineId" : "latlog"
+  },
+  "definition" : {
+    "template" : [ ]
+  },
+  "instances" : {
+    "c5" : {
+      "config" : { },
+      "sources" : { },
+      "schedule" : {
+        "cron" : "* 0 2 * * * *",
+        "timeZone" : "GMT",
+        "emailOnSuccess" : false,
+        "emailOnFailure" : false,
+        "emailOnStart" : false,
+        "emails" : [ "email@gmail.com" ],
+        "enabled" : false
+      }
+    }
+  }
+}

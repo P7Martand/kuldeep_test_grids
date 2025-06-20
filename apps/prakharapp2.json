@@ -1,0 +1,83 @@
+{
+  "id" : "prakharapp2",
+  "metainfo" : {
+    "description" : "",
+    "pipelineId" : "latlong3"
+  },
+  "definition" : {
+    "template" : [ {
+      "key" : "5_DAj2dQElfAKGbQg8NmA",
+      "id" : "DataPreview1",
+      "type" : "DataPreview",
+      "properties" : {
+        "tableId" : "-vtaBTkEttmFhZ3PYhH13$$nnh2NKJV-S3sgv4KHX02v",
+        "columns" : [ {
+          "column" : "seq",
+          "label" : "seq",
+          "selected" : true
+        }, {
+          "column" : "from_city",
+          "label" : "from_city",
+          "selected" : true
+        }, {
+          "column" : "to_city",
+          "label" : "to_city",
+          "selected" : true
+        }, {
+          "column" : "from_lat",
+          "label" : "from_lat",
+          "selected" : true
+        }, {
+          "column" : "from_lon",
+          "label" : "from_lon",
+          "selected" : true
+        }, {
+          "column" : "to_lat",
+          "label" : "to_lat",
+          "selected" : true
+        }, {
+          "column" : "to_lon",
+          "label" : "to_lon",
+          "selected" : true
+        }, {
+          "column" : "Alteryx_Distance_KM",
+          "label" : "Alteryx_Distance_KM",
+          "selected" : true
+        }, {
+          "column" : "Formula_Distance_KM",
+          "label" : "Formula_Distance_KM",
+          "selected" : true
+        }, {
+          "column" : "Difference_Alteryx_KM_2",
+          "label" : "Difference_Alteryx_KM_2",
+          "selected" : true
+        }, {
+          "column" : "h3_approx_distance",
+          "label" : "h3_approx_distance",
+          "selected" : true
+        }, {
+          "column" : "Difference_Alteryx_KM",
+          "label" : "Difference_Alteryx_KM",
+          "selected" : true
+        } ],
+        "title" : "create_point_gem_seed_1"
+      },
+      "errors" : { }
+    } ]
+  },
+  "instances" : {
+    "config133" : {
+      "config" : { },
+      "sources" : { },
+      "schedule" : {
+        "cron" : "* 0 2 * * * *",
+        "timeZone" : "GMT",
+        "emailOnSuccess" : false,
+        "emailOnFailure" : false,
+        "emailOnStart" : false,
+        "emails" : [ "email@gmail.com" ],
+        "enabled" : false
+      }
+    }
+  }
+}

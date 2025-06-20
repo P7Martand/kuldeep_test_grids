@@ -1,0 +1,1325 @@
+{
+  "id" : "DO_NOT_USE_OR_YOU_WILL_BE_FIRED",
+  "metainfo" : {
+    "label" : "DO_NOT_USE_OR_YOU_WILL_BE_FIRED",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "isTranspiledPipeline" : false
+  },
+  "processes" : {
+    "route_data##UBTsyb5G" : {
+      "id" : "route_data##UBTsyb5G",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "route_data",
+        "x" : 820,
+        "y" : 220,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "route_data",
+          "sourceType" : "Seed"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "lzjmvTCL",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "route_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "distance_km",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "daily_frequency",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "avg_price_inr",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      },
+      "index" : 0
+    },
+    "high_gdp_cities_##GCGIpCVQ" : {
+      "id" : "high_gdp_cities_##GCGIpCVQ",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "high_gdp_cities_1",
+        "x" : 220,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "expression" : "GDP_billion_USD > 30"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "fQu0i6Ne",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "population_2023",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "GDP_billion_USD",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "tourist_arrivals_million",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "region",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "city_information"
+        } ],
+        "outputs" : [ {
+          "id" : "SiLz9rIM",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "population_2023",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "GDP_billion_USD",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "tourist_arrivals_million",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "region",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "city_combination##N57DwBsc" : {
+      "id" : "city_combination##N57DwBsc",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "city_combinations_not_in_routes",
+        "x" : 1420,
+        "y" : 120,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "cc_city1"
+          },
+          "alias" : "city1",
+          "_row_id" : "822300522"
+        }, {
+          "expression" : {
+            "expression" : "cc_city2"
+          },
+          "alias" : "city2",
+          "_row_id" : "2118613356"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "R7s8CBu9",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "cc_city2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "rd_from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "rd_to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "cc_city1",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "missing_route_data"
+        } ],
+        "outputs" : [ {
+          "id" : "SgJXPfTj",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "city1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "city2",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "city_information##Qj7gALhU" : {
+      "id" : "city_information##Qj7gALhU",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "city_information",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "city_data",
+          "sourceType" : "Seed"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "MnQblTV9",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "population_2023",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "GDP_billion_USD",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "tourist_arrivals_million",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "region",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      },
+      "index" : 1
+    },
+    "city_combination##oGNeRUCv" : {
+      "id" : "city_combination##oGNeRUCv",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "city_combinations",
+        "x" : 820,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "h1_city"
+          },
+          "alias" : "city1",
+          "_row_id" : "1222901459"
+        }, {
+          "expression" : {
+            "expression" : "h2_city"
+          },
+          "alias" : "city2",
+          "_row_id" : "504049004"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "BjupqGDb",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "h2_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "h1_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "different_city_pairs"
+        } ],
+        "outputs" : [ {
+          "id" : "ctZFb3hk",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "city1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "city2",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "city_pairs##s2xtrLom" : {
+      "id" : "city_pairs##s2xtrLom",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "city_pairs",
+        "x" : 420,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "h2",
+          "joinType" : "CROSS"
+        } ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "h2.city"
+          },
+          "alias" : "h2_city",
+          "_row_id" : "2077299407"
+        }, {
+          "expression" : {
+            "expression" : "h1.city"
+          },
+          "alias" : "h1_city",
+          "_row_id" : "1717434200"
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ ],
+        "headAlias" : "h1"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "FPM7lR8C",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "population_2023",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "GDP_billion_USD",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "tourist_arrivals_million",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "region",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "h1"
+        }, {
+          "id" : "tB58z5uC",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "population_2023",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "GDP_billion_USD",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "tourist_arrivals_million",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "region",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "h2"
+        } ],
+        "outputs" : [ {
+          "id" : "ncCG1Y9l",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "h2_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "h1_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "airport_informat##J4CCfxIL" : {
+      "id" : "airport_informat##J4CCfxIL",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "airport_information",
+        "x" : 1420,
+        "y" : 320,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "airport",
+          "sourceType" : "Seed"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "YiAtO5L1",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "airport_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "airport_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "state",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "latitude",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "longitude",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "airport_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "is_hub",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      },
+      "index" : 9
+    },
+    "enriched_city_co##JPzKgVEG" : {
+      "id" : "enriched_city_co##JPzKgVEG",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "enriched_city_combinations",
+        "x" : 1620,
+        "y" : 320,
+        "phase" : 0
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "a1",
+          "expression" : {
+            "expression" : "ccnir.city1 = a1.city"
+          },
+          "joinType" : ""
+        }, {
+          "alias" : "a2",
+          "expression" : {
+            "expression" : "ccnir.city2 = a2.city"
+          },
+          "joinType" : ""
+        } ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "ccnir.city1"
+          },
+          "_row_id" : "2146042933"
+        }, {
+          "expression" : {
+            "expression" : "ccnir.city2"
+          },
+          "_row_id" : "1516171820"
+        }, {
+          "expression" : {
+            "expression" : "a1.airport_name"
+          },
+          "alias" : "city1_airport",
+          "_row_id" : "1434953088"
+        }, {
+          "expression" : {
+            "expression" : "a2.airport_name"
+          },
+          "alias" : "city2_airport",
+          "_row_id" : "1617516093"
+        }, {
+          "expression" : {
+            "expression" : "CONCAT('POINT(', a1.longitude, ' ', a1.latitude, ')')"
+          },
+          "alias" : "city1_wkt_point",
+          "_row_id" : "1043623429"
+        }, {
+          "expression" : {
+            "expression" : "CONCAT('POINT(', a2.longitude, ' ', a2.latitude, ')')"
+          },
+          "alias" : "city2_wkt_point",
+          "_row_id" : "472197369"
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ ],
+        "headAlias" : "ccnir"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "FZvnvDmx",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "city1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "city2",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "ccnir"
+        }, {
+          "id" : "LOJdt2mC",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "airport_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "airport_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "state",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "latitude",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "longitude",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "airport_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "is_hub",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "a1"
+        }, {
+          "id" : "j9UfnLFx",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "airport_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "airport_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "state",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "latitude",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "longitude",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "airport_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "is_hub",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "a2"
+        } ],
+        "outputs" : [ {
+          "id" : "JA3znJXF",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "city1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "city2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "city1_airport",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "city2_airport",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "city1_wkt_point",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "city2_wkt_point",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "missing_route_da##SanofHJn" : {
+      "id" : "missing_route_da##SanofHJn",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "missing_route_data",
+        "x" : 1220,
+        "y" : 120,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "expression" : "rd_from_city IS NULL AND rd_to_city IS NULL"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "NUDI0bkl",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "cc_city2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "rd_from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "rd_to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "cc_city1",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "city_route_mappings"
+        } ],
+        "outputs" : [ {
+          "id" : "fDH9g8TE",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "cc_city2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "rd_from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "rd_to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "cc_city1",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "different_city_p##bWX5Cy6M" : {
+      "id" : "different_city_p##bWX5Cy6M",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "different_city_pairs",
+        "x" : 620,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "expression" : "h1_city <> h2_city"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "iaEGW9g5",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "h2_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "h1_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "city_pairs"
+        } ],
+        "outputs" : [ {
+          "id" : "Qgy8Jl4A",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "h2_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "h1_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "city_route_data##eD1FtfMk" : {
+      "id" : "city_route_data##eD1FtfMk",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "city_route_data",
+        "x" : 2020,
+        "y" : 320,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "city1"
+          },
+          "alias" : "ORIGIN_CITY",
+          "_row_id" : "1427524105"
+        }, {
+          "expression" : {
+            "expression" : "city1_wkt_point"
+          },
+          "alias" : "ORIGIN_CITY_WKT_POINT",
+          "_row_id" : "1942582291"
+        }, {
+          "expression" : {
+            "expression" : "UNIQUE_ROUTES"
+          },
+          "alias" : "TOTAL_UNIQUE_ROUTES",
+          "_row_id" : "593636877"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "BPMSjCEs",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "city1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "city1_wkt_point",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "UNIQUE_ROUTES",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            } ]
+          },
+          "slug" : "unique_city_routes"
+        } ],
+        "outputs" : [ {
+          "id" : "KBafLVQk",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "ORIGIN_CITY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ORIGIN_CITY_WKT_POINT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "TOTAL_UNIQUE_ROUTES",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "city_route_mappi##M8tdLebF" : {
+      "id" : "city_route_mappi##M8tdLebF",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "city_route_mappings",
+        "x" : 1020,
+        "y" : 120,
+        "phase" : 0
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "rd",
+          "expression" : {
+            "expression" : "cc.city1 = rd.from_city AND cc.city2 = rd.to_city"
+          },
+          "joinType" : "LEFT"
+        } ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "cc.city2"
+          },
+          "alias" : "cc_city2",
+          "_row_id" : "304121055"
+        }, {
+          "expression" : {
+            "expression" : "rd.from_city"
+          },
+          "alias" : "rd_from_city",
+          "_row_id" : "413937208"
+        }, {
+          "expression" : {
+            "expression" : "rd.to_city"
+          },
+          "alias" : "rd_to_city",
+          "_row_id" : "1910221153"
+        }, {
+          "expression" : {
+            "expression" : "cc.city1"
+          },
+          "alias" : "cc_city1",
+          "_row_id" : "332715873"
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ ],
+        "headAlias" : "cc"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "o8oPPAMC",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "city1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "city2",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "cc"
+        }, {
+          "id" : "LizWKBBl",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "route_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "distance_km",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "daily_frequency",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "avg_price_inr",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "rd"
+        } ],
+        "outputs" : [ {
+          "id" : "ezwpdWRl",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "cc_city2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "rd_from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "rd_to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "cc_city1",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "unique_city_rout##CQ54u7Of" : {
+      "id" : "unique_city_rout##CQ54u7Of",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "unique_city_routes",
+        "x" : 1820,
+        "y" : 320,
+        "phase" : 0
+      },
+      "properties" : {
+        "aggregate" : [ {
+          "expression" : {
+            "expression" : "city1"
+          },
+          "_row_id" : "1205210992"
+        }, {
+          "expression" : {
+            "expression" : "city1_wkt_point"
+          },
+          "_row_id" : "591597403"
+        }, {
+          "expression" : {
+            "expression" : "COUNT(DISTINCT city2)"
+          },
+          "alias" : "UNIQUE_ROUTES",
+          "_row_id" : "145985384"
+        } ],
+        "allowSelection" : true,
+        "condition" : {
+          "expression" : ""
+        },
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ ],
+        "groupBy" : [ {
+          "expression" : {
+            "expression" : "city1"
+          },
+          "_row_id" : "1091481698"
+        }, {
+          "expression" : {
+            "expression" : "city1_wkt_point"
+          },
+          "_row_id" : "1700666053"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "wLwMtjUM",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "city1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "city2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "city1_airport",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "city2_airport",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "city1_wkt_point",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "city2_wkt_point",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "enriched_city_combinations"
+        } ],
+        "outputs" : [ {
+          "id" : "R8C8AEct",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "city1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "city1_wkt_point",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "UNIQUE_ROUTES",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "H52ufoMo",
+    "source" : "city_information##Qj7gALhU",
+    "sourcePort" : "MnQblTV9",
+    "target" : "high_gdp_cities_##GCGIpCVQ",
+    "targetPort" : "fQu0i6Ne"
+  }, {
+    "id" : "bXJY90Nn",
+    "source" : "high_gdp_cities_##GCGIpCVQ",
+    "sourcePort" : "SiLz9rIM",
+    "target" : "city_pairs##s2xtrLom",
+    "targetPort" : "FPM7lR8C"
+  }, {
+    "id" : "xigxCpcG",
+    "source" : "high_gdp_cities_##GCGIpCVQ",
+    "sourcePort" : "SiLz9rIM",
+    "target" : "city_pairs##s2xtrLom",
+    "targetPort" : "tB58z5uC"
+  }, {
+    "id" : "RUUN9zwl",
+    "source" : "city_pairs##s2xtrLom",
+    "sourcePort" : "ncCG1Y9l",
+    "target" : "different_city_p##bWX5Cy6M",
+    "targetPort" : "iaEGW9g5"
+  }, {
+    "id" : "MPN2iIF3",
+    "source" : "different_city_p##bWX5Cy6M",
+    "sourcePort" : "Qgy8Jl4A",
+    "target" : "city_combination##oGNeRUCv",
+    "targetPort" : "BjupqGDb"
+  }, {
+    "id" : "XfJgwof3",
+    "source" : "city_combination##oGNeRUCv",
+    "sourcePort" : "ctZFb3hk",
+    "target" : "city_route_mappi##M8tdLebF",
+    "targetPort" : "o8oPPAMC"
+  }, {
+    "id" : "dhDp43wG",
+    "source" : "route_data##UBTsyb5G",
+    "sourcePort" : "lzjmvTCL",
+    "target" : "city_route_mappi##M8tdLebF",
+    "targetPort" : "LizWKBBl"
+  }, {
+    "id" : "RDXCD2rt",
+    "source" : "city_route_mappi##M8tdLebF",
+    "sourcePort" : "ezwpdWRl",
+    "target" : "missing_route_da##SanofHJn",
+    "targetPort" : "NUDI0bkl"
+  }, {
+    "id" : "gTasCjnu",
+    "source" : "missing_route_da##SanofHJn",
+    "sourcePort" : "fDH9g8TE",
+    "target" : "city_combination##N57DwBsc",
+    "targetPort" : "R7s8CBu9"
+  }, {
+    "id" : "ZY7bNwt3",
+    "source" : "city_combination##N57DwBsc",
+    "sourcePort" : "SgJXPfTj",
+    "target" : "enriched_city_co##JPzKgVEG",
+    "targetPort" : "FZvnvDmx"
+  }, {
+    "id" : "f78qOkVp",
+    "source" : "airport_informat##J4CCfxIL",
+    "sourcePort" : "YiAtO5L1",
+    "target" : "enriched_city_co##JPzKgVEG",
+    "targetPort" : "LOJdt2mC"
+  }, {
+    "id" : "mLOE5gTV",
+    "source" : "airport_informat##J4CCfxIL",
+    "sourcePort" : "YiAtO5L1",
+    "target" : "enriched_city_co##JPzKgVEG",
+    "targetPort" : "j9UfnLFx"
+  }, {
+    "id" : "PqvHxPMW",
+    "source" : "enriched_city_co##JPzKgVEG",
+    "sourcePort" : "JA3znJXF",
+    "target" : "unique_city_rout##CQ54u7Of",
+    "targetPort" : "wLwMtjUM"
+  }, {
+    "id" : "CgwH5f3X",
+    "source" : "unique_city_rout##CQ54u7Of",
+    "sourcePort" : "R8C8AEct",
+    "target" : "city_route_data##eD1FtfMk",
+    "targetPort" : "BPMSjCEs"
+  } ],
+  "component" : "Pipeline"
+}

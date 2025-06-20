@@ -1,0 +1,3045 @@
+{
+  "id" : "latlong3",
+  "metainfo" : {
+    "label" : "latlong3",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "schedule" : {
+      "cron" : "* 0 2 * * * *",
+      "timeZone" : "GMT",
+      "emailOnSuccess" : false,
+      "emailOnFailure" : false,
+      "emailOnStart" : false,
+      "emails" : [ "email@gmail.com" ],
+      "enabled" : false
+    },
+    "isTranspiledPipeline" : false
+  },
+  "processes" : {
+    "eslpRWxH3x2raQRvtIsgY$$o75Lz1ZsXggvEhxR-ajat" : {
+      "id" : "eslpRWxH3x2raQRvtIsgY$$o75Lz1ZsXggvEhxR-ajat",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "points_1_1",
+        "x" : 400,
+        "y" : -40,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "bHUfLCtGdn7drbT_RHg5O$$NdQDSN8J_4YRAdpk5R-oD##seq", "bHUfLCtGdn7drbT_RHg5O$$NdQDSN8J_4YRAdpk5R-oD##from_city", "bHUfLCtGdn7drbT_RHg5O$$NdQDSN8J_4YRAdpk5R-oD##to_city", "bHUfLCtGdn7drbT_RHg5O$$NdQDSN8J_4YRAdpk5R-oD##from_wkt", "bHUfLCtGdn7drbT_RHg5O$$NdQDSN8J_4YRAdpk5R-oD##to_wkt", "bHUfLCtGdn7drbT_RHg5O$$NdQDSN8J_4YRAdpk5R-oD##distance_km", "bHUfLCtGdn7drbT_RHg5O$$NdQDSN8J_4YRAdpk5R-oD##growth_rate" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "seq"
+          },
+          "alias" : "seq",
+          "_row_id" : "34065643"
+        }, {
+          "expression" : {
+            "expression" : "from_city"
+          },
+          "alias" : "from_city",
+          "_row_id" : "33563606"
+        }, {
+          "expression" : {
+            "expression" : "to_city"
+          },
+          "alias" : "to_city",
+          "_row_id" : "273269488"
+        }, {
+          "expression" : {
+            "expression" : "from_wkt"
+          },
+          "alias" : "from_wkt",
+          "_row_id" : "2068057143"
+        }, {
+          "expression" : {
+            "expression" : "to_wkt"
+          },
+          "alias" : "to_wkt",
+          "_row_id" : "1509788166"
+        }, {
+          "expression" : {
+            "expression" : "distance_km"
+          },
+          "alias" : "distance_km",
+          "_row_id" : "1663729045"
+        }, {
+          "expression" : {
+            "expression" : "growth_rate"
+          },
+          "alias" : "growth_rate",
+          "_row_id" : "1243551073"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "bHUfLCtGdn7drbT_RHg5O$$NdQDSN8J_4YRAdpk5R-oD",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "distance_km",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "growth_rate",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "-1JV0D1MvKrTB4czrgAtj$$Ph85bAX-1f-tHvUxp6baV",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "distance_km",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "growth_rate",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "wcxl03kY54EhA9bwzyLlH$$8t-MNqjB8YF30SG7Mdbe2" : {
+      "id" : "wcxl03kY54EhA9bwzyLlH$$8t-MNqjB8YF30SG7Mdbe2",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "test_seed",
+        "x" : 0,
+        "y" : -40,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "test_seed",
+          "sourceType" : "Seed"
+        },
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "j8_z4B6kCyPObPoFQPcFg$$0ZbaOqmQYhwUkaSBrl63d",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "_Pr5F42SRTLz8MYtMmVju$$BmBxQqvszoS7xJ3XbIf1U",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_lat",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_lon",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_lat",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_lon",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "distance_km",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sales_amount",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "customer_count",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "date_field",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "category",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "growth_rate",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "coordinates_valid",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "special_chars",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "mixed_data",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "iNqRADdTHAvEIN7QSLNrP$$CN6LES4tu7DwELLYWShLw" : {
+      "id" : "iNqRADdTHAvEIN7QSLNrP$$CN6LES4tu7DwELLYWShLw",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "create_point_gem_seed_3",
+        "x" : 0,
+        "y" : 160,
+        "phase" : 0
+      },
+      "properties" : {
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        },
+        "table" : {
+          "name" : "create_point_gem_seed",
+          "sourceType" : "Table",
+          "sourceName" : "sony.orch_test",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "bYYToeuBTmz6l4PoyQcmo$$qNbbglV0r_etUzbmWnn4Z",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "6k_gV1-ucoM4eML_YBvVb$$OsQToPypnH-rcbF2wnOS0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_lat",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "from_lon",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "to_lat",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "to_lon",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Alteryx_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Formula_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM_2",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "h3_approx_distance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "BO5GYiEyW0NZUWs3hWVwT$$8gsvxcASdOBv4jZ9WctNw" : {
+      "id" : "BO5GYiEyW0NZUWs3hWVwT$$8gsvxcASdOBv4jZ9WctNw",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "create_point_1_3",
+        "x" : 20,
+        "y" : -320,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "VdHVakMwk_KOt6a0w5tuO$$cliR1U4RVBh1YYaVMmgCA##seq", "VdHVakMwk_KOt6a0w5tuO$$cliR1U4RVBh1YYaVMmgCA##from_city", "VdHVakMwk_KOt6a0w5tuO$$cliR1U4RVBh1YYaVMmgCA##to_city", "VdHVakMwk_KOt6a0w5tuO$$cliR1U4RVBh1YYaVMmgCA##from_lon", "VdHVakMwk_KOt6a0w5tuO$$cliR1U4RVBh1YYaVMmgCA##from_lat", "VdHVakMwk_KOt6a0w5tuO$$cliR1U4RVBh1YYaVMmgCA##to_lon", "VdHVakMwk_KOt6a0w5tuO$$cliR1U4RVBh1YYaVMmgCA##to_lat", "VdHVakMwk_KOt6a0w5tuO$$cliR1U4RVBh1YYaVMmgCA##distance_km", "VdHVakMwk_KOt6a0w5tuO$$cliR1U4RVBh1YYaVMmgCA##category", "VdHVakMwk_KOt6a0w5tuO$$cliR1U4RVBh1YYaVMmgCA##date", "VdHVakMwk_KOt6a0w5tuO$$cliR1U4RVBh1YYaVMmgCA##timestampNTZ", "VdHVakMwk_KOt6a0w5tuO$$cliR1U4RVBh1YYaVMmgCA##time", "VdHVakMwk_KOt6a0w5tuO$$cliR1U4RVBh1YYaVMmgCA##date_field", "VdHVakMwk_KOt6a0w5tuO$$cliR1U4RVBh1YYaVMmgCA##customer_count", "VdHVakMwk_KOt6a0w5tuO$$cliR1U4RVBh1YYaVMmgCA##sales_amount", "VdHVakMwk_KOt6a0w5tuO$$cliR1U4RVBh1YYaVMmgCA##growth_rate" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "seq"
+          },
+          "alias" : "seq",
+          "_row_id" : "2023309115"
+        }, {
+          "expression" : {
+            "expression" : "from_city"
+          },
+          "alias" : "from_city",
+          "_row_id" : "2145984674"
+        }, {
+          "expression" : {
+            "expression" : "to_city"
+          },
+          "alias" : "to_city",
+          "_row_id" : "1110302321"
+        }, {
+          "expression" : {
+            "expression" : "CONCAT('POINT(', from_lon, ' ', from_lat, ')')"
+          },
+          "alias" : "from_wkt",
+          "_row_id" : "71232349"
+        }, {
+          "expression" : {
+            "expression" : "CONCAT('POINT(', to_lon, ' ', to_lat, ')')"
+          },
+          "alias" : "to_wkt",
+          "_row_id" : "1060444723"
+        }, {
+          "expression" : {
+            "expression" : "distance_km"
+          },
+          "alias" : "distance_km",
+          "_row_id" : "956846143"
+        }, {
+          "expression" : {
+            "expression" : "category"
+          },
+          "alias" : "category",
+          "_row_id" : "55282413"
+        }, {
+          "expression" : {
+            "expression" : "date"
+          },
+          "alias" : "date",
+          "_row_id" : "1493915489"
+        }, {
+          "expression" : {
+            "expression" : "timestampNTZ"
+          },
+          "alias" : "timestampNTZ",
+          "_row_id" : "1414552871"
+        }, {
+          "expression" : {
+            "expression" : "time"
+          },
+          "alias" : "time",
+          "_row_id" : "1652011290"
+        }, {
+          "expression" : {
+            "expression" : "date_field"
+          },
+          "alias" : "date_field",
+          "_row_id" : "839940311"
+        }, {
+          "expression" : {
+            "expression" : "customer_count"
+          },
+          "alias" : "customer_count",
+          "_row_id" : "1959952358"
+        }, {
+          "expression" : {
+            "expression" : "sales_amount"
+          },
+          "alias" : "sales_amount",
+          "_row_id" : "1286051196"
+        }, {
+          "expression" : {
+            "expression" : "growth_rate"
+          },
+          "alias" : "growth_rate",
+          "_row_id" : "766136301"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "VdHVakMwk_KOt6a0w5tuO$$cliR1U4RVBh1YYaVMmgCA",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_lat",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "from_lon",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "to_lat",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "to_lon",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "distance_km",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "sales_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "customer_count",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "date_field",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "category",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "growth_rate",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "coordinates_valid",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "special_chars",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "mixed_data",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "timestampNTZ",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "time",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "p5ZBl_uPc4vPDT7ANdn3I$$OL5d7Mf_rCqhoS1j2fWP3",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "distance_km",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "category",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "timestampNTZ",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "time",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "date_field",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "customer_count",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "sales_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "growth_rate",
+              "dataType" : {
+                "type" : "Float"
+              }
+            } ]
+          },
+          "slug" : "out",
+          "dataExplorerProps" : {
+            "sorts" : [ ],
+            "filter" : {
+              "type" : "Composite",
+              "op" : {
+                "type" : "AND"
+              },
+              "filters" : [ ]
+            }
+          }
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "-vtaBTkEttmFhZ3PYhH13$$nnh2NKJV-S3sgv4KHX02v" : {
+      "id" : "-vtaBTkEttmFhZ3PYhH13$$nnh2NKJV-S3sgv4KHX02v",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "create_point_gem_seed_1",
+        "x" : -460,
+        "y" : -40,
+        "phase" : 0
+      },
+      "properties" : {
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        },
+        "table" : {
+          "name" : "create_point_gem_seed",
+          "sourceType" : "Table",
+          "sourceName" : "sony.orch_test",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "z8fd91E_zvWvfYKzlzjRt$$jOt29yjpjQcf5CtDg_AM7",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "fty6F8tb0RLL2L-YLn63O$$-q-E4f52FRYeEXW2fPHO2",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_lat",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "from_lon",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "to_lat",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "to_lon",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Alteryx_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Formula_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM_2",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "h3_approx_distance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "_oxbMU_sI6d3wrcAHSZeh$$9UC5S5FPVoOgKq8ta2G3l" : {
+      "id" : "_oxbMU_sI6d3wrcAHSZeh$$9UC5S5FPVoOgKq8ta2G3l",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "create_point_gem_seed_2",
+        "x" : -200,
+        "y" : -380,
+        "phase" : 0
+      },
+      "properties" : {
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        },
+        "table" : {
+          "name" : "create_point_gem_seed",
+          "sourceType" : "Table",
+          "sourceName" : "sony.orch_test",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "kzdzTm2MNaN5yJJjakFIp$$HqDdIKF7Pn_5PE8hBVg4j",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_lat",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "from_lon",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "to_lat",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "to_lon",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Alteryx_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Formula_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM_2",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "h3_approx_distance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "oznl0vtCPA5oeElckLAGt$$Y_B7Van3w7HAWrmSufgao",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_lat",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "from_lon",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "to_lat",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "to_lon",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Alteryx_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Formula_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM_2",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "h3_approx_distance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "8aox3DVYtwnUF1UccrB6i$$3YgqxbNEfPTqu8Kow1D8d" : {
+      "id" : "8aox3DVYtwnUF1UccrB6i$$3YgqxbNEfPTqu8Kow1D8d",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "test_new_seed_with_date",
+        "x" : -260,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        },
+        "table" : {
+          "name" : "test_new_seed_with_date",
+          "sourceType" : "Seed",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ygg8y6U1jrkEp0FgfN-KZ$$NPq6qYflcj45HLasqHp_q",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "TCEDtIzJ1BvA0StZrZNLc$$FdrNHIQgDKP_RKTFW2I3w",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_lat",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "from_lon",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "to_lat",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "to_lon",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "distance_km",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "sales_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "customer_count",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "date_field",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "category",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "growth_rate",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "coordinates_valid",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "special_chars",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "mixed_data",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "timestampNTZ",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "time",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "e8aQ1sY_Earck0s2L6g74$$kiirnp1RcyDB706ukgUn4" : {
+      "id" : "e8aQ1sY_Earck0s2L6g74$$kiirnp1RcyDB706ukgUn4",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "points_1",
+        "x" : 400,
+        "y" : 160,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "w2EKOh0lPEyUEJoRDtSEW$$xqbnQ6e7LExdEiera09q1##seq", "w2EKOh0lPEyUEJoRDtSEW$$xqbnQ6e7LExdEiera09q1##from_city", "w2EKOh0lPEyUEJoRDtSEW$$xqbnQ6e7LExdEiera09q1##to_city", "w2EKOh0lPEyUEJoRDtSEW$$xqbnQ6e7LExdEiera09q1##from_wkt", "w2EKOh0lPEyUEJoRDtSEW$$xqbnQ6e7LExdEiera09q1##Alteryx_Distance_KM", "w2EKOh0lPEyUEJoRDtSEW$$xqbnQ6e7LExdEiera09q1##Formula_Distance_KM", "w2EKOh0lPEyUEJoRDtSEW$$xqbnQ6e7LExdEiera09q1##Difference_Alteryx_KM_2", "w2EKOh0lPEyUEJoRDtSEW$$xqbnQ6e7LExdEiera09q1##h3_approx_distance", "w2EKOh0lPEyUEJoRDtSEW$$xqbnQ6e7LExdEiera09q1##Difference_Alteryx_KM" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "seq"
+          },
+          "alias" : "seq",
+          "_row_id" : "34065643"
+        }, {
+          "expression" : {
+            "expression" : "from_city"
+          },
+          "alias" : "from_city",
+          "_row_id" : "33563606"
+        }, {
+          "expression" : {
+            "expression" : "to_city"
+          },
+          "alias" : "to_city",
+          "_row_id" : "273269488"
+        }, {
+          "expression" : {
+            "expression" : "from_wkt"
+          },
+          "alias" : "from_wkt",
+          "_row_id" : "2068057143"
+        }, {
+          "expression" : {
+            "expression" : "Alteryx_Distance_KM"
+          },
+          "alias" : "Alteryx_Distance_KM",
+          "_row_id" : "493531372"
+        }, {
+          "expression" : {
+            "expression" : "Formula_Distance_KM"
+          },
+          "alias" : "Formula_Distance_KM",
+          "_row_id" : "1618567376"
+        }, {
+          "expression" : {
+            "expression" : "Difference_Alteryx_KM_2"
+          },
+          "alias" : "Difference_Alteryx_KM_2",
+          "_row_id" : "551771342"
+        }, {
+          "expression" : {
+            "expression" : "h3_approx_distance"
+          },
+          "alias" : "h3_approx_distance",
+          "_row_id" : "1356397681"
+        }, {
+          "expression" : {
+            "expression" : "Difference_Alteryx_KM"
+          },
+          "alias" : "Difference_Alteryx_KM",
+          "_row_id" : "2038540104"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "w2EKOh0lPEyUEJoRDtSEW$$xqbnQ6e7LExdEiera09q1",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Alteryx_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Formula_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM_2",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "h3_approx_distance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "pXHH0EdjXqSX2RcAS04g0$$liOtrQH3PIr8OBDO9tT9A",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Alteryx_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Formula_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM_2",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "h3_approx_distance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "mHcS9avzZC-bQP3vyvAJ1$$FSqa3Jsss45s7DDlDmN7-" : {
+      "id" : "mHcS9avzZC-bQP3vyvAJ1$$FSqa3Jsss45s7DDlDmN7-",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "create_point_1_2",
+        "x" : 200,
+        "y" : -40,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "I4s4mfw7yLjpyjig-d4ix$$NyyuPk8wLB3Zc4F1DHF1P##seq", "I4s4mfw7yLjpyjig-d4ix$$NyyuPk8wLB3Zc4F1DHF1P##from_city", "I4s4mfw7yLjpyjig-d4ix$$NyyuPk8wLB3Zc4F1DHF1P##to_city", "I4s4mfw7yLjpyjig-d4ix$$NyyuPk8wLB3Zc4F1DHF1P##from_lon", "I4s4mfw7yLjpyjig-d4ix$$NyyuPk8wLB3Zc4F1DHF1P##from_lat", "I4s4mfw7yLjpyjig-d4ix$$NyyuPk8wLB3Zc4F1DHF1P##to_lon", "I4s4mfw7yLjpyjig-d4ix$$NyyuPk8wLB3Zc4F1DHF1P##to_lat", "I4s4mfw7yLjpyjig-d4ix$$NyyuPk8wLB3Zc4F1DHF1P##distance_km", "I4s4mfw7yLjpyjig-d4ix$$NyyuPk8wLB3Zc4F1DHF1P##growth_rate" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "seq"
+          },
+          "alias" : "seq",
+          "_row_id" : "2023309115"
+        }, {
+          "expression" : {
+            "expression" : "from_city"
+          },
+          "alias" : "from_city",
+          "_row_id" : "2145984674"
+        }, {
+          "expression" : {
+            "expression" : "to_city"
+          },
+          "alias" : "to_city",
+          "_row_id" : "1110302321"
+        }, {
+          "expression" : {
+            "expression" : "CONCAT('POINT(', from_lon, ' ', from_lat, ')')"
+          },
+          "alias" : "from_wkt",
+          "_row_id" : "71232349"
+        }, {
+          "expression" : {
+            "expression" : "CONCAT('POINT(', to_lon, ' ', to_lat, ')')"
+          },
+          "alias" : "to_wkt",
+          "_row_id" : "1060444723"
+        }, {
+          "expression" : {
+            "expression" : "distance_km"
+          },
+          "alias" : "distance_km",
+          "_row_id" : "1344598369"
+        }, {
+          "expression" : {
+            "expression" : "growth_rate"
+          },
+          "alias" : "growth_rate",
+          "_row_id" : "1235246555"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "I4s4mfw7yLjpyjig-d4ix$$NyyuPk8wLB3Zc4F1DHF1P",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_lat",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_lon",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_lat",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_lon",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "distance_km",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sales_amount",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "customer_count",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "date_field",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "category",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "growth_rate",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "coordinates_valid",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "special_chars",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "mixed_data",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "mmN9Tg3376jB87Qk5CpGD$$bS_TZp5C7RPEdQLKrXeNP",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "distance_km",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "growth_rate",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out",
+          "dataExplorerProps" : {
+            "sorts" : [ ],
+            "filter" : {
+              "type" : "Composite",
+              "op" : {
+                "type" : "AND"
+              },
+              "filters" : [ ]
+            }
+          }
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "K2XY9LEAmTVP1KFX9BfXR$$Hl0JKAdrF5557dwjnOQLI" : {
+      "id" : "K2XY9LEAmTVP1KFX9BfXR$$Hl0JKAdrF5557dwjnOQLI",
+      "component" : "OrchestrationSource",
+      "kind" : "S3Source",
+      "metadata" : {
+        "label" : "dataLatLong_csv_1",
+        "x" : 0,
+        "y" : 320,
+        "phase" : 0
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "s3",
+          "properties" : {
+            "id" : "s3"
+          },
+          "type" : "connector"
+        },
+        "format" : {
+          "kind" : "csv",
+          "properties" : {
+            "allowLazyQuotes" : false,
+            "allowEmptyColumnNames" : true,
+            "separator" : ",",
+            "nullValue" : "",
+            "schema" : {
+              "fields" : [ {
+                "name" : "seq",
+                "dataType" : {
+                  "type" : "int64"
+                }
+              }, {
+                "name" : "from_city",
+                "dataType" : {
+                  "type" : "utf8"
+                }
+              }, {
+                "name" : "to_city",
+                "dataType" : {
+                  "type" : "utf8"
+                }
+              }, {
+                "name" : "from_lat",
+                "dataType" : {
+                  "type" : "float64"
+                }
+              }, {
+                "name" : "from_lon",
+                "dataType" : {
+                  "type" : "float64"
+                }
+              }, {
+                "name" : "to_lat",
+                "dataType" : {
+                  "type" : "float64"
+                }
+              }, {
+                "name" : "to_lon",
+                "dataType" : {
+                  "type" : "float64"
+                }
+              }, {
+                "name" : "Alteryx_Distance_KM",
+                "dataType" : {
+                  "type" : "float64"
+                }
+              }, {
+                "name" : "Formula_Distance_KM",
+                "dataType" : {
+                  "type" : "float64"
+                }
+              }, {
+                "name" : "Difference_Alteryx_KM_2",
+                "dataType" : {
+                  "type" : "float64"
+                }
+              }, {
+                "name" : "h3_approx_distance",
+                "dataType" : {
+                  "type" : "float64"
+                }
+              }, {
+                "name" : "Difference_Alteryx_KM",
+                "dataType" : {
+                  "type" : "float64"
+                }
+              } ],
+              "providerType" : "arrow"
+            },
+            "header" : true
+          }
+        },
+        "properties" : {
+          "filePath" : "/datasets/orchestration_datasets/csv/arun/dataLatLong.csv"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "UaRmbMJnqTBW8kv14GzpO$$F8--gDe3f9rEedsQsVo4S",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_lat",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "from_lon",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "to_lat",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "to_lon",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Alteryx_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Formula_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM_2",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "h3_approx_distance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ]
+      }
+    },
+    "xN6oNyB__wazjwXb22iK-$$348AijCY_cOE6SnplsgWt" : {
+      "id" : "xN6oNyB__wazjwXb22iK-$$348AijCY_cOE6SnplsgWt",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "ashtest",
+        "x" : -680,
+        "y" : 200,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "ashtest",
+          "sourceType" : "Table",
+          "sourceName" : "qa_team.qa_database",
+          "alias" : "",
+          "additionalProperties" : null
+        },
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "MTy6BYf0Nc9gYVVL5ENFm$$9qWp2IbGVaMRyJJhw8hc5",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "4t9ZiWE9jBV9BmoGNL1tH$$txgVe5M5SpmY8BWJsXsx4",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "Series_reference",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Period",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Data_value",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "UNITS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "MAGNTUDE",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "Subject",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Group",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Series_title_1",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Series_title_2",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Series_title_3",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Series_title_4",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Series_title_5",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "fn5f7IVK-VR9tCtd860wt$$CpeCH218M0cYtlaqdRCVn" : {
+      "id" : "fn5f7IVK-VR9tCtd860wt$$CpeCH218M0cYtlaqdRCVn",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "create_point_1",
+        "x" : 200,
+        "y" : 160,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "V2MWXrnLNS9ivcJ3ek2di$$vaYUZhAPuby91DO_zfi4V##seq", "V2MWXrnLNS9ivcJ3ek2di$$vaYUZhAPuby91DO_zfi4V##from_city", "V2MWXrnLNS9ivcJ3ek2di$$vaYUZhAPuby91DO_zfi4V##to_city", "V2MWXrnLNS9ivcJ3ek2di$$vaYUZhAPuby91DO_zfi4V##from_lon", "V2MWXrnLNS9ivcJ3ek2di$$vaYUZhAPuby91DO_zfi4V##from_lat", "V2MWXrnLNS9ivcJ3ek2di$$vaYUZhAPuby91DO_zfi4V##to_lon", "V2MWXrnLNS9ivcJ3ek2di$$vaYUZhAPuby91DO_zfi4V##to_lat", "V2MWXrnLNS9ivcJ3ek2di$$vaYUZhAPuby91DO_zfi4V##Alteryx_Distance_KM", "V2MWXrnLNS9ivcJ3ek2di$$vaYUZhAPuby91DO_zfi4V##Formula_Distance_KM", "V2MWXrnLNS9ivcJ3ek2di$$vaYUZhAPuby91DO_zfi4V##Difference_Alteryx_KM_2", "V2MWXrnLNS9ivcJ3ek2di$$vaYUZhAPuby91DO_zfi4V##h3_approx_distance", "V2MWXrnLNS9ivcJ3ek2di$$vaYUZhAPuby91DO_zfi4V##Difference_Alteryx_KM" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "seq"
+          },
+          "alias" : "seq",
+          "_row_id" : "2023309115"
+        }, {
+          "expression" : {
+            "expression" : "from_city"
+          },
+          "alias" : "from_city",
+          "_row_id" : "2145984674"
+        }, {
+          "expression" : {
+            "expression" : "to_city"
+          },
+          "alias" : "to_city",
+          "_row_id" : "1110302321"
+        }, {
+          "expression" : {
+            "expression" : "CONCAT('POINT(', from_lon, ' ', from_lat, ')')"
+          },
+          "alias" : "from_wkt",
+          "_row_id" : "71232349"
+        }, {
+          "expression" : {
+            "expression" : "CONCAT('POINT(', to_lon, ' ', to_lat, ')')"
+          },
+          "alias" : "to_wkt",
+          "_row_id" : "1060444723"
+        }, {
+          "expression" : {
+            "expression" : "Alteryx_Distance_KM"
+          },
+          "alias" : "Alteryx_Distance_KM",
+          "_row_id" : "1159842737"
+        }, {
+          "expression" : {
+            "expression" : "Formula_Distance_KM"
+          },
+          "alias" : "Formula_Distance_KM",
+          "_row_id" : "1390834828"
+        }, {
+          "expression" : {
+            "expression" : "Difference_Alteryx_KM_2"
+          },
+          "alias" : "Difference_Alteryx_KM_2",
+          "_row_id" : "2126289909"
+        }, {
+          "expression" : {
+            "expression" : "h3_approx_distance"
+          },
+          "alias" : "h3_approx_distance",
+          "_row_id" : "1770210937"
+        }, {
+          "expression" : {
+            "expression" : "Difference_Alteryx_KM"
+          },
+          "alias" : "Difference_Alteryx_KM",
+          "_row_id" : "1717492824"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "V2MWXrnLNS9ivcJ3ek2di$$vaYUZhAPuby91DO_zfi4V",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_lat",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "from_lon",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "to_lat",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "to_lon",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Alteryx_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Formula_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM_2",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "h3_approx_distance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "hb4yG_o8pBvE-JHKz718q$$NMlUea3rDSbMsq5ApIuw1",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Alteryx_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Formula_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM_2",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "h3_approx_distance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "out",
+          "dataExplorerProps" : {
+            "sorts" : [ ],
+            "filter" : {
+              "type" : "Composite",
+              "op" : {
+                "type" : "AND"
+              },
+              "filters" : [ ]
+            }
+          }
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "EQmF0rZ9Wi2iJcSQToE3C$$1lpvt5_wV5Iu-YtIdUHKW" : {
+      "id" : "EQmF0rZ9Wi2iJcSQToE3C$$1lpvt5_wV5Iu-YtIdUHKW",
+      "component" : "Limit",
+      "metadata" : {
+        "label" : "single_point_1",
+        "x" : 600,
+        "y" : 160,
+        "phase" : 0
+      },
+      "properties" : {
+        "limit" : {
+          "expression" : "1"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "EHTfJsDjJKbsN0rOoXQhg$$NmNJUtBNaN_OVmvWnWiWN",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Alteryx_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Formula_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM_2",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "h3_approx_distance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "Clq0Lnxq2H6EjYOx7MSOS$$MsXQhHizeb9t6duwg5WB5",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Alteryx_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Formula_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM_2",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "h3_approx_distance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "v9Iwf8475oG7T0RDdaTNH$$OZDTcl_JC1IHvnCneNIfo" : {
+      "id" : "v9Iwf8475oG7T0RDdaTNH$$OZDTcl_JC1IHvnCneNIfo",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "points_1_3",
+        "x" : 220,
+        "y" : -320,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "C1aJ3OuL8GsyLeXimhnYK$$r00BvTR9dfb4L2xRvbi3e##seq", "C1aJ3OuL8GsyLeXimhnYK$$r00BvTR9dfb4L2xRvbi3e##from_city", "C1aJ3OuL8GsyLeXimhnYK$$r00BvTR9dfb4L2xRvbi3e##to_city", "C1aJ3OuL8GsyLeXimhnYK$$r00BvTR9dfb4L2xRvbi3e##from_wkt", "C1aJ3OuL8GsyLeXimhnYK$$r00BvTR9dfb4L2xRvbi3e##date" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "seq"
+          },
+          "alias" : "seq",
+          "_row_id" : "34065643"
+        }, {
+          "expression" : {
+            "expression" : "from_city"
+          },
+          "alias" : "from_city",
+          "_row_id" : "33563606"
+        }, {
+          "expression" : {
+            "expression" : "to_city"
+          },
+          "alias" : "to_city",
+          "_row_id" : "273269488"
+        }, {
+          "expression" : {
+            "expression" : "from_wkt"
+          },
+          "alias" : "from_wkt",
+          "_row_id" : "2068057143"
+        }, {
+          "expression" : {
+            "expression" : "date"
+          },
+          "alias" : "date",
+          "_row_id" : "1491950212"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C1aJ3OuL8GsyLeXimhnYK$$r00BvTR9dfb4L2xRvbi3e",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "distance_km",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "category",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "timestampNTZ",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "time",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "date_field",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "customer_count",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "sales_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "growth_rate",
+              "dataType" : {
+                "type" : "Float"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "Su6tKv53-YFRB53I-1WLe$$E1aR0u8Di0hbyLMHX-J8R",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "W9PBK27dzG5k82Y3ecx3L$$pL2bscYiDqbUOgZAEvKnO" : {
+      "id" : "W9PBK27dzG5k82Y3ecx3L$$pL2bscYiDqbUOgZAEvKnO",
+      "component" : "Limit",
+      "metadata" : {
+        "label" : "single_point_1_1",
+        "x" : 600,
+        "y" : -40,
+        "phase" : 0
+      },
+      "properties" : {
+        "limit" : {
+          "expression" : "1"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "obSOtOGqIoe8XveFEOd_P$$3CH9V1PilZ1RCO3p62RJo",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "distance_km",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "growth_rate",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "pCafeRr-UpbMWpDKH_xb1$$suTQX1cmMwBq3UUQOHaxM",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "distance_km",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "growth_rate",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "vfbnZNGZ0nSdpTsm8W3Bu$$yqyh-6iiTld92CN2KjtSv" : {
+      "id" : "vfbnZNGZ0nSdpTsm8W3Bu$$yqyh-6iiTld92CN2KjtSv",
+      "component" : "Limit",
+      "metadata" : {
+        "label" : "single_point_1_2",
+        "x" : 600,
+        "y" : 320,
+        "phase" : 0
+      },
+      "properties" : {
+        "limit" : {
+          "expression" : "1"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "b2s7zHNf1_Zempyua5kqw$$X8vO19u79_yOkxrf7b2_3",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Alteryx_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Formula_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM_2",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "h3_approx_distance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "qJrjgVF6R2xiqYwxKrcnv$$jh5Z6ZlFy-O5oiMxSAXl1",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Alteryx_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Formula_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM_2",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "h3_approx_distance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "mSg-VuJpVLslRa_WMoP_h$$jEk3pBjetnnyarunCJe07" : {
+      "id" : "mSg-VuJpVLslRa_WMoP_h$$jEk3pBjetnnyarunCJe07",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "create_point_1_1",
+        "x" : 200,
+        "y" : 320,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "yL811n0gSLzvckJvf7CVo$$PJveou88ltPkV06larwdO##seq", "yL811n0gSLzvckJvf7CVo$$PJveou88ltPkV06larwdO##from_city", "yL811n0gSLzvckJvf7CVo$$PJveou88ltPkV06larwdO##to_city", "yL811n0gSLzvckJvf7CVo$$PJveou88ltPkV06larwdO##from_lon", "yL811n0gSLzvckJvf7CVo$$PJveou88ltPkV06larwdO##from_lat", "yL811n0gSLzvckJvf7CVo$$PJveou88ltPkV06larwdO##to_lon", "yL811n0gSLzvckJvf7CVo$$PJveou88ltPkV06larwdO##to_lat", "yL811n0gSLzvckJvf7CVo$$PJveou88ltPkV06larwdO##Alteryx_Distance_KM", "yL811n0gSLzvckJvf7CVo$$PJveou88ltPkV06larwdO##Formula_Distance_KM", "yL811n0gSLzvckJvf7CVo$$PJveou88ltPkV06larwdO##Difference_Alteryx_KM_2", "yL811n0gSLzvckJvf7CVo$$PJveou88ltPkV06larwdO##h3_approx_distance", "yL811n0gSLzvckJvf7CVo$$PJveou88ltPkV06larwdO##Difference_Alteryx_KM" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "seq"
+          },
+          "alias" : "seq",
+          "_row_id" : "2023309115"
+        }, {
+          "expression" : {
+            "expression" : "from_city"
+          },
+          "alias" : "from_city",
+          "_row_id" : "2145984674"
+        }, {
+          "expression" : {
+            "expression" : "to_city"
+          },
+          "alias" : "to_city",
+          "_row_id" : "1110302321"
+        }, {
+          "expression" : {
+            "expression" : "CONCAT('POINT(', from_lon, ' ', from_lat, ')')"
+          },
+          "alias" : "from_wkt",
+          "_row_id" : "71232349"
+        }, {
+          "expression" : {
+            "expression" : "CONCAT('POINT(', to_lon, ' ', to_lat, ')')"
+          },
+          "alias" : "to_wkt",
+          "_row_id" : "1060444723"
+        }, {
+          "expression" : {
+            "expression" : "Alteryx_Distance_KM"
+          },
+          "alias" : "Alteryx_Distance_KM",
+          "_row_id" : "1159842737"
+        }, {
+          "expression" : {
+            "expression" : "Formula_Distance_KM"
+          },
+          "alias" : "Formula_Distance_KM",
+          "_row_id" : "1390834828"
+        }, {
+          "expression" : {
+            "expression" : "Difference_Alteryx_KM_2"
+          },
+          "alias" : "Difference_Alteryx_KM_2",
+          "_row_id" : "2126289909"
+        }, {
+          "expression" : {
+            "expression" : "h3_approx_distance"
+          },
+          "alias" : "h3_approx_distance",
+          "_row_id" : "1770210937"
+        }, {
+          "expression" : {
+            "expression" : "Difference_Alteryx_KM"
+          },
+          "alias" : "Difference_Alteryx_KM",
+          "_row_id" : "1717492824"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "yL811n0gSLzvckJvf7CVo$$PJveou88ltPkV06larwdO",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_lat",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "from_lon",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "to_lat",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "to_lon",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Alteryx_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Formula_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM_2",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "h3_approx_distance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "03h86aR1W9R01-SW5Y0KW$$M2gfhgEzTvf0phlY1vHob",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Alteryx_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Formula_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM_2",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "h3_approx_distance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "out",
+          "dataExplorerProps" : {
+            "sorts" : [ ],
+            "filter" : {
+              "type" : "Composite",
+              "op" : {
+                "type" : "AND"
+              },
+              "filters" : [ ]
+            }
+          }
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "Sd7HAH5l5b9zASWGwBGam$$K80kgZOkRPLoT0OGopMT2" : {
+      "id" : "Sd7HAH5l5b9zASWGwBGam$$K80kgZOkRPLoT0OGopMT2",
+      "component" : "Limit",
+      "metadata" : {
+        "label" : "single_point_1_3",
+        "x" : 420,
+        "y" : -320,
+        "phase" : 0
+      },
+      "properties" : {
+        "limit" : {
+          "expression" : "1"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "z6GDD39ZfbT3TfkbByUEa$$Kiv9Ro7kwWgwARKrEXzR2",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "oaPkWDXXFOuI7qzKFeTtT$$rEtN8EhPXtVYcSdB5iXT1",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "-CUdPvjuhlp1wZJwnCDsy$$eJgTS0Vb9UBCNotIUqsLd" : {
+      "id" : "-CUdPvjuhlp1wZJwnCDsy$$eJgTS0Vb9UBCNotIUqsLd",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "points_1_2",
+        "x" : 400,
+        "y" : 320,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "XU9PuXjwuRRuhWJ0IoVLc$$_y_Q2uWjkfMsL4S9SSK1w##seq", "XU9PuXjwuRRuhWJ0IoVLc$$_y_Q2uWjkfMsL4S9SSK1w##from_city", "XU9PuXjwuRRuhWJ0IoVLc$$_y_Q2uWjkfMsL4S9SSK1w##to_city", "XU9PuXjwuRRuhWJ0IoVLc$$_y_Q2uWjkfMsL4S9SSK1w##from_wkt", "XU9PuXjwuRRuhWJ0IoVLc$$_y_Q2uWjkfMsL4S9SSK1w##Alteryx_Distance_KM", "XU9PuXjwuRRuhWJ0IoVLc$$_y_Q2uWjkfMsL4S9SSK1w##Formula_Distance_KM", "XU9PuXjwuRRuhWJ0IoVLc$$_y_Q2uWjkfMsL4S9SSK1w##Difference_Alteryx_KM_2", "XU9PuXjwuRRuhWJ0IoVLc$$_y_Q2uWjkfMsL4S9SSK1w##h3_approx_distance", "XU9PuXjwuRRuhWJ0IoVLc$$_y_Q2uWjkfMsL4S9SSK1w##Difference_Alteryx_KM" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "seq"
+          },
+          "alias" : "seq",
+          "_row_id" : "34065643"
+        }, {
+          "expression" : {
+            "expression" : "from_city"
+          },
+          "alias" : "from_city",
+          "_row_id" : "33563606"
+        }, {
+          "expression" : {
+            "expression" : "to_city"
+          },
+          "alias" : "to_city",
+          "_row_id" : "273269488"
+        }, {
+          "expression" : {
+            "expression" : "from_wkt"
+          },
+          "alias" : "from_wkt",
+          "_row_id" : "2068057143"
+        }, {
+          "expression" : {
+            "expression" : "Alteryx_Distance_KM"
+          },
+          "alias" : "Alteryx_Distance_KM",
+          "_row_id" : "493531372"
+        }, {
+          "expression" : {
+            "expression" : "Formula_Distance_KM"
+          },
+          "alias" : "Formula_Distance_KM",
+          "_row_id" : "1618567376"
+        }, {
+          "expression" : {
+            "expression" : "Difference_Alteryx_KM_2"
+          },
+          "alias" : "Difference_Alteryx_KM_2",
+          "_row_id" : "551771342"
+        }, {
+          "expression" : {
+            "expression" : "h3_approx_distance"
+          },
+          "alias" : "h3_approx_distance",
+          "_row_id" : "1356397681"
+        }, {
+          "expression" : {
+            "expression" : "Difference_Alteryx_KM"
+          },
+          "alias" : "Difference_Alteryx_KM",
+          "_row_id" : "2038540104"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "XU9PuXjwuRRuhWJ0IoVLc$$_y_Q2uWjkfMsL4S9SSK1w",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Alteryx_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Formula_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM_2",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "h3_approx_distance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "tPoC0a_yl7X1bOSIsLZa8$$pVeomLr1PF814T4GXgI6r",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "seq",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "from_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "to_city",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "from_wkt",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Alteryx_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Formula_Distance_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM_2",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "h3_approx_distance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Difference_Alteryx_KM",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "Ggl9X4xISv42MZ5999GIb",
+    "source" : "e8aQ1sY_Earck0s2L6g74$$kiirnp1RcyDB706ukgUn4",
+    "sourcePort" : "pXHH0EdjXqSX2RcAS04g0$$liOtrQH3PIr8OBDO9tT9A",
+    "target" : "EQmF0rZ9Wi2iJcSQToE3C$$1lpvt5_wV5Iu-YtIdUHKW",
+    "targetPort" : "EHTfJsDjJKbsN0rOoXQhg$$NmNJUtBNaN_OVmvWnWiWN"
+  }, {
+    "id" : "QEQjWwdnFQusy0-uFBmwD",
+    "source" : "fn5f7IVK-VR9tCtd860wt$$CpeCH218M0cYtlaqdRCVn",
+    "sourcePort" : "hb4yG_o8pBvE-JHKz718q$$NMlUea3rDSbMsq5ApIuw1",
+    "target" : "e8aQ1sY_Earck0s2L6g74$$kiirnp1RcyDB706ukgUn4",
+    "targetPort" : "w2EKOh0lPEyUEJoRDtSEW$$xqbnQ6e7LExdEiera09q1"
+  }, {
+    "id" : "Zot3rd7OXrw6aoHLiVQoP",
+    "source" : "eslpRWxH3x2raQRvtIsgY$$o75Lz1ZsXggvEhxR-ajat",
+    "sourcePort" : "-1JV0D1MvKrTB4czrgAtj$$Ph85bAX-1f-tHvUxp6baV",
+    "target" : "W9PBK27dzG5k82Y3ecx3L$$pL2bscYiDqbUOgZAEvKnO",
+    "targetPort" : "obSOtOGqIoe8XveFEOd_P$$3CH9V1PilZ1RCO3p62RJo"
+  }, {
+    "id" : "OJ07NhkFdZh5nfSXDst39",
+    "source" : "wcxl03kY54EhA9bwzyLlH$$8t-MNqjB8YF30SG7Mdbe2",
+    "sourcePort" : "_Pr5F42SRTLz8MYtMmVju$$BmBxQqvszoS7xJ3XbIf1U",
+    "target" : "mHcS9avzZC-bQP3vyvAJ1$$FSqa3Jsss45s7DDlDmN7-",
+    "targetPort" : "I4s4mfw7yLjpyjig-d4ix$$NyyuPk8wLB3Zc4F1DHF1P"
+  }, {
+    "id" : "0nNgp7sXXgJqR3NE2CQRK",
+    "source" : "-CUdPvjuhlp1wZJwnCDsy$$eJgTS0Vb9UBCNotIUqsLd",
+    "sourcePort" : "tPoC0a_yl7X1bOSIsLZa8$$pVeomLr1PF814T4GXgI6r",
+    "target" : "vfbnZNGZ0nSdpTsm8W3Bu$$yqyh-6iiTld92CN2KjtSv",
+    "targetPort" : "b2s7zHNf1_Zempyua5kqw$$X8vO19u79_yOkxrf7b2_3"
+  }, {
+    "id" : "v1PWWM4vbeOEjt5nsnQRL",
+    "source" : "mSg-VuJpVLslRa_WMoP_h$$jEk3pBjetnnyarunCJe07",
+    "sourcePort" : "03h86aR1W9R01-SW5Y0KW$$M2gfhgEzTvf0phlY1vHob",
+    "target" : "-CUdPvjuhlp1wZJwnCDsy$$eJgTS0Vb9UBCNotIUqsLd",
+    "targetPort" : "XU9PuXjwuRRuhWJ0IoVLc$$_y_Q2uWjkfMsL4S9SSK1w"
+  }, {
+    "id" : "2ZyjYVFiEEU49OfaeF_91",
+    "source" : "K2XY9LEAmTVP1KFX9BfXR$$Hl0JKAdrF5557dwjnOQLI",
+    "sourcePort" : "UaRmbMJnqTBW8kv14GzpO$$F8--gDe3f9rEedsQsVo4S",
+    "target" : "mSg-VuJpVLslRa_WMoP_h$$jEk3pBjetnnyarunCJe07",
+    "targetPort" : "yL811n0gSLzvckJvf7CVo$$PJveou88ltPkV06larwdO"
+  }, {
+    "id" : "rE4w0-fU6IaNgwvUyKYyF",
+    "source" : "-vtaBTkEttmFhZ3PYhH13$$nnh2NKJV-S3sgv4KHX02v",
+    "sourcePort" : "fty6F8tb0RLL2L-YLn63O$$-q-E4f52FRYeEXW2fPHO2",
+    "target" : "_oxbMU_sI6d3wrcAHSZeh$$9UC5S5FPVoOgKq8ta2G3l",
+    "targetPort" : "kzdzTm2MNaN5yJJjakFIp$$HqDdIKF7Pn_5PE8hBVg4j"
+  }, {
+    "id" : "0WMJvhH4WavtxDsMdGtdh",
+    "source" : "iNqRADdTHAvEIN7QSLNrP$$CN6LES4tu7DwELLYWShLw",
+    "sourcePort" : "6k_gV1-ucoM4eML_YBvVb$$OsQToPypnH-rcbF2wnOS0",
+    "target" : "fn5f7IVK-VR9tCtd860wt$$CpeCH218M0cYtlaqdRCVn",
+    "targetPort" : "V2MWXrnLNS9ivcJ3ek2di$$vaYUZhAPuby91DO_zfi4V"
+  }, {
+    "id" : "i__9ShTHxc2LEk7HM_sbK",
+    "source" : "v9Iwf8475oG7T0RDdaTNH$$OZDTcl_JC1IHvnCneNIfo",
+    "sourcePort" : "Su6tKv53-YFRB53I-1WLe$$E1aR0u8Di0hbyLMHX-J8R",
+    "target" : "Sd7HAH5l5b9zASWGwBGam$$K80kgZOkRPLoT0OGopMT2",
+    "targetPort" : "z6GDD39ZfbT3TfkbByUEa$$Kiv9Ro7kwWgwARKrEXzR2"
+  }, {
+    "id" : "I0WY7nqXYZGOzTwp91IsE",
+    "source" : "BO5GYiEyW0NZUWs3hWVwT$$8gsvxcASdOBv4jZ9WctNw",
+    "sourcePort" : "p5ZBl_uPc4vPDT7ANdn3I$$OL5d7Mf_rCqhoS1j2fWP3",
+    "target" : "v9Iwf8475oG7T0RDdaTNH$$OZDTcl_JC1IHvnCneNIfo",
+    "targetPort" : "C1aJ3OuL8GsyLeXimhnYK$$r00BvTR9dfb4L2xRvbi3e"
+  }, {
+    "id" : "MfE-9nZgePVGcGMmsuepF",
+    "source" : "8aox3DVYtwnUF1UccrB6i$$3YgqxbNEfPTqu8Kow1D8d",
+    "sourcePort" : "TCEDtIzJ1BvA0StZrZNLc$$FdrNHIQgDKP_RKTFW2I3w",
+    "target" : "BO5GYiEyW0NZUWs3hWVwT$$8gsvxcASdOBv4jZ9WctNw",
+    "targetPort" : "VdHVakMwk_KOt6a0w5tuO$$cliR1U4RVBh1YYaVMmgCA"
+  }, {
+    "id" : "f0whg6q-PT87kdeCnj7V_",
+    "source" : "mHcS9avzZC-bQP3vyvAJ1$$FSqa3Jsss45s7DDlDmN7-",
+    "sourcePort" : "mmN9Tg3376jB87Qk5CpGD$$bS_TZp5C7RPEdQLKrXeNP",
+    "target" : "eslpRWxH3x2raQRvtIsgY$$o75Lz1ZsXggvEhxR-ajat",
+    "targetPort" : "bHUfLCtGdn7drbT_RHg5O$$NdQDSN8J_4YRAdpk5R-oD"
+  } ],
+  "component" : "Pipeline"
+}
